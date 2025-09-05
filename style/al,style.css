@@ -1,0 +1,561 @@
+div { 
+  font-family: FreeSerif; 
+  margin: 0; 
+  padding: 0;
+  text-align: center; 
+}
+
+
+nav a { 
+  color: rgb(214, 202, 202); 
+  margin: 0 10px; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+section { 
+  padding: 40px; 
+  max-width: 900px; 
+  margin: auto; 
+  text-align: justify; 
+}
+
+h2 { color: #0e3c87; }
+h3 { color: #000000; }
+
+/* --- ফুটার --- */
+footer {
+    background: #0e5993ff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.card { 
+  background: rgb(239, 239, 239); 
+  padding: 20px; 
+  border-radius: 10px; 
+  margin: 15px 0; 
+}
+
+.accordion {
+  background-color: #1967baff;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  font-size: 19px;
+  border-radius: 6px;
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+
+.accordion:hover {
+  background-color: #0152a8ff;
+}
+
+.panel {
+  display: none;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 0 0 6px 6px;
+}
+
+/* Header Section */
+/* --- প্রধান কাঠামো এবং বডি --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+/* --- প্রধান লেআউট Wrapper যা মেনু ও কন্টেন্টকে পাশাপাশি রাখবে --- */
+.main-layout-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* বাম পাশের সাইডবার ন্যাভিগেশন */
+.sidebar-nav {
+    width: 200px; /* মেনুর জন্য একটি নির্দিষ্ট প্রস্থ */
+    background-color: rgba(235, 236, 238, 0.892); /* মেনুর ব্যাকগ্রাউন্ড রঙ */
+    color: rgba(5, 31, 135, 0.878);
+    padding: 1rem;
+    height: fit-content; /* কন্টেন্টের উচ্চতা অনুযায়ী */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;   
+}
+
+/* আপনার বডি কন্টেন্টকে একটি "পেজ" এর মতো দেখাতে */
+.page-wrapper {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+/* --- হেডার --- */
+header {
+    background: rgb(15, 95, 175);
+    color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header-topLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 0.95em;
+    margin: 10px 0 20px 0;
+}
+
+.nav-menu {
+    display: flex; /* ডেস্কটপে সবসময় মেনু দেখানোর জন্য */
+    flex-direction: column;
+    width: 100%;
+    background-color: transparent; /* ব্যাকগ্রাউন্ড ট্রান্সপারেন্ট রাখা হয়েছে */
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    z-index: 1000;
+}
+
+.nav-menu li a {
+    color: rgb(8, 10, 36); /* মেনুর লিঙ্কগুলোর রঙ সাদা */
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.nav-menu li a:hover {
+    background: linear-gradient(135deg, #abadb4, #abaeb7);
+    color: black; /* হোভারের সময় লেখার রঙ কালো */
+}
+
+/* নতুন কন্টেইনার যা আইকন ও মেনুকে পাশাপাশি রাখবে */
+.nav-container {
+    display: none;
+    align-items: center;
+    justify-content: flex-end; /* ডানদিকে রাখার জন্য */
+    width: 100%;
+    padding-right: 20px;
+}
+
+/* হ্যামবার্গার আইকনের স্টাইল */
+.hamburger-icon {
+    display: block; /* বড় স্ক্রিনে লুকানো থাকবে */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 15px;
+    height: 15px;
+    z-index: 1000;
+    position: absolute;
+    left: 20px;
+    top: auto;
+    bottom: 20px;
+    background-color: #092872c6;
+    padding: 5px;
+    transition: opacity 0.5s ease;
+}
+
+.hamburger-icon.scrolled{
+    padding: auto;
+    position: fixed;
+    top: 20px;
+    bottom: auto;
+}
+
+.hamburger-icon.hide{
+    opacity: 0;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.rgb(0, 19, 111)
+}
+
+.hamburger-icon:hover { background-color: #000;}
+.hamburger-icon span:hover{ background-color: #000;}
+
+
+/* --- ন্যাভিগেশন মেনু --- */
+.main-nav-menu {
+    display: flex; /* ডেস্কটপে মেনু পাশাপাশি থাকবে */
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.main-nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav-menu li a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+
+.main-nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-nav2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.1mm;
+}
+
+.main-nav2 a {
+  background-color: #1675b0ff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 40px;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: background-color 0.6s;
+}
+
+.main-nav2 a:hover {
+  background-color: #01629fff;
+}
+
+/* --- সংশোধিত ফেসবুক মডাল স্টাইল --- */
+#fbModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 27, 27, 0.175);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.fbModal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #333;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+.fbBackBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #c4c4c438;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.fbBackBtn:hover { background-color: #ff0000; color:rgb(255, 255, 255);}
+
+.fbModal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1877f2;
+}
+
+.fbBtn {
+    display: inline-block;
+    color: white;
+    background-color: #1877f2;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.fbBtn:hover {
+    background-color: #145dbf;
+}
+
+.fb-note {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-top {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .tagline {
+        font-size: 0.8em;
+    }
+
+    .main-layout-wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .sidebar-nav {
+        display: none;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        box-shadow: none;
+        position: relative;
+    }
+
+    .nav-container {
+        display: flex;
+        flex-direction: column; /* আইকন এবং মেনুকে উল্লম্বভাবে সাজানো */
+        align-items: flex-end; /* ডানদিকে সারিবদ্ধ করা */
+    }
+
+    .hamburger-icon {
+        display: flex;
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .hamburger-icon.scrolled{
+        position: fixed;
+        top: 20px;
+        bottom: auto;
+    }
+
+    .main-nav-menu ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .main-nav-menu.active ul {
+        display: flex;
+    }
+
+    .page-wrapper {
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+  .main-nav a {
+    padding: 5px 10px;
+    font-size: 0.85em;
+  }
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery img {
+  width: calc(33.33% - 10px);
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .gallery img { width: calc(50% - 10px); }
+}
+
+@media (max-width: 480px) {
+  .gallery img { width: 50%; }
+}
+
+/* Album */
+.album {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.album-img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.album-img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Back Button Style */
+.back-btn2 {
+  background:  #006eb2ff;
+  padding: 0px;
+  text-align: left;
+}
+
+.back-btn2 button {
+  background: #1675b0ff;
+  color: #ffffff;
+  border: none;
+  padding: 6px 6px;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-btn2 button:hover {
+  background: #004a80;
+  color: #fff;
+}
+/* style.css */
+.credit-right {
+  background: rgb(2, 36, 61);
+  position: none;      /* সবসময় স্ক্রিনের নিচে থাকবে */
+  bottom: 5px;          /* একদম নিচ থেকে 5px ওপরে */
+  right: 10px;          /* ডান থেকে 10px ভেতরে */
+  font-size: 12px;      /* ছোট সাইজ */
+  color: #888;          /* হালকা ধূসর রঙ */
+  font-family: Arial, sans-serif;
+}
+
+.credit-right span {
+  color: #00bfff;       /* নামটা আলাদা রঙে */
+  font-weight: bold;
+}

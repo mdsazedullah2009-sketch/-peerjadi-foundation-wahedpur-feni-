@@ -1,0 +1,260 @@
+/* --- প্রধান কাঠামো এবং বডি --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+/* --- প্রধান লেআউট Wrapper যা মেনু ও কন্টেন্টকে পাশাপাশি রাখবে --- */
+.main-layout-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* আপনার বডি কন্টেন্টকে একটি "পেজ" এর মতো দেখাতে */
+.page-wrapper {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+/* --- হেডার --- */
+header {
+    background: rgb(15, 95, 175);
+    color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header-topLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* --- সংশোধিত ফেসবুক মডাল স্টাইল --- */
+#fbModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 27, 27, 0.175);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.fbModal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #333;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+.fbBackBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #c4c4c438;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.fbBackBtn:hover { background-color: #ff0000; color:rgb(255, 255, 255);}
+
+.fbModal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1877f2;
+}
+
+.fbBtn {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    background-color: #1877f2;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.fbBtn:hover {
+    background-color: #145dbf;
+}
+
+.fb-note {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+}
+
+
+/* Back Button Style */
+.back-btn1 {
+  border-radius: 50px;
+  background:  #006eb2ff;
+  padding: 0px;
+  text-align: center;
+}
+
+.back-btn1 button {
+  background: #1675b0ff;
+  color: #ffffff;
+  border: none;
+  padding: 6px 6px;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-btn1 button:hover {
+  background: #004a80;
+  color: #fff;
+}
+
+div { 
+  font-family: FreeSerif; 
+  margin: 0; 
+  padding: 0;
+  text-align: center; 
+}
+
+
+section { 
+  padding: 40px; 
+  max-width: 900px; 
+  margin: auto; 
+  text-align: justify; 
+}
+
+h2 { color: #0e3c87; }
+h3 { color: #000000; }
+
+/* --- ফুটার --- */
+footer {
+    background: #0e5993ff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.card { 
+  background: rgb(239, 239, 239); 
+  padding: 20px; 
+  border-radius: 10px; 
+  margin: 15px 0; 
+}
+
+.accordion {
+  background-color: #1967baff;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  font-size: 19px;
+  border-radius: 6px;
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+
+.accordion:hover {
+  background-color: #0152a8ff;
+}
+
+.panel {
+  display: none;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 0 0 6px 6px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-top {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .main-layout-wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .page-wrapper {
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+  }
+/* style.css */
+.credit-right {
+  background: rgb(2, 36, 61);
+  position: none;      /* সবসময় স্ক্রিনের নিচে থাকবে */
+  bottom: 5px;          /* একদম নিচ থেকে 5px ওপরে */
+  right: 10px;          /* ডান থেকে 10px ভেতরে */
+  font-size: 12px;      /* ছোট সাইজ */
+  color: #888;          /* হালকা ধূসর রঙ */
+  font-family: Arial, sans-serif;
+}
+
+.credit-right span {
+  color: #00bfff;       /* নামটা আলাদা রঙে */
+  font-weight: bold;
+}
