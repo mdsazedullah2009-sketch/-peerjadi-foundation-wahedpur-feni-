@@ -31,6 +31,12 @@
   gtag('config', 'G-7Q7V2N1EQN');
 </script>
 
+    <script>
+  // যদি URL এর শেষে / না থাকে, তাহলে / সহ URL এ রিডাইরেক্ট করবে
+  if (!window.location.pathname.endsWith("/")) {
+    window.location.replace(window.location.pathname + "/" + window.location.search + window.location.hash);
+  }
+</script>
     <script src="script/script.js"></script>
 
     <link rel="stylesheet" href="style/style.css">
