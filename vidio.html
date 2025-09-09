@@ -55,21 +55,20 @@
 
 <div class="page-wrapper">
 <section id="mahfil">
-    <h2>মাহফিলের ভিডিও</h2>
+  <button class="accordion">মাহফিলের ভিডিও</button>
     <div class="video-container">
         <video controls>
-            <source src="vido/taheri1.mp4" type="video/mp4">
+            <source src="gallary/vido/taheri1.mp4" type="video/mp4">
             আপনার ব্রাউজার ভিডিও ট্যাগ সমর্থন করে না।
         </video>
     </div>
-
     <div class="video-container">
         <iframe width="560" height="315" src="https://youtu.be/urAZy0gyKuY?si=RPmxAnaEYQk0nRYB" frameborder="0" allowfullscreen></iframe>
     </div>
 </section>
 
 <section id="karzokrom">
-<h2>ভিবিন্ন কার্যক্রম এর ভিডিও</h2>
+    <button class="accordion">ভিবিন্ন কার্যক্রম এর ভিডিও</button>
 <div class="video-container">
     <video controls>
         <source src="vido/taheri1.jpg" type="video/mp4">
@@ -79,29 +78,41 @@
 </section>
 
 <section id="faound">
-<h2>ফাউণ্ডেশান সংশ্লিষ্ট ভিডিও</h2>
+    <button class="accordion">ফাউণ্ডেশান সংশ্লিষ্ট ভিডিও</button>
 <div class="video-container">
     <video controls>
         <source src="vido/taheri1.jpg" type="video/mp4">
     </video>
+  </div>
 
-</div>
 </section>
     </body>
-
-  
+    </div>
+</div>  
     <footer>
         <p>© ২০২৫ পীরজাদী ফাউন্ডেশন - ওয়াহেদপুর, ফেনী</p>
         <p>ওয়াহেদপুর জামে মসজিদ</p>
-    </footer>
+
 
     <!-- Developed by credit -->
-    <div class="credit-right">
-        Developed by <span>MD SAZED ULLAH</span></p>
-        <a href="https://www.facebook.com/profile.php?id=100078337626798">Md Sazed Ullah</a></p>
-        Document Write by <span>ABDULLAH SADI</span></p>
-        <a href="https://www.facebook.com/profile.php?id=100078337626798">abdullah sadi</a>
+<div class="credit-right">
+        <p>Developed by <span>MD SAZED ULLAH</span></p>
+        <p>ফেসবুক:<a href="#" data-fb-url="https://www.facebook.com/md.sazed.ullah.2024" data-fb-name="Md Sazed Ullah" data-fb-img="profail.pic/sazed.jpg" class="fb-link-js">Md Sazed Ullah</a>
+        <p>Document Write by <span>ABDULLAH SADI</span></p>
+        <p>ফেসবুক:<a href="#" data-fb-url="https://www.facebook.com/abdullah.sadi.7311" data-fb-name="Abdullah Sadi" data-fb-img="profail.pic/sadi.jpg" class="fb-link-js">Abdullah Sadi</a>
     </div>
+   </footer>
+    <div id="fbModal">
+    <div class="fbModal-content">
+        <button onclick="closeFBModal()" class="fbBackBtn">🔙 Back</button>
+        <div class="fbModal-body">
+            <img id="profile-pic" class="profile-pic" alt="profile-picture">
+            <p id="profile-name" class="profile-name"></p>
+            <a id="fb-link" href="#" target="_blank" class="fbBtn">Open Facebook</a>
+            <p class="fb-note">ফেসবুক অ্যাপ বা নতুন ট্যাবে খোলা হচ্ছে…</p>
+        </div>
+
+
 
 <script src="script/vd,script.js"></script>
 </body>
