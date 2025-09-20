@@ -871,4 +871,21 @@ footer {
   section {
     padding: 15px;
   }
+  
+  .credit-right {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+  margin-top: 15px;
+  font-size: 0.6rem;
+}
+
+
+.credit-right span {
+  margin: 0%;
+  font-size: 10px;
+  color: rgb(165, 172, 175);
+  font-weight: bold;
+}
 }
