@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Popup</title>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+  <header>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+  </header>
+
+<div class="container">
+
+  <div class="string">
+    <div class="shape1">💬</div>
+  </div>
+
+  <!-- Chat Modal -->
+  <div class="modal">
+    <div class="modal-header">
+      <img src="logo/logo.png" alt="Profile" class="profile-img">
+      <span class="profile-name">পীরজাদী ফাউণ্ডেশান, ওয়াহেদপুর, ফেনী</span>
+    </div>
+
+    <div class="modal-body" id="chatBody">
+      <div class="typing-indicator" id="typingIndicator">Typing...</div>
+    </div>
+
+    <div class="modal-footer">
+      <div class="input-group">
+        <input type="text" id="userInput" placeholder="আপনার মেসেজ লিখুন..." />
+        <button id="sendBtn">📨</button>
+      </div>
+      <div class="quick-replies">
+        <button class="quick-btn">হ্যালো</button>
+        <button class="quick-btn">আস্সালামু আলাইকুম</button>
+        <button class="quick-btn">আমি আপনার সাথে কথা বলতে চাই</button>
+        <button class="quick-btn">যোগাযোগ করুন</button>
+      </div>
+      <a href="https://wa.me/8801916774966?text=হ্যালো! আমি আপনার সাথে যোগাযোগ করতে চাই।" target="_blank" class="wa-btn">Open WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ================== তোমার আগের CSS এখানে থাকবে ================== */
+  .shape1 {  
+    width:50px;  
+    position: relative;  
+    margin: center;  
+    animation: swing 40s ease-in-out infinite;  
+  }  
+    @keyframes swing {  
+    0%   { transform: rotate(-20deg); }  
+    50%  { transform: rotate(20deg); }  
+    100% { transform: rotate(-20deg); }  
+  }  .glow-box{
+display: inline-block;
+padding: 15px 25px;
+color: #ffffff;
+background: #077c28a7;
+border-radius: 12px;
+font-size: 40px;
+font-family: Arial, sans-serif;
+position: relative;
+margin-top: 20%;
+border: 2px solid #92a2f2;
+box-shadow: 4px 4px 12px #3f3c3c;
+}
+
+@keyframes glowing {
+0% { box-shadow: 0 0 10px red, 0 0 20px orange;}
+25% { box-shadow: 0 0 10px orange, 0 0 20px yellow;}
+50% { box-shadow: 0 0 10px green, 0 0 20px cyan;}
+75% { box-shadow: 0 0 10px blue, 0 0 20px violet;}
+100% { box-shadow: 0 0 10px red, 0 0 20px orange;}
+}
+/* ====== Body ====== */
+body {
+font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+background: #0e1b29;
+color: #fff;
+}
+
+/* ====== Container ====== */
+.container{
+max-width: 400px;
+margin: 20px auto;
+padding: 10px;
+}
+
+/* ====== Back Button ====== */
+.back-btn {
+background: #1d63ae;
+color: white;
+border: none;
+padding: 8px 15px;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+transition: 0.3s;
+margin-bottom: 10px;
+}
+.back-btn:hover {
+background: #15478b;
+transform: translateY(-2px);
+}
+
+/* ====== Modal ====== */
+.modal {
+flex-direction: column;
+background: #fff;
+color: #000;
+border-radius: 12px;
+width: 100%;
+max-width: 400px;
+margin: auto;
+box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+overflow: hidden;
+}
+
+/* ====== Modal Header ====== */
+.modal-header {
+display: flex;
+align-items: center;
+background: #1d63ae;
+color: white;
+padding: 10px;
+border-radius: 12px 12px 0 0;
+}
+.profile-img {
+width: 45px;
+height: 45px;
+border-radius: 50%;
+margin-right: 10px;
+border: 2px solid white;
+}
+.profile-name {
+font-weight: bold;
+font-size: 18px;
+flex: 1;
+}
+
+/* ====== Modal Body ====== */
+.modal-body {
+flex: 1;
+padding: 10px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+max-height: 350px;
+overflow-y: auto;
+background: #f0f0f0;
+}
+
+/* ====== Chat Messages ====== */
+.chat-msg {
+max-width: 75%;
+padding: 10px 14px;
+border-radius: 20px;
+font-size: 15px;
+line-height: 1.4;
+color: #fff;
+background: #256dd3;
+opacity: 0;
+transform: translateY(20px);
+animation: fadeInUp 0.5s forwards;
+text-align: left;
+}
+
+.chat-msg.user {
+background: #DCF8C6;
+color: #000;
+align-self: flex-end;
+}
+
+/* ====== Typing Indicator ====== */
+.typing-indicator {
+font-size: 14px;
+color: #888;
+display: none;
+margin-bottom: 5px;
+}
+
+/* ====== Modal Footer ====== */
+.modal-footer {
+display: flex;
+flex-direction: column;
+padding: 10px;
+gap: 8px;
+background: #f9f9f9;
+}
+
+.input-group {
+display: flex;
+gap: 5px;
+}
+#userInput {
+padding: 10px;
+border-radius: 8px;
+border: 1px solid #ccc;
+flex: 1;
+}
+
+#userInput:hover{
+animation: glowing 4s linear infinite;
+}
+
+#sendBtn {
+padding: 0 12px;
+background: #121487;
+border: none;
+color: white;
+border-radius: 8px;
+font-size: 18px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#sendBtn:hover {
+background: #0d1060;
+}
+
+.quick-replies {
+display: flex;
+gap: 5px;
+flex-wrap: wrap;
+justify-content: flex-start;
+}
+.quick-btn {
+background: #2c30b7;
+color: white;
+border: none;
+border-radius: 8px;
+padding: 5px 10px;
+cursor: pointer;
+font-size: 14px;
+z-index: 1000;
+}
+.quick-btn:hover {
+background: #3049d4;
+}
+
+.wa-btn {
+flex: 1;
+display: block;
+padding: 10px;
+background: #121487;
+color: white;
+border-radius: 8px;
+text-decoration: none;
+font-size: 16px;
+text-align: center;
+animation: glowing 4s linear infinite;
+}
+.wa-btn:hover {
+background: #0000ff;
+}
+
+/* ====== Animations ====== */
+@keyframes fadeInUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* ====== Responsive ====== */
+@media(max-width:480px){
+.container{max-width:95%;}
+#sendBtn{font-size:16px;padding:8px;}
+.quick-btn{font-size:12px;padding:4px 6px;}
+}
+</style>
+
+<script>
+// ====== Back ======
+function goBack(){window.history.back();}
+
+// ====== Socket.IO Setup ======
+const socket = io("https://your-server.com"); // এখানে তোমার সার্ভারের URL দিবে
+
+const chatBody = document.getElementById("chatBody");
+const userInput = document.getElementById("userInput");
+const sendBtn = document.getElementById("sendBtn");
+const quickBtns = document.querySelectorAll(".quick-btn");
+
+// ====== Send User Message ======
+function sendMessage(){
+  const text = userInput.value.trim();
+  if(!text) return;
+
+  // Show locally
+  appendMessage("user", text);
+
+  // Send to server
+  socket.emit("new message", { name: "Visitor", message: text });
+
+  userInput.value = "";
+}
+
+sendBtn.addEventListener("click",sendMessage);
+userInput.addEventListener("keypress",e=>{if(e.key==="Enter") sendMessage();});
+quickBtns.forEach(btn=>btn.addEventListener("click",()=>{userInput.value=btn.textContent;sendMessage();}));
+
+// ====== Receive Message from Server ======
+socket.on("new message", (msg) => {
+  appendMessage("bot", msg.message);
+});
+
+// ====== Append Message ======
+function appendMessage(type, text){
+  const msgDiv = document.createElement("div");
+  msgDiv.classList.add("chat-msg");
+  if(type==="user") msgDiv.classList.add("user");
+  msgDiv.textContent = text;
+  chatBody.appendChild(msgDiv);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+// ====== Event Listeners ======
+sendBtn.addEventListener("click", sendMessage);
+userInput.addEventListener("keypress", e => { if(e.key==="Enter") sendMessage(); });
+quickBtns.forEach(btn => btn.addEventListener("click", ()=>{ userInput.value = btn.textContent; sendMessage(); }));
+
+</script>
+</body>
+</html>
