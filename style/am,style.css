@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&family=Noto+Serif+Bengali:wght@400;700&family=Tiro+Bangla&family=Amiri&display=swap');
+
+:root {
+  --primary-color: #0d8b4e;
+  --secondary-color: #2c5f2d;
+  --accent-color: #f8f1e5;
+  --text-color: #333;
+  --light-color: #f9f9f9;
+  --dark-color: #1a472a;
+  --gold-color: #c9a145;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;   /* আগে হয়তো ডিফল্টে 700 ছিল */
+  line-height: 1.4;
+}
+
 /* --- প্রধান কাঠামো এবং বডি --- */
 body {
     font-family: Arial, sans-serif;
@@ -13,7 +32,7 @@ body {
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 /* আপনার বডি কন্টেন্টকে একটি "পেজ" এর মতো দেখাতে */
@@ -135,6 +154,23 @@ header h1 {
     margin-top: 10px;
 }
 
+.fb-link-js {
+  font-family: 'Arial', sans-serif;  /* ফন্ট */
+  font-size: 15px;                   /* লেখা বড়/ছোট */
+  color:#1877f2 ;
+  padding: 5px 5px;                  /* চারপাশে ফাঁকা */
+  border-radius: 9px;                 /* কোণ গোল */
+  text-decoration: none;              /* আন্ডারলাইন না থাকা */
+}
+
+.fb-link-js:hover {
+  transform: scale(1.05);             /* হালকা বড় হবে হোভার করলে */
+  font-weight: bold;                  /* মোটা লেখা */
+  background-color: #1877f2;          /* হোভার রঙ পরিবর্তন */
+  color: #ffffff;                      /* হোভার লেখার রঙ */
+  cursor: pointer;
+}
+
 
 /* Back Button Style */
 .back-btn1 {
@@ -142,6 +178,7 @@ header h1 {
   background:  #006eb2ff;
   padding: 0px;
   text-align: center;
+  margin-right: auto;
 }
 
 .back-btn1 button {
@@ -179,13 +216,65 @@ section {
 h2 { color: #0e3c87; }
 h3 { color: #000000; }
 
-/* --- ফুটার --- */
+
+/* ফুটার */
 footer {
-    background: #0e5993ff;
-    color: white;
-    text-align: center;
-    padding: 15px;
+  background-color: rgba(4, 5, 5, 0.908);
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
+
+.paragraph-P01 {
+  background-color: rgb(15, 95, 175);;
+  color: #ececec;
+  border-bottom: 1px solid rgb(156, 149, 149);
+  padding: 5px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.credit-right {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.topbuttonlin{
+  background-color:rgb(52, 47, 47);
+  padding: 1px;
+  height: 100px;
+  width: 0px;
+}
+
+.sazed{
+  text-align: right;
+}
+
+.sadi{
+  text-align: left;
+}
+
+.credit-right span {
+  color: rgb(165, 172, 175);
+  font-weight: bold;
+}
+
+.socalicon{
+  display: flex;
+  justify-content: left;
+}
+
+.scoallogo{
+  height: 30px;
+            width: auto;
+            margin-right: 15px;
+            border-radius: 50%;
+}
+
 
 .card { 
   background: rgb(239, 239, 239); 
@@ -243,18 +332,3 @@ footer {
     }
 
   }
-/* style.css */
-.credit-right {
-  background: rgb(2, 36, 61);
-  position: none;      /* সবসময় স্ক্রিনের নিচে থাকবে */
-  bottom: 5px;          /* একদম নিচ থেকে 5px ওপরে */
-  right: 10px;          /* ডান থেকে 10px ভেতরে */
-  font-size: 12px;      /* ছোট সাইজ */
-  color: #888;          /* হালকা ধূসর রঙ */
-  font-family: Arial, sans-serif;
-}
-
-.credit-right span {
-  color: #00bfff;       /* নামটা আলাদা রঙে */
-  font-weight: bold;
-}
