@@ -1,108 +1,174 @@
+// DOM কন্টেন্ট লোড হওয়ার পর স্ক্রিপ্ট এক্সিকিউট
 document.addEventListener('DOMContentLoaded', function() {
-    // হ্যামবার্গার মেনু
-    const hamburger = document.getElementById('hamburger-icon');
-    const navMenu = document.getElementById('nav-menu');
-    const header = document.querySelector('header');
-    
-    let hideTimer;
-
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-        });
-    }
-
-        // স্ক্রলিং ইভেন্ট হ্যান্ডলার
-    window.addEventListener('scroll', function() {
-        const headerRect = header.getBoundingClientRect();
-        
-        // হেডার যখন স্ক্রিনের বাইরে চলে যাবে
-        if (headerRect.bottom < 0) {
-            hamburger.classList.add('scrolled');
-            // স্ক্রলিং চলাকালীন হাইড হওয়া বন্ধ করা
-            clearTimeout(hideTimer);
-            hamburger.classList.remove('hide');
-
-            // স্ক্রলিং থেমে গেলে হাইড করার জন্য টাইমার সেট করা
-            hideTimer = setTimeout(() => {
-                hamburger.classList.add('hide');
-            }, 5000); // 5 সেকেন্ড পর হাইড হবে
-            
-        } else {
-            // যখন হেডার আবার দেখা যাবে
-            hamburger.classList.remove('scrolled');
-            hamburger.classList.remove('hide');
-            clearTimeout(hideTimer); // টাইমার বাতিল করা
-        }
+  
+  // হ্যামবার্গার মেনু টগল
+  const headerHamburger = document.getElementById('headerHamburger');
+  const fixedHamburger = document.getElementById('fixedHamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  
+  if (headerHamburger) {
+    headerHamburger.addEventListener('click', function() {
+      mobileMenu.style.right = '0';
     });
-
-    // অ্যাকর্ডিয়ন ফাংশনালিটি
-    document.querySelectorAll(".accordion").forEach(function(btn) {
-        btn.addEventListener("click", function() {
-            let panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
+  }
+  
+  if (fixedHamburger) {
+    fixedHamburger.addEventListener('click', function() {
+      mobileMenu.style.right = '0';
     });
-
-    // ইমেজ মারকিউ লুপ
-    const marquee = document.querySelector(".marquee-track");
-    if (marquee) {
-        const clone = marquee.innerHTML;
-        marquee.innerHTML += clone;
-    }
-
-    // নতুন কোড: ফেসবুক লিঙ্ক হ্যান্ডেল করা
-    const fbLinks = document.querySelectorAll('.fb-link-js');
-    fbLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // লিংকের ডিফল্ট অ্যাকশন বন্ধ করে
-            const url = this.getAttribute('data-fb-url');
-            const name = this.getAttribute('data-fb-name');
-            const img = this.getAttribute('data-fb-img'); // এখানে 'img' ভেরিয়েবলে সঠিক ছবির পাথ থাকবে
-            openFBModal(url, name, img);
-        });
+  }
+  
+  if (closeMenu) {
+    closeMenu.addEventListener('click', function() {
+      mobileMenu.style.right = '-300px';
     });
-});
-
-// ফেসবুক মডাল খোলা
-function openFBModal(url, name, img) {
-    const modal = document.getElementById("fbModal");
-    const fbBtn = document.getElementById("fb-link");
-    const profileName = document.getElementById("profile-name");
-    const profilePic = document.getElementById("profile-pic");
-
-    fbBtn.href = url;
-    profileName.textContent = name;
-    
-    // সংশোধিত লাইন: এখানে img ভেরিয়েবল থেকে ছবির পাথ নেওয়া হয়েছে
-    if (img) {
-        profilePic.src = img;
+  }
+  
+  // ফিক্সড হেডার স্ক্রোল ইভেন্ট
+  const fixedHeader = document.getElementById('fixedHeader');
+  
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 200) {
+      fixedHeader.style.top = '0';
     } else {
-        profilePic.src = ''; // যদি কোনো ছবি না থাকে তাহলে src ফাঁকা রাখুন
+      fixedHeader.style.top = '-100px';
     }
-    profilePic.alt = `Profile picture of ${name}`;
+  });
 
-    modal.style.display = "flex";
+    // লিংকের জন্য অ্যাকর্ডিয়ন ফাংশনালিটি
+  const accli = document.getElementsByClassName('accordion2');
+  
+  for (let i = 0; i < accli.length; i++) {
+    accli[i].addEventListener('click', function() {
+      this.classList.toggle('active');
+    });
+  }
+  
+  // অ্যাকর্ডিয়ন ফাংশনালিটি
+  const acc = document.getElementsByClassName('accordion1');
+  
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener('click', function() {
+      this.classList.toggle('active');
+      
+      const panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  }
+  
+// অ্যাকর্ডিয়ন ফাংশনালিটি
+  const accordions = document.querySelectorAll('.accordion');
+  accordions.forEach(acc => {
+    acc.addEventListener('click', () => {
+      acc.classList.toggle('active');
+      const panel = acc.nextElementSibling;
+      if(panel.style.maxHeight){
+        panel.style.maxHeight = null;
+        panel.style.padding = "0 25px";
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+
+
+
+  // ফেসবুক লিংক হ্যান্ডলার
+  const fbLinks = document.querySelectorAll('.fb-link-js');
+  const fbModal = document.getElementById('fbModal');
+  const profilePic = document.getElementById('profile-pic');
+  const profileName = document.getElementById('profile-name');
+  const fbLink = document.getElementById('fb-link');
+  
+  fbLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const url = this.getAttribute('data-fb-url');
+      const name = this.getAttribute('data-fb-name');
+      const img = this.getAttribute('data-fb-img');
+      
+      profilePic.src = img;
+      profileName.textContent = name;
+      fbLink.href = url;
+      
+      fbModal.style.display = 'flex';
+    });
+  });
+  
+  // ফেসবুক মোডাল বন্ধ করা
+  window.closeFBModal = function() {
+    fbModal.style.display = 'none';
+  };
+  
+  // মোডালের বাইরে ক্লিক করলে বন্ধ করা
+  window.addEventListener('click', function(e) {
+    if (e.target === fbModal) {
+      fbModal.style.display = 'none';
+    }
+  });
+  
+  // ইমেজ মার্কি পজিশন রিসেট
+  const marqueeTrack = document.querySelector('.marquee-track');
+  
+  // মার্কি ট্র্যাকের ক্লোন তৈরি করে অনন্ত লুপের ইলিউশন দেওয়া
+  if (marqueeTrack) {
+    const marqueeContent = marqueeTrack.innerHTML;
+    marqueeTrack.innerHTML = marqueeContent + marqueeContent;
     
-    // ব্রাউজার হিস্টোরিতে একটি নতুন এন্ট্রি যোগ করা
-    history.pushState({modalOpen: true}, '', '#modal');
-}
-
-// ফেসবুক মডাল বন্ধ করা এবং হিস্টোরি API ব্যবহার
-function closeFBModal() {   
-    if (location.hash === '#modal') {
-        history.back();
-    }
-}
-
-// ব্রাউজারের ব্যাক বাটনে ক্লিক করলে মডাল বন্ধ হবে
-window.onpopstate = function(event) {
-    if (location.hash !== '#modal') {
-        const modal = document.getElementById("fbModal");
-        modal.style.display = "none";
-    }
-};
+    // অ্যানিমেশন শেষ হলে রিসেট
+    marqueeTrack.addEventListener('animationiteration', function() {
+      if (this.style.animationPlayState === 'running') {
+        this.style.animation = 'none';
+        void this.offsetWidth; // রিফ্লো ট্রিগার
+        this.style.animation = null;
+      }
+    });
+  }
+  
+  // স্মুথ স্ক্রোলিং
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        
+        // মোবাইল মেনু বন্ধ করা
+        if (window.innerWidth <= 768) {
+          mobileMenu.style.right = '-300px';
+        }
+      }
+    });
+  });
+  
+  // নোটিশ বোর্ডে তারিখ আপডেট
+  const dateParagraph = document.querySelector('.paragraph-P10');
+  if (dateParagraph) {
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString('bn-BD', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    
+    dateParagraph.textContent = `তারিখ: ${formattedDate}`;
+  }
+  
+  // লোডিং এফেক্ট
+  window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+  });
+});
