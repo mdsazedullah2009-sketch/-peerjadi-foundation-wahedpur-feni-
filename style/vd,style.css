@@ -1,491 +1,1557 @@
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 অনুপাত */
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #0d698b;
+  --primary-dark: #0a546f;
+  --secondary-color: #2c495f;
+  --accent-color: #f8f1e5;
+  --text-color: #222222;
+  --light-color: #f9f9f9;
+  --dark-color: #1a2847;
+  --gold-color: #c9a145;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
 }
 
-.video-container iframe,
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-}
 
-
-div { 
-  font-family: FreeSerif; 
-  margin: 0; 
+* {
+  margin: 0;
   padding: 0;
-  text-align: center; 
+  box-sizing: border-box;
 }
 
-
-nav a { 
-  color: rgb(214, 202, 202); 
-  margin: 0 10px; 
-  text-decoration: none; 
-  font-weight: bold; 
-}
-
-section { 
-  padding: 40px; 
-  max-width: 900px; 
-  margin: auto; 
-  text-align: justify; 
-}
-
-
-/* --- ফুটার --- */
-footer {
-    background: #0e5993ff;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-.card { 
-  background: rgb(239, 239, 239); 
-  padding: 20px; 
-  border-radius: 10px; 
-  margin: 15px 0; 
-}
-
-.accordion {
-  background-color: #1967baff;
-  color: white;
-  cursor: pointer;
-  padding: 12px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  font-size: 19px;
-  border-radius: 6px;
-  transition: 0.3s;
-  margin-bottom: 5px;
-}
-
-.accordion:hover {
-  background-color: #0152a8ff;
-}
-
-.panel {
-  display: none;
-  background-color: #f1f1f1;
-  padding: 10px;
-  border-radius: 0 0 6px 6px;
-}
-
-/* Header Section */
-/* --- প্রধান কাঠামো এবং বডি --- */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f2f5;
+  font-family: 'Hind Siliguri', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #f5f7fa;
+  overflow-x: hidden;
 }
 
-/* --- প্রধান লেআউট Wrapper যা মেনু ও কন্টেন্টকে পাশাপাশি রাখবে --- */
-.main-layout-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+
+h1,
+h2,
+h3 {
+  font-family: 'Noto Serif Bengali', serif;
+  font-weight: 700;
 }
 
-/* বাম পাশের সাইডবার ন্যাভিগেশন */
+
+/* ফিক্সড হেডার */
+.fixed-header {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  width: 35%;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5%;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.fixed-header .Logoname1 {
+  height: auto;
+  width: 170px;
+  border-radius: 10px;
+}
+
+/* সাইডবার নেভিগেশন */
 .sidebar-nav {
-    width: 200px; /* মেনুর জন্য একটি নির্দিষ্ট প্রস্থ */
-    background-color: rgba(235, 236, 238, 0.892); /* মেনুর ব্যাকগ্রাউন্ড রঙ */
-    color: rgba(5, 31, 135, 0.878);
-    padding: 1rem;
-    height: fit-content; /* কন্টেন্টের উচ্চতা অনুযায়ী */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;   
+  width: 100%;
+  margin-top: 15px;
+  top: 0px;
+  position: sticky;
+  display: block;
+  overflow-y: hidden;
+  background: #ffffff;
+  padding: 15px 10px;
+  box-shadow: var(--shadow);
+  z-index: 1000;
 }
 
-/* আপনার বডি কন্টেন্টকে একটি "পেজ" এর মতো দেখাতে */
-.page-wrapper {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    box-sizing: border-box;
-    flex-grow: 1;
+.sidnavfexdscrol {
+  display: block;
+  overflow-y: hidden;
 }
 
-/* --- হেডার --- */
-header {
-    background: rgb(15, 95, 175);
-    color: rgba(255, 255, 255, 1);
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.header-topLeft {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.logo {
-    width: 80px;
-    height: auto;
-}
-
-header h1 {
-    font-size: 2em;
-    margin: 0;
-}
-
-.tagline {
-    font-size: 0.95em;
-    margin: 10px 0 20px 0;
-}
-
-h2 { background-color:  rgb(15, 95, 175);
-    color: #ffffff;
-    text-align: center;
-    padding: auto;
+.topbuttonlin1 {
+  background-color: rgba(52, 47, 47, 0.216);
+  padding: 1px;
+  height: 30px;
+  width: 0px;
 }
 
 .nav-menu {
-    display: flex; /* ডেস্কটপে সবসময় মেনু দেখানোর জন্য */
-    flex-direction: column;
-    width: 100%;
-    background-color: transparent; /* ব্যাকগ্রাউন্ড ট্রান্সপারেন্ট রাখা হয়েছে */
-    padding: 0;
-    list-style: none;
-    margin: 0;
-    z-index: 1000;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  place-content: center;
+  place-items: center;
+  display: flex;
 }
 
-.nav-menu li a {
-    color: rgb(8, 10, 36); /* মেনুর লিঙ্কগুলোর রঙ সাদা */
-    text-decoration: none;
-    display: block;
-    padding: 0.5rem 1rem;
+.nav-menu a {
+  width: max-content;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: var(--transition);
+  border-radius: 10%;
 }
 
-.nav-menu li a:hover {
-    background: linear-gradient(135deg, #abadb4, #abaeb7);
-    color: black; /* হোভারের সময় লেখার রঙ কালো */
+.nav-menu a:hover {
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: rgb(255, 255, 255);
 }
 
-/* নতুন কন্টেইনার যা আইকন ও মেনুকে পাশাপাশি রাখবে */
-.nav-container {
-    display: none;
-    align-items: center;
-    justify-content: flex-end; /* ডানদিকে রাখার জন্য */
-    width: 100%;
-    padding-right: 20px;
+.nav-menu a.active {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 8px rgba(13, 105, 139, 0.3);
 }
 
-.hamburger-icon {
-    display: block; /* বড় স্ক্রিনে লুকানো থাকবে */
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 15px;
-    height: 15px;
-    z-index: 1000;
-    position: absolute;
-    left: 20px;
-    top: auto;
-    bottom: 20px;
-    background-color: #092872c6;
-    padding: 5px;
-    transition: opacity 0.5s ease;
+progress {
+  width: 100%;
+  height: 0px;
+  position: fixed;
+  top: 2px;
+  display: block;
+  align-items: center;
+  z-index: 1200;
 }
 
-.hamburger-icon.scrolled{
-    padding: auto;
-    position: fixed;
-    top: 20px;
-    bottom: auto;
+/* হেডার */
+header {
+  background: linear-gradient(135deg, #0A192e 0%, #1a3a5f 100%);
+  color: white;
+  text-align: center;
+  padding: 30px 0 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-.hamburger-icon.hide{
-    opacity: 0;
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+  background-size: cover;
 }
 
-.hamburger-icon span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-    transition: all 0.rgb(0, 19, 111)
+header h1 {
+  font-size: 2.8rem;
+  margin: 15px 0;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
 }
 
-.hamburger-icon:hover { background-color: #000;}
-.hamburger-icon span:hover{ background-color: #000;}
-
-
-/* --- ন্যাভিগেশন মেনু --- */
-.main-nav-menu {
-    display: flex; /* ডেস্কটপে মেনু পাশাপাশি থাকবে */
-    justify-content: flex-end;
-    flex-grow: 1;
+.back-btn1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
 }
 
-.main-nav-menu ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+.back-btn1 button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.main-nav-menu li a {
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration: none;
-    display: block;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s;
-}
-
-.main-nav-menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.back-btn1 button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .main-nav2 {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.1mm;
+  margin-top: 20px;
+  position: relative;
+  flex-wrap: nowrap;
+  gap: 15px;
 }
 
-.main-nav2 a {
-  background-color: #1675b0ff;
-  color: #ffffff;
+.main-nav2 :last-child {
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.top-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
   text-decoration: none;
-  font-size: 20px;
-  padding: 10px 40px;
-  border-radius: 15px;
+  font-size: 18px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+div {
+  font-family: FreeSerif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+section {
+  padding: 40px 20px;
+  margin: auto;
+  text-align: justify;
+}
+
+.card {
+  background: rgb(239, 239, 239);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+/* --- অ্যাকর্ডিয়ন বোতাম --- */
+.accordion {
+  background-color: var(--dark-color);
+  color: #ffffff;
+  cursor: pointer;
+  padding: 12px 20px;
+  width: 100%;
+  border: 2px solid rgb(14, 42, 59);
+  text-align: center;
+  font-size: 19px;
   font-weight: bold;
-  transition: background-color 0.6s;
+  border-radius: 10px;
+  transition: 0.4s;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.main-nav2 a:hover {
-  background-color: #01629fff;
+.accordion:hover {
+  background-color: rgb(22, 28, 22);
+  transform: scale(1.01);
 }
 
-/* --- সংশোধিত ফেসবুক মডাল স্টাইল --- */
+.accordion:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.accordion::after {
+  content: '\002B';
+  font-size: 24px;
+  color: white;
+  transition: var(--transition);
+}
+
+.accordion.active::after {
+  content: '\2212';
+  transform: rotate(0deg);
+}
+
+.panel {
+  display: none;
+  padding: 5px 10px;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  margin-top: -10px;
+  box-shadow: var(--shadow);
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+/* --- প্রধান লেআউট Wrapper যা মেনু ও কন্টেন্টকে পাশাপাশি রাখবে --- */
+.main-layout-wrapper {
+  display: block;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 5px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* আপনার বডি কন্টেন্টকে একটি "পেজ" এর মতো দেখাতে */
+.page-wrapper {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.vidionorwp {
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.video-container {
+  display: block;
+  min-height: 250px;
+  min-width: 350px;
+  position: relative;
+  border: 1px groove rgba(2, 41, 95, 0.582);
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 1px 2px 1px rgba(32, 6, 6, 0.519);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.video-container:hover .play-icon {
+  background: rgba(0, 94, 255, 0.591);
+  width: 65px;
+  height: 65px;
+}
+
+.modal-gallery .video-container.active,
+.video-container.active {
+  box-shadow: 1px 1px 1px rgba(4, 11, 41, 0.89);
+  border: 3px solid rgba(0, 94, 255, 0.8);
+}
+
+.video-container .description {
+  display: none;
+}
+
+.continar-a {
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 80%;
+  display: block;
+}
+
+.img-thambel {
+  width: 100%;
+  height: 100%;
+}
+
+.album-caption {
+  display: block;
+  width: 100%;
+  height: 20%;
+  padding: 2px;
+  border-top: 1px solid var(--dark-color);
+  background: rgb(229, 232, 240);
+  backdrop-filter: blur(50px);
+  color: var(--dark-color);
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  z-index: 1;
+}
+
+
+.video-thumbnail .videonai {
+  display: block;
+  position: absolute;
+  top: 0;
+  color: #242424;
+  background-color: rgb(226, 226, 226);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.nonevideocontent {
+  display: block;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.iformetionicon {
+  height: 100%;
+  display: inline-flex;
+  position: relative;
+  font-size: 100px;
+  text-align: center;
+  align-items: center;
+  color: #1a1a1a;
+}
+
+.video-item:hover {
+  box-shadow: 2px 3px 3px 2px rgb(32, 6, 6);
+}
+
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background: rgba(0, 94, 255, 0.8);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  opacity: 1;
+  z-index: 10;
+}
+
+.play-icon:hover {
+  background: rgba(0, 94, 255, 0.591);
+  width: 65px;
+  height: 65px;
+}
+
+.play-icon.hiding {
+  animation: hideAnimation 0.4s ease forwards;
+}
+
+.play-icon.hidden {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  display: none;
+  /* সম্পূর্ণ hide */
+}
+
+@keyframes hideAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
+
+/*---ভিডিও ফ্রেম---*/
+.vdmodal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  background: rgb(234, 242, 255);
+  padding: 2px;
+  display: none;
+  overflow-x: scroll;
+  z-index: 1500;
+}
+
+
+.model-haed {
+  display: flex;
+  padding: 1px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background: rgb(207, 227, 255);
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1200;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid rgba(0, 34, 93, 0.392);
+  border-bottom: 4px solid rgba(161, 184, 216, 0.104);
+}
+
+.close {
+  color: rgba(255, 0, 0, 0.79);
+  background-color: rgba(255, 0, 0, 0.059);
+  border-radius: 50%;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 20px;
+  margin: 2px;
+  position: relative;
+  left: 10px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.217);
+}
+
+.modalhaedtaegname {
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #06246a;
+  cursor: default;
+}
+
+.modal-content {
+  width: 100%;
+  height: max-content;
+  background-color: rgba(240, 255, 255, 0.768);
+  padding: 10px;
+  border: 1px solid rgba(0, 34, 93, 0.393);
+  border-top: none;
+}
+
+.modal-body {
+  background-color: azure;
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+
+}
+
+.main-video {
+  width: 70%;
+  position: relative;
+  display: block;
+  background-color: rgb(231, 238, 248);
+  border: 1px solid rgba(34, 94, 178, 0.213);
+  padding: 10px;
+  margin-right: 1%;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.error-message {
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  height: 480px;
+}
+
+.loading {
+  font-size: 16px;
+}
+
+.error-message.loading .viddeolod {
+  display: block;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  animation: fa-beat-fade 1.1ms ease-in-out;
+}
+
+
+.videospinandicon {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Loading Animation */
+.videospainer {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: #2b2b2b;
+  border: 4px solid rgba(115, 199, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #006eff;
+  animation: fa-spin 2s ease-in-out infinite;
+}
+
+.videoicon {
+  position: absolute;
+  font-size: 50px;
+  color: #3b3b3b;
+  padding: 30px;
+  border-radius: 50%;
+}
+
+.lodingtext {
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
+  color: #729ac0;
+  margin-top: 10px;
+}
+
+.error-message .internetcanectnone {
+  animation: fa-beat-fade 0.1ms ease-in-out;
+}
+
+
+.neticon {
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+  border-radius: 50%;
+  border: 2px double rgb(34, 34, 34)0;
+  background: #272727;
+  color: rgb(114, 114, 114);
+}
+
+.neticon i {
+  font-size: 70px;
+}
+
+.neticon img {
+  width: 70px;
+}
+
+.videoheadname {
+  display: block;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  color: #b1b1b1;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.fastifo {
+  display: inline-block;
+  width: 100%;
+  color: rgb(172, 172, 172);
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.secendifo {
+  display: inline-block;
+  width: 100%;
+  color: rgb(126, 126, 126);
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+#modalVideoPlayer iframe {
+  width: 100%;
+  height: 480px;
+  background-color: black;
+  display: none;
+}
+
+#modalHeadline {
+  width: 100%;
+  height: inherit;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: left;
+  align-items: center;
+  background-color: rgba(228, 237, 250, 0.954);
+  border-bottom: 1px solid rgba(174, 208, 255, 0.954);
+  color: rgb(3, 20, 51);
+  margin-top: 10px;
+  padding: 3px;
+}
+
+#modalDescription {
+  display: block;
+  text-align: justify;
+  justify-items: center;
+  justify-content: space-between;
+  background-color: rgba(213, 224, 238, 0.897);
+  padding: 20px 10px;
+  margin-top: 5%;
+  font-size: 20px;
+}
+
+.deshead {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 36, 87, 0.954);
+}
+
+.textoverflow {
+  display: none;
+  color: #001b5b;
+  background: rgb(175, 207, 252);
+  border-radius: 0px 0px 5px 5px;
+  width: 100%;
+  border: 1px solid #0a192e8f;
+  border-bottom: none;
+  padding: 3px;
+  padding-left: none;
+  padding-right: none;
+}
+
+.textoverflow i {
+  cursor: pointer;
+  border: 1px solid #0a192e67;
+  padding: 2px;
+  background-color: rgb(134, 176, 234);
+}
+
+.textoverflow i:hover {
+  background-color: rgb(110, 159, 228);
+}
+
+.model-video-itme {
+  position: relative;
+  width: 30%;
+  height: auto;
+  background-color: #e3ebf9ca;
+  padding: 10px;
+  border: 1px solid rgba(34, 94, 178, 0.213);
+  border-radius: 25px 25px 0px 0px;
+}
+
+.videohade {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 25px 25px 0px 0px;
+  height: 40px;
+  background-color: rgba(168, 203, 253, 0.712);
+}
+
+.model-video-itme-gallery {
+  width: 100%;
+}
+
+.quickbtnconteinar {
+  display: inline-block;
+  padding: none;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: fit-content;
+  overflow-x: hidden;
+  overflow: scroll;
+  cursor: default;
+  border-radius: 10px;
+  z-index: 1200;
+}
+
+.btn-quieq {
+  width: max-content;
+  animation: fadeLeft 3.1s ease;
+  background-color: #b2d9f057;
+  backdrop-filter: blur(5px);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.quick-btn {
+  display: inline-block;
+  padding: 3px 5px;
+  color: #000000;
+  background-color: #c3ddff98;
+  backdrop-filter: blur(50px);
+  cursor: pointer;
+  margin: 2px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+.quick-btn:hover {
+  background-color: #c3ddff2e;
+  border: 1px solid rgba(3, 3, 78, 0.701);
+}
+
+.quick-btn.active {
+  background-color: #b8d0ee5d;
+  border: 1px solid rgba(3, 3, 78, 0.872);
+  color: #09182cae;
+}
+
+.modal-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  padding: 2px;
+  padding-top: none;
+  padding-left: 5px;
+  height: auto;
+  background-color: #ecf3ffe4;
+  animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-gallery .video-container {
+  display: block;
+  min-width: 100%;
+  height: auto;
+  margin-top: 8px;
+  position: relative;
+  border: 1px solid rgba(34, 94, 178, 0.318);
+  border-radius: 0px 0px 0px 0px;
+  box-shadow: 0px 0px 0px 0px;
+}
+
+.modal-gallery .video-container.fadeUp {
+  animation: fadeUp 1.2s ease;
+}
+
+.modal-gallery .video-container:hover {
+  box-shadow: 1px 1px 1px 1px rgba(32, 6, 6, 0.349);
+}
+
+.modal-gallery .album-caption.activ {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.modal-gallery .videonai {
+  display: block;
+  position: absolute;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.modalgalaryvideonone {
+  display: none;
+  width: 100%;
+  height: 300px;
+  background: rgba(128, 128, 128, 0.514);
+  text-align: center;
+  align-content: center;
+  animation: opacitycot 1.2s ease;
+}
+
+@keyframes opacitycot {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.modalgalaryvideonone i {
+  font-size: 80px;
+  color: rgb(33, 33, 33);
+}
+
+.catagoriiformetion {
+  font-size: 25px;
+  color: rgb(24, 24, 24);
+  margin-top: 2px;
+}
+
+.catagori-canect {
+  font-size: 22px;
+}
+
+/* ফেসবুক মোডাল */
 #fbModal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(27, 27, 27, 0.175);
-    backdrop-filter: blur(5px);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1200;
+  justify-content: center;
+  align-items: center;
 }
 
 .fbModal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    color: #333;
-    max-width: 400px;
-    width: 90%;
-    position: relative;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fbBackBtn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #c4c4c438;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #c4c4c438;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.fbBackBtn:hover { background-color: #ff0000; color:rgb(255, 255, 255);}
+.fbBackBtn:hover {
+  background-color: #ff0000;
+  color: rgb(255, 255, 255);
+}
 
 .fbModal-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 20px 0;
+  text-align: center;
 }
 
 .profile-pic {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
 }
 
 .profile-name {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #1877f2;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #1877f2;
 }
 
 .fbBtn {
-    display: inline-block;
-    color: white;
-    background-color: #1877f2;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.3s;
+  display: inline-block;
+  background-color: #1877f2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.fbBtn i {
+  padding-right: 10px;
+}
+
+.fbBtn .fbloading {
+  display: none;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  border: 3px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: fa-spin 1s ease-in-out infinite;
 }
 
 .fbBtn:hover {
-    background-color: #145dbf;
+  background-color: #145dbf;
 }
 
 .fb-note {
-    font-size: 0.9em;
-    color: #777;
-    margin-top: 10px;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 10px;
 }
 
-
-/* Responsive */
-@media (max-width: 768px) {
-  .header-top {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .logo {
-        width: 50px;
-    }
-
-    header h1 {
-        font-size: 1.2em;
-    }
-
-    .tagline {
-        font-size: 0.8em;
-    }
-
-    .main-layout-wrapper {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .nav-menu {
-        display: none;
-    }
-
-    .sidebar-nav {
-        display: none;
-        width: 100%;
-        height: auto;
-        border-radius: 0;
-        box-shadow: none;
-        position: relative;
-    }
-
-    .nav-container {
-        display: flex;
-        flex-direction: column; /* আইকন এবং মেনুকে উল্লম্বভাবে সাজানো */
-        align-items: flex-end; /* ডানদিকে সারিবদ্ধ করা */
-    }
-
-    .hamburger-icon {
-        display: flex;
-        position: absolute;
-        left: 20px;
-        bottom: 20px;
-    }
-
-    .hamburger-icon.scrolled{
-        position: fixed;
-        top: 20px;
-        bottom: auto;
-    }
-
-    .main-nav-menu ul {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.9);
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-    }
-
-    .main-nav-menu.active ul {
-        display: flex;
-    }
-
-    .page-wrapper {
-        padding: 15px;
-        margin-top: 10px;
-    }
-
-  .main-nav a {
-    padding: 5px 10px;
-    font-size: 0.85em;
-  }
+.fb-link-js {
+  font-family: 'Arial', sans-serif;
+  /* ফন্ট */
+  font-size: 15px;
+  /* লেখা বড়/ছোট */
+  color: #1877f2;
+  padding: 5px 5px;
+  /* চারপাশে ফাঁকা */
+  border-radius: 9px;
+  /* কোণ গোল */
+  text-decoration: none;
+  /* আন্ডারলাইন না থাকা */
 }
-/* Back Button Style */
-.back-btn1 {
-  border-radius: 50px;
-  background:  #006eb2ff;
-  padding: 0px;
+
+.fb-link-js:hover {
+  background-color: #1877f2;
+  /* হোভার রঙ পরিবর্তন */
+  color: #ffffff;
+  /* হোভার লেখার রঙ */
+  cursor: pointer;
+  border-radius: 2x;
+  box-shadow: 1px 1px 10px 1px #27629d65;
+}
+
+/*উপরে উঠার আইকোন*/
+.upre {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  display: block;
+  border-radius: 50%;
+  width: 40px;
+  margin: 5px 0px 20px 0px;
+  z-index: 1;
+}
+
+.upreicon {
+  background: #353c4631;
+  color: rgb(1, 14, 3);
+  font-size: 18px;
+  border-radius: 50%;
+  padding: 12px 12px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+  z-index: 1200;
+  backdrop-filter: blur(2px);
+  border: 1px double rgba(7, 5, 5, 0.336);
+}
+
+.upreicon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+}
+
+/* ফুটার */
+footer {
+  background-color: rgba(4, 5, 5, 0.908);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.paragraph-P01 {
+  background-color: var(--dark-color);
+  color: #ececec;
+  border-bottom: 1px solid rgb(156, 149, 149);
+  padding: 5px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.credit-right {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.topbuttonlin {
+  background-color: rgb(52, 47, 47);
+  padding: 1px;
+  height: 100px;
+  width: 0px;
+}
+
+.sazed {
+  text-align: right;
+}
+
+.sadi {
   text-align: left;
 }
 
-.back-btn1 button {
-  background: #1675b0ff;
-  color: #ffffff;
-  border: none;
-  padding: 6px 6px;
-  border-radius: 50px;
-  font-size: 15px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.back-btn1 button:hover {
-  background: #004a80;
-  color: #fff;
-}
-/* style.css */
-.credit-right {
-  background: rgb(2, 36, 61);
-  position: none;      /* সবসময় স্ক্রিনের নিচে থাকবে */
-  bottom: 5px;          /* একদম নিচ থেকে 5px ওপরে */
-  right: 10px;          /* ডান থেকে 10px ভেতরে */
-  font-size: 12px;      /* ছোট সাইজ */
-  color: #888;          /* হালকা ধূসর রঙ */
-  font-family: Arial, sans-serif;
-}
-
 .credit-right span {
-  color: #00bfff;       /* নামটা আলাদা রঙে */
+  color: rgb(165, 172, 175);
   font-weight: bold;
+}
+
+.socalicon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 18px;
+}
+
+.brand-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 02);
+}
+
+.fb-brand {
+  background: #1877f2;
+}
+
+.yt-brand {
+  background: #ff0000;
+}
+
+.wh-brand {
+  background: #25D366;
+}
+
+/* Responsive */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+  /* হেডার */
+  header {
+    text-align: center;
+    padding: 20px 0 20px;
+    position: relative;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .fixed-header .Logoname1 {
+    height: 40px;
+    width: auto;
+  }
+
+  .back-btn1 {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    z-index: 10;
+  }
+
+  .back-btn1 button {
+    padding: 8px 10px;
+    font-size: 10px;
+    font-weight: 500;
+    gap: 1px;
+  }
+
+  .main-nav2 {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .top-button {
+    font-size: 12px;
+    padding: 10px 15px;
+    font-weight: 400;
+    gap: 10px;
+  }
+
+  .sidebar-nav {
+    padding: 15px 10px;
+  }
+
+  .nav-menu {
+    padding: 5px;
+    width: max-content;
+  }
+
+  .nav-menu a {
+    font-weight: 50px;
+    padding: 4px 8px;
+    border-radius: 7%;
+  }
+
+  .main-layout-wrapper {
+    padding: 0px 0px;
+    gap: none;
+    margin: none;
+  }
+
+  section {
+    padding: 20px 5px;
+    margin: none;
+  }
+
+  .panel {
+    padding: 2px 5px;
+    margin-top: -5px;
+  }
+
+  .page-wrapper {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: none;
+    box-sizing: content-box;
+    flex-grow: 0;
+  }
+
+
+  .informetionicon {
+    font-size: 25px;
+  }
+
+  .infrom {
+    font-size: 17px;
+  }
+
+  .album-caption {
+    font-size: 13px;
+  }
+
+  .play-icon {
+    transform: translate(-50%, -50%) scale(1);
+    width: 45px;
+    height: 45px;
+  }
+
+  .video-container:hover .play-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  /*---ভিডিও ফ্রেম---*/
+  .vdmodal {
+    padding: 0px;
+    padding-top: 10px
+  }
+
+  .close {
+    font-size: 15px;
+    margin: 1px;
+    left: 5px;
+  }
+
+  .modalhaedtaegname {
+    font-size: 11px;
+  }
+
+  .modal-content {
+    padding: 5px;
+  }
+
+  .modal-body {
+    display: block;
+  }
+
+  .main-video {
+    width: 100%;
+    padding: 5px;
+    margin-right: none;
+    padding-bottom: none;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 2px 2px rgba(43, 134, 226, 0.557);
+  }
+
+  .error-message {
+    font-size: 16px;
+  }
+
+  .neticon i {
+    font-size: 50px;
+  }
+
+  .neticon img {
+    width: 50px;
+  }
+
+  .fastifo {
+    font-size: 18px;
+  }
+
+  .secendifo {
+    font-size: 15px;
+  }
+
+  #modalVideoPlayer iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  #modalHeadline {
+    font-size: 13px;
+    padding: 2px;
+  }
+
+  .description-content {
+    margin-top: 2px;
+    padding: 3px;
+  }
+
+  .description-content.active {
+    border: 1px solid #0a192e74;
+    border-top: none;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .textoverflow {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: none;
+  }
+
+  .textoverflow:hover {
+    background-color: rgb(157, 193, 244);
+    border: 1px solid #0a192e74;
+    border-bottom: none;
+  }
+
+  .textoverflow.active {
+    border-radius: 5px 5px 0px 0px;
+    border: none;
+  }
+
+  .overtext {
+    margin-left: 5px;
+    font-size: 13px;
+    text-align: center;
+    align-items: center;
+    gap: 1px;
+    display: flex;
+    width: max-content;
+  }
+
+  .overicon {
+    margin-right: 5px;
+    font-size: 11px;
+    text-align: center;
+    align-content: center;
+  }
+
+  #modalDescription.active {
+    display: block;
+  }
+
+  .dekhun.active {
+    display: none;
+  }
+
+  .dekhahyeche {
+    display: none;
+  }
+
+  .dekhahyeche.active {
+    display: block;
+  }
+
+  .inicon.active {
+    display: none;
+  }
+
+  .upicon {
+    display: none;
+  }
+
+  .upicon.active {
+    display: flex;
+  }
+
+
+  #modalDescription {
+    display: none;
+    margin-top: 1%;
+    font-size: 17px;
+  }
+
+  .deshead {
+    font-size: 20px;
+  }
+
+  .quickbtnconteinar {
+    display: inline-block;
+    padding: 1px;
+    background-color: none;
+    position: -webkit-sticky;
+    width: 100%;
+    height: fit-content;
+    overflow-x: hidden;
+    cursor: default;
+    border-radius: 5px;
+  }
+
+  .model-video-itme {
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+    overflow: scroll;
+    padding: 5px;
+    border-radius: 0px 0px 15px 15px;
+  }
+
+  .videohade {
+    border-radius: 0px;
+    height: 35px;
+  }
+
+  .modal-gallery {
+    width: 95%;
+    padding-left: -5px;
+  }
+
+  .modal-gallery .video-container {
+    width: 100%;
+    height: 250px;
+    margin: 10px;
+    border: 1px solid rgba(34, 94, 178, 0.318);
+  }
+
+  .modal-gallery .video-container .video-thumbnail {
+    width: 100%;
+    height: 80%;
+  }
+
+  /*উপরে উঠার আইকোন*/
+  .upre {
+    bottom: 50px;
+    right: 10px;
+    width: 30px;
+    margin: 5px 0px 14px 0px;
+  }
+
+  .upreicon {
+    font-size: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+  }
+
+  .upreicon:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  }
+
+  .credit-right {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    margin-top: 15px;
+    font-size: 0.6rem;
+  }
+
+
+  .credit-right span {
+    margin: 0%;
+    font-size: 10px;
+    color: rgb(165, 172, 175);
+    font-weight: bold;
+  }
+}
+
+/* Responsive */
+@media screen and(max-width: 320px) {
+  .vidionorwp {
+    border-radius: 6px;
+    padding: 4px;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .video-container {
+    width: 100%;
+    height: 180px;
+  }
 }
