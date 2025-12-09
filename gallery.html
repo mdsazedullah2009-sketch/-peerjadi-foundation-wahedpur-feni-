@@ -1,177 +1,346 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>পীরজাদী ফাউন্ডেশন - ওয়াহেদপুর, ফেনী</title>
-    <link rel="stylesheet" href="style/al,style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>পীরজাদী ফাউন্ডেশন - ওয়াহেদপুর, ফেনী</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta name="description" content="পীরজাদী ফাউন্ডেশনের ছবি">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style/al,style.css">
 </head>
+
 <body>
-
-<header>
-    <div class="header-topLeft">
-        <img src="logo/logo.png" alt="Logo" class="logo">
-        <h1>পীরজাদী ফাউন্ডেশন, ওয়াহেদপুর, ফেনী</h1>
-        <p>স্থাপিত: ১৯৯৫</p>
+  <header>
+    <progress id="progress"></progress>
+    <div class="back-btn1">
+      <a style="color: aliceblue; text-decoration: none;" href="index.html"><button>⬅ ফিরে যান</button></a>
     </div>
-    <p class="tagline">
-        বঙ্গের অলিকুল শিরোমণী হযরত মাও: মরহূম শাহ্ মোঃ ইসহাক রঃ পীর সাহেব, দুধমুখার মেঝ মেয়ে- এর দীর্ঘ ৬৫ বছর রাজ্জাকীয়া ফোরকানীয়া মাদ্রাসায় সম্পূর্ণ অবৈতনিক খেদমতের প্রতি শ্রদ্ধা করে এই ফাউন্ডেশনের জন্ম।
-    </p>
-    <h1>অ্যালবাম</h1>
-
+    <h1>পীরজাদী ফাউন্ডেশন গ্যালারি</h1>
     <nav class="main-nav2">
-    <a href="gallery.html">ছবি</a>
-   <a href="vidio.html">ভিডিও</a></li>
-   </nav>
-
-    <div class="nav-container">
-        <div class="hamburger-icon" id="hamburger-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav class="main-nav-menu" id="nav-menu">
-            <ul>
-                <li><a href="index.html">প্রথম পৃষ্ঠা</a></li>
-                <li><a href="#mahfil">মাহফিলের ছবি</a></li>
-                <li><a href="#postar">মাহফিল পেস্টার ছবি</a></li>
-                <li><a href="#protistan">প্রতিষ্ঠানের ছবি</a></li>
-                <li><a href="#karjokrom">প্রতিষ্ঠানিক কার্যক্রমের ছবি</a></li> 
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<div class="main-layout-wrapper">
-    <nav class="sidebar-nav">
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html">প্রথম পৃষ্ঠা</a></li>
-                <li><a href="#mahfil">মাহফিলের ছবি</a></li>
-                <li><a href="#postar">মাহফিল পেস্টার ছবি</a></li>
-                <li><a href="#protistan">প্রতিষ্ঠানের ছবি</a></li>
-                <li><a href="#karjokrom">প্রতিষ্ঠানিক কার্যক্রমের ছবি</a></li> 
-        </ul>
+      <a href="gallery.html" class="top-button">ছবি</a>
+      <a href="vidio.html" class="top-button">ভিডিও</a>
     </nav>
+  </header>
 
-<div class="page-wrapper">
-<section id="mahfil">
-  <button class="accordion">মাহফিলের ছবি</button>
-  <!-- Album Section -->
-<div class="album">
-  <img src="gallary/mahfil/picture5.jpg" alt="Image 1" class="album-img">
-  <img src="gallary/mahfil/picture6.jpg" alt="Image 2" class="album-img">
-  <img src="gallary/mahfil/picture7.jpg" alt="Image 3" class="album-img">
-  <img src="gallary/mahfil/picture11.jpg" alt="Image 4" class="album-img">
-  <img src="gallary/mahfil/picture8.jpg" alt="Image 5" class="album-img">
-  <img src="gallary/mahfil/picture13.jpg" alt="Image 6" class="album-img">
-  <img src="gallary/mahfil/picture4.jpg" alt="Image 7" class="album-img">
-  <img src="gallary/mahfil/picture9.jpg" alt="Image 8" class="album-img">
-  <img src="gallary/mahfil/picture10.jpg" alt="Image 9" class="album-img">
-</div>
-
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
-  <a class="prev">&#10094;</a>
-  <a class="next">&#10095;</a>
-</div>
-</section>
-
-<section id="postar">
-  <button class="accordion">মাহফিল পেস্টার ছবি</button>
-  <!-- Album Section -->
-<div class="album">
-  <img src="gallary/mahfil postar/picture1.jpg" alt="Image 1" class="album-img">
-  <img src="gallary/mahfil postar/picture2.jpg" alt="Image 2" class="album-img">
-  <img src="gallary/mahfil postar/picture3.jpg" alt="Image 3" class="album-img">
-  <img src="gallary/mahfil postar/picture4.jpg" alt="Image 4" class="album-img">
-  <img src="gallary/mahfil postar/picture4,0.jpg" alt="Image 5" class="album-img">
-  <img src="gallary/mahfil postar/picture4,1.jpg" alt="Image 6" class="album-img">
-  <img src="gallary/mahfil postar/picture4,2.jpg" alt="Image 7" class="album-img">
-  <img src="gallary/mahfil postar/picture5,0.jpg" alt="Image 8" class="album-img">
-  <img src="gallary/mahfil postar/picture5,1.jpg" alt="Image 9" class="album-img">
-  <img src="gallary/mahfil postar/picture5,2.jpg" alt="Image 10" class="album-img">
-  <img src="gallary/mahfil postar/picture6.jpg" alt="Image 11" class="album-img">
-  <img src="gallary/mahfil postar/picture7.jpg" alt="Image 12" class="album-img">
-  <img src="gallary/mahfil postar/picture8.jpg" alt="Image 13" class="album-img">
-  <img src="gallary/mahfil postar/picture9.jpg" alt="Image 14" class="album-img">
-  <img src="gallary/mahfil postar/picture10.jpg" alt="Image 15" class="album-img">
-  <img src="gallary/mahfil postar/picture11.jpg" alt="Image 15" class="album-img">
-</div>
-
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
-  <a class="prev">&#10094;</a>
-  <a class="next">&#10095;</a>
-</div>
-</section>
-
-<section id="protistan">
-  <button class="accordion">প্রতিষ্ঠানের ছবি</button>
-  <!-- Album Section -->
-<div class="album">
-  <img src="gallary/protistan/picture1.jpg" alt="Image 1" class="album-img">
-  <img src="gallary/protistan/picture2.jpg" alt="Image 2" class="album-img">
-  <img src="images/pic3.jpg" alt="Image 3" class="album-img">
-  <img src="images/pic4.jpg" alt="Image 4" class="album-img">
-  <img src="images/pic5.jpg" alt="Image 5" class="album-img">
-</div>
-
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
-  <a class="prev">&#10094;</a>
-  <a class="next">&#10095;</a>
-</div>
-</section>
-
-<section id="karjokrom">
-  <button class="accordion">প্রতিষ্ঠানিক কার্যক্রমের ছবি</button>
-  <!-- Album Section -->
-<div class="album">
-<img src="gallary/karzo/picture1.jpg" alt="Image 1" class="album-img">
-  <img src="gallary/karzo/picture2.jpg" alt="Image 2" class="album-img">
-  <img src="gallary/karzo/picture3.jpg" alt="Image 3" class="album-img">
-  <img src="gallary/karzo/picture4.jpg" alt="Image 4" class="album-img">
-  <img src="images/pic5.jpg" alt="Image 5" class="album-img">
-</div>
-
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
-  <a class="prev">&#10094;</a>
-  <a class="next">&#10095;</a>
-</div>
-</section>
+  <!--বড় ইস্ক্রিনের নাব মেনু-->
+  <div class="sidebar-nav">
+    <!-- Fixed Header -->
+    <div class="fixed-header" id="fixedHeader">
+      <a href="gallery.html"><img src="logo/nameandlogo.png" alt="Logoname" class="Logoname1"></a>
     </div>
-</div>
-<footer>
-    <p>© ২০২৫ পীরজাদী ফাউন্ডেশন - ওয়াহেদপুর, ফেনী</p>
-    <div class="credit-right">
-        <p>Developed by <span>MD SAZED ULLAH</span></p>
-        <p>ফেসবুক:<a href="#" data-fb-url="https://www.facebook.com/md.sazed.ullah.2024" data-fb-name="Md Sazed Ullah" data-fb-img="profail.pic/sazed.jpg" class="fb-link-js">Md Sazed Ullah</a>
-        <p>Document Write by <span>ABDULLAH SADI</span></p>
-        <p>ফেসবুক:<a href="#" data-fb-url="https://www.facebook.com/abdullah.sadi.7311" data-fb-name="Abdullah Sadi" data-fb-img="profail.pic/sadi.jpg" class="fb-link-js">Abdullah Sadi</a>
+    <div class="sidnavfexdscrol">
+      <div class="nav-menu">
+        <a href="#mahfil" class="nav-link active">মাহফিলের ছবি</a>
+        <div class="topbuttonlin1"></div>
+        <a href="#postar" class="nav-link">মাহফিলের পেস্টার ছবি</a>
+        <div class="topbuttonlin1"></div>
+        <a href="#karjokrom" class="nav-link">প্রতিষ্ঠানিক কার্যক্রমের ছবি</a>
+        <div class="topbuttonlin1"></div>
+        <a href="#protistan" class="nav-link">প্রতিষ্ঠানের ছবি</a>
+      </div>
     </div>
-</footer>
+  </div>
 
-<div id="fbModal">
-    <div class="fbModal-content">
-        <button onclick="closeFBModal()" class="fbBackBtn">🔙 Back</button>
-        <div class="fbModal-body">
-            <img id="profile-pic" class="profile-pic" alt="profile-picture">
-            <p id="profile-name" class="profile-name"></p>
-            <a id="fb-link" href="#" target="_blank" class="fbBtn">Open Facebook</a>
-            <p class="fb-note">ফেসবুক অ্যাপ বা নতুন ট্যাবে খোলা হচ্ছে…</p>
+
+  <div class="main-layout-wrapper">
+    <div class="page-wrapper">
+      <section id="mahfil">
+        <button class="accordion">মাহফিলের ছবি</button>
+        <div class="panel">
+
+          <!-- Album Section -->
+          <div class="album">
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil/picture1.jpg" alt="Image 1">
+              <div class="album-caption">২০২২ সালের আববাসি মন্জিলে মাহফিল কমিটি</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil/picture2.jpg" alt="Image 2">
+              <div class="album-caption"></div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil/picture3.jpg" alt="Image 3">
+              <div class="album-caption">২০২২ সালের এনায়েতুল্লাহ আব্বাসির মাহফিল আরাম্ব অবস্থায় </div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil/picture4.jpg" alt="Image 4">
+              <div class="album-caption">২০২২ সালের মাহফিলে নাশিদ
+                পরিবেশন করছেন শিল্পী ইকবাল হোসাইন জীবন</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil/picture5.jpg" alt="Image 5">
+              <div class="album-caption">২০২২ সালের এনায়েতুল্লাহ
+                আব্বাসি হুজুরের বয়ানরত অবস্থায় জনতারঢল</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil/picture6.jpg" alt="Image 6">
+              <div class="album-caption">২০২৪ সালের ৫০তম পবিত্র আশুরার মাহফিলের স্টেজ ব্যনার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil/picture7.jpg" alt="Image 7">
+              <div class="album-caption">২০২৪ সালের ৫০তম পবিত্র আশুরার মাহফিলে বয়ান করছেন তাহেরির হুজুর</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil/picture8.jpg" alt="Image 8">
+              <div class="album-caption">২০২৪ সালের ৫০তম পবিত্র আশুরার মাহফিলে উপস্থিত শ্রোতাদের একাংশর</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil/picture9.jpg" alt="Image 9">
+              <div class="album-caption">২০২৪ সালের মাহফিল শেষে ফাউন্ডেশনের সভাপতি কতৃক তাহেরির হুজুরকে নফল সিজদাহ নামক
+                পেষ্টুন উপহার দেওয়া অবস্থায়</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil/picture10.jpg" alt="Image 10">
+              <div class="album-caption">২০২৪ সালে মাহফিল শেষে মাহফিলে সেচ্ছাসেবকদের সাথে তাহেরির হুজুর</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil/picture11.jpg" alt="Image 11">
+              <div class="album-caption">২০২৪ সালে মাহফিল শেষে মাহফিলে সেচ্ছাসেবকদের সাথে তাহেরির হুজুর</div>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section id="postar">
+        <button class="accordion">মাহফিল পেস্টার ছবি</button>
+        <div class="panel">
+          <!-- Album Section -->
+          <div class="album">
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture1.jpg" alt="Image 1">
+              <div class="album-caption">১৯৯৭ সালের ৬ষ্ঠ তম পবিত্র রমজানের শিক্ষা ও আমাদের করনীয় শীর্ষক মাহফিলের পোষ্টার
+              </div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture2.jpg" alt="Image 2">
+              <div class="album-caption">১৯৯৮ সালের ৭ম তম পবিত্র রমজানের শিক্ষা ও আমাদের করনীয় শীর্ষক মাহফিলের পোষ্টার
+              </div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture3.jpg" alt="Image 3">
+              <div class="album-caption">১৯৯৯ সালের ৮ম তম পবিত্র রমজানের শিক্ষা ও আমাদের করনীয় শীর্ষক মাহফিলের পোষ্টার
+              </div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture4.jpg" alt="Image 4">
+              <div class="album-caption">২০০০ সালের ৩দিন ব্যপী ৯ম তম পবিত্র রমজানের শিক্ষা ও আমাদের করনীয় ও তাফসিরুল
+                কুরআন
+                মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture4,0.jpg" alt="Image 5">
+              <div class="album-caption">২০০২ সালের ৩দিন ব্যপী ১১তম তাফসিরুল কুরআন মাহফিলের পোষ্টার (পৃষ্ঠা-১)</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture4,1.jpg" alt="Image 6">
+              <div class="album-caption">২০০২ সালের তাফসিরুল কুরআন মাহফিলের পোষ্টার(পৃষ্ঠা-২,৩)</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture4,2.jpg" alt="Image 7">
+              <div class="album-caption">২০০২ সালের তাফসিরুল কুরআন মাহফিলের পোষ্টার(পৃষ্ঠা-৪)</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture5,0.jpg" alt="Image 8">
+              <div class="album-caption">২০০৪ সালের ৩দিন ব্যপী ১৩তম তাফসিরুল কুরআন মাহফিলের পোষ্টার (পৃষ্ঠা-১)</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture5,1.jpg" alt="Image 9">
+              <div class="album-caption">২০০৪ সালের ৩দিন ব্যপী ১৩তম তাফসিরুল কুরআন মাহফিলের পোষ্টার (পৃষ্ঠা-২,৩)</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture5,2.jpg" alt="Image 10">
+              <div class="album-caption">২০০৪ সালের ৩দিন ব্যপী ১৩তম তাফসিরুল কুরআন মাহফিলের পোষ্টার (পৃষ্ঠা-৪)</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture6.jpg" alt="Image 11">
+              <div class="album-caption">২০০৮ইং সালের ১ম ইসালে ছওয়াব ও ১৭তম তাফসিরুল কোরআল মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture7.jpg" alt="Image 12">
+              <div class="album-caption">২০১০ইং সালের ১৯তম তাফসিরুল কোরআল মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture8.jpg" alt="Image 13">
+              <div class="album-caption">২০১১ইং সালের ২০তম তাফসিরুল কোরআল মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture9.jpg" alt="Image 14">
+              <div class="album-caption">২০১২ইং সালের ৫ম ইসালে ছওয়াব ও ২১তম তাফসিরুল কোরআল মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture10.jpg" alt="Image 15">
+              <div class="album-caption">২০১৩ইং সালের ৪০তম ঈদে মিলাদুন্নাবী (সঃ) মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture11.jpg" alt="Image 15">
+              <div class="album-caption">২০২৪ইং সালের ৫০তম পবিত্র আশুরার মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture12.jpg" alt="Image 16">
+              <div class="album-caption">২০২৫ইং সালের ৩৯তম পবিত্র মেরাজুন্নবী (সঃ) মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture13.jpg" alt="Image 17">
+              <div class="album-caption">২০২৫ইং সালের ৩৯তম পবিত্র মেরাজুন্নবী (সঃ) মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture14.jpg" alt="Image 18">
+              <div class="album-caption">২০২৫ইং সালের ৩৯তম পবিত্র মেরাজুন্নবী (সঃ) মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/mahfil_postar/picture15.jpg" alt="Image 19">
+              <div class="album-caption">২০২৫ইং সালের ৩৯তম পবিত্র মেরাজুন্নবী (সঃ) মাহফিলের পোষ্টার</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="karjokrom">
+        <button class="accordion">প্রতিষ্ঠানিক কার্যক্রমের ছবি</button>
+        <div class="panel">
+          <!-- Album Section -->
+          <div class="album">
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/karzo/picture1.jpg" alt="Image 1">
+              <div class="album-caption">মাহফিল ছবি ১</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/karzo/picture2.jpg" alt="Image 2">
+              <div class="album-caption">মাহফিল ছবি ১</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/karzo/picture3.jpg" alt="Image 3">
+              <div class="album-caption">মাহফিল ছবি ১</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/karzo/picture4.jpg" alt="Image 4">
+              <div class="album-caption">মাহফিল ছবি ১</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/karzo/picture5.jpg" alt="Image 5">
+              <div class="album-caption">মাহফিল ছবি ১</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/karzo/picture6.jpg" alt="Image 6">
+              <div class="album-caption">২০২৫ইং সালের ৩৯তম পবিত্র মেরাজুন্নবী (সঃ) মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/karzo/picture7.jpg" alt="Image 7">
+              <div class="album-caption">২০২৫ইং সালের ৩৯তম পবিত্র মেরাজুন্নবী (সঃ) মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/karzo/picture8.jpg" alt="Image 8">
+              <div class="album-caption">২০২৫ইং সালের ৩৯তম পবিত্র মেরাজুন্নবী (সঃ) মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/karzo/picture9.jpg" alt="Image 9">
+              <div class="album-caption">২০২৫ইং সালের ৩৯তম পবিত্র মেরাজুন্নবী (সঃ) মাহফিলের পোষ্টার</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/karzo/picture10.jpg" alt="Image 16">
+              <div class="album-caption">২০২৫ইং সালের ৩৯তম পবিত্র মেরাজুন্নবী (সঃ) মাহফিলের পোষ্টার</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="protistan">
+        <button class="accordion">প্রতিষ্ঠানের ছবি</button>
+        <div class="panel">
+          <!-- Album Section -->
+          <div class="album">
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/protistan/picture1.jpg" alt="Image 1">
+              <div class="album-caption">ওয়াহেদপুর জামে মসজিদ</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="gallary/protistan/picture2.jpg" alt="Image 2">
+              <div class="album-caption">মাহফিল ছবি ১</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="images/pic3.jpg" alt="Image 3">
+              <div class="album-caption">মাহফিল ছবি ১</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="images/pic4.jpg" alt="Image 4">
+              <div class="album-caption">মাহফিল ছবি ১</div>
+            </div>
+            <div class="album-item">
+              <img class="main-pictur" data-src="images/pic5.jpg" alt="Image 5">
+              <div class="album-caption">মাহফিল ছবি ১</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+
+  <img class="pictuerloaderor" data-pictureholder-src="logo/loadinglogo.png" style="display: none;">
+
+  <div class="upre">
+    <span onclick="upre()" class="upreicon" id="upreicon"><i class="fas fa-chevron-up" width="30"
+        height="14"></i></span>
+  </div>
+
+  <div class="paragraph-P01">© 2025 পীরজাদী ফাউন্ডেশন - ওয়াহেদপুর, ফেনী</div>
+  <footer>
+    <div class="credit-right">
+      <div class="sazed">
+        <p>Developed by <span>MD SAZED ULLAH</span></p>
+        <p>ফেসবুক:<a href="#" data-fb-url="https://www.facebook.com/md.sazed.ullah.2024" data-fb-name="Md Sazed Ullah"
+            data-fb-img="profail.pic/sazed.jpg" class="fb-link-js">Md Sazed
+            Ullah</a>
+      </div>
+      <div class="topbuttonlin"></div>
+      <div class="sadi">
+        <p>Document Write by <span>ABDULLAH SADI</span></p>
+        <p>ফেসবুক:<a href="#" data-fb-url="https://www.facebook.com/abdullah.sadi.7311" data-fb-name="Abdullah Sadi"
+            data-fb-img="profail.pic/sadi.jpg" class="fb-link-js">Abdullah
+            Sadi</a>
+      </div>
+    </div>
+    <div class="socalicon">
+      <a href="https://www.facebook.com/profile.php?id=100078337626798" target="_blank" class="brand-icon fb-brand">
+        <i title="ফাউন্ডেশনের ফেসবুক ফেজ " class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCuS61cRxyztvLuq752Xk37w?si=vt0HbnhygOnkJelU" target="_blank"
+        class="brand-icon yt-brand">
+        <i title="ফাউন্ডেশনের ইউটুব" class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="https://wa.me/8801916774966?text=আচ্ছালামুআলাইকুম। আমি আপনার সাথে আপনার ফাউন্ডেশন সম্পর্কিত বিষয়ে যোগাযোগ করতে চাই।"
+        target="_blank" class="brand-icon wh-brand">
+        <i class="fab fa-whatsapp" title="হোয়াটসঅ্যাপ"></i>
+      </a>
+    </div>
+  </footer>
 
 
-<script src="script/al,script.js"></script>
 
+  <!--ফেসবুক মডাল-->
+  <div id="fbModal">
+    <div class="fbModal-content">
+      <button onclick="closeFBModal()" class="fbBackBtn">🔙 Back</button>
+      <div class="fbModal-body">
+        <img id="profile-pic" class="profile-pic" alt="profile-picture">
+        <p id="profile-name" class="profile-name"></p>
+        <a id="fb-link" href="#" target="_blank" class="fbBtn">Open Facebook</a>
+        <p class="fb-note">ফেসবুক অ্যাপ বা নতুন ট্যাবে খোলা হচ্ছে…</p>
+      </div>
+    </div>
+  </div>
+  <script src="script/al,script.js"></script>
 </body>
+
 </html>
