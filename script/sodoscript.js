@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 permanent_thana: permanentFields.thana.value.trim(),
                 permanent_district: permanentFields.district.value.trim(),
                 memberType: memberType,
-                secendarymemberType: selectedKaj, // অ্যারে হিসেবে পাঠানো হচ্ছে
+                secendarymemberType: selectedKaj.length > 0 ? selectedKaj.join(', ') : 'দেন নাই', // অ্যারে হিসেবে পাঠানো হচ্ছে
                 payMethod: payMethod,
                 txid: txid,
                 nid1silect: nid1silectBase64,
