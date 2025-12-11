@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const pageprint = document.querySelector(".printforom");
     if (pageprint) {
         pageprint.addEventListener('click', function () {
-            const summary = document.getElementById('stutesfr')
-            summary.select(print(summary))
+            window.print();
         })
     }
 
@@ -402,7 +401,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 permanent_thana: permanentFields.thana.value.trim(),
                 permanent_district: permanentFields.district.value.trim(),
                 memberType: memberType,
-                secendarymemberType: selectedKaj.length > 0 ? selectedKaj.join(', ') : 'দেন নাই', // অ্যারে হিসেবে পাঠানো হচ্ছে
+                secendarymemberType: selectedKaj.length > 0 ? selectedKaj.join(', ') : 'দেন নাই',  // এই লাইনটা বদলাও
                 payMethod: payMethod,
                 txid: txid,
                 nid1silect: nid1silectBase64,
