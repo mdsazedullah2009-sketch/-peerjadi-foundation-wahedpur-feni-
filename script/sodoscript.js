@@ -1,5 +1,5 @@
 // আপনার Google Apps Script এর Web app URL টি এখানে দিন (ধাপ ২ দেখুন)
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz6Uamv2laY740PaVooChsODvNxeI2yocJxW0kWqp0bZQfkn5lpomMvd54WVSoOCTBs/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx_cRv72oJKkm4iB7JvqmTHk94lqzGMReHZ1ceMlXu04xlT_J1MtBImlXXzgBhDISfm/exec";
 
 // ফাইল সাইজের নতুন কনস্ট্যান্ট (৫০ KB)
 const MAX_FILE_SIZE = 50 * 1024;
