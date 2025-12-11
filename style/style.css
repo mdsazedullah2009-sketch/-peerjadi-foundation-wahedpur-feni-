@@ -9,10 +9,8 @@
   --dark-color: #1a472a;
   --gold-color: #c9a145;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-midiuam: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
-
-
-
 /* বেসিক স্টাইল */
 * {
   margin: 0;
@@ -582,15 +580,10 @@ progress {
   margin-bottom: 10px;
 }
 
-.page-wrapper1 {
+.lastebtn {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  padding: 20px;
-  margin-bottom: 10px;
 }
 
 /* Loading Animation */
@@ -866,7 +859,6 @@ a {
   margin-top: 10px;
   margin-bottom: 40px;
 }
-
 
 /* সেকশন স্টাইল */
 section {
@@ -1721,6 +1713,27 @@ footer {
     height: 80px;
   }
 
+  /* মেইন কন্টেন্ট */
+  .main-layout-wrapper {
+    width: 96%;
+    margin: 6px;
+    padding: 0 6px;
+  }
+
+  .page-wrapper {
+    border-radius: 4px;
+    box-shadow: var(--shadow-midiuam);
+    padding: 10px;
+    margin-bottom: 6px;
+  }
+
+  /* সেকশন স্টাইল */
+  section {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: none;
+  }
 
   /* নোটিশ বোর্ড */
   .notisbord {
@@ -1741,10 +1754,6 @@ footer {
   .fade {
     width: 100%;
     height: 100%;
-  }
-
-  section {
-    padding: 15px;
   }
 
   .sobhapti {
@@ -1837,7 +1846,7 @@ footer {
     box-shadow: none;
   }
 
-  .page-wrapper1 {
+  .lastebtn {
     display: block;
   }
 
@@ -1902,6 +1911,5 @@ footer {
     border-radius: 5px;
     font-size: 10px;
   }
-
 
 }
