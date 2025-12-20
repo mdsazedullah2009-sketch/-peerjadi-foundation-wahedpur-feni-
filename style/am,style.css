@@ -17,6 +17,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+@media (max-width:130px) {
+  *{
+    word-break: break-all;
+    font-size: small;
+  }
+}
 
 h1,
 h2,
@@ -49,11 +55,11 @@ body {
 
 /* --- প্রধান লেআউট Wrapper যা মেনু ও কন্টেন্টকে পাশাপাশি রাখবে --- */
 .main-layout-wrapper {
-  display: flex;
+  display: block;
   justify-content: center;
   gap: 20px;
   padding: 40px;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: auto;
 }
 
@@ -65,6 +71,7 @@ body {
   padding: 55px;
   box-sizing: border-box;
   flex-grow: 1;
+  margin-bottom: 20px;
 }
 
 /* --- হেডার --- */
@@ -86,12 +93,11 @@ header {
   gap: 15px;
 }
 
-
-
 header h1 {
   font-size: 2em;
   margin: 0;
 }
+
 
 /* ফেসবুক মোডাল */
 #fbModal {
@@ -282,6 +288,255 @@ h3 {
   color: #000000;
 }
 
+/*new style withe sotovag mosjid */
+.povimosdan {
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.povmodabody {
+  display: block;
+  border: 10px solid rgb(1, 13, 119);
+  max-width: 900px;
+  background-color: #f1f3f7;
+}
+
+
+.povhad {
+  display: block;
+  background: rgb(1, 81, 155);
+  padding: 5px;
+}
+
+.povhad div {
+  display: block;
+  font-family: monospace;
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+}
+
+.povhad div span {
+  display: block;
+}
+
+.povcont {
+  display: block;
+  padding: 8px;
+}
+
+.povctext {
+  display: block;
+  color: #000;
+  margin-bottom: 6px;
+  font-size: 23px;
+  font-weight: 600;
+  opacity: 1;
+  text-align: justify;
+}
+
+.phad {
+  font-weight: 700;
+  font-size: 25px;
+
+}
+
+.povchaed {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.povlist {
+  display: block;
+}
+
+.povliscont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  text-align: left;
+  justify-content: space-around;
+}
+
+@media (max-width:1129px) {
+.povhad div {
+    font-size: 47px;
+  }
+  .povliscont {
+    display: block;
+  }
+
+  .bcgrin {
+    display: none;
+  }
+}
+
+.listcon {
+  display: inline;
+  text-align: left;
+}
+
+.listcon ul {
+  margin: 0 10px;
+}
+
+.listcon ul li {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cpinc {
+  color: rgb(187, 53, 98);
+}
+
+.cgrin {
+  color: rgb(3, 104, 3);
+}
+
+.coreng {
+  color: rgb(197, 62, 0);
+}
+
+.cdrblu {
+  color: rgb(10, 10, 102);
+}
+
+.bcoreng {
+  color: white;
+  background-color: rgb(197, 62, 0);
+  border-radius: 10px;
+  padding: 2px;
+  margin-top: 10px;
+  margin: 5px;
+}
+
+.bcgrin {
+  width: 4px;
+  height: inherit;
+  background-color: rgb(2, 59, 2);
+}
+
+.povfoter {
+  display: block;
+}
+
+.povfrhead {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.pvfrcnt {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pvfrst {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.povfotcont {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@media (max-width:500px) {
+  .povmodabody {
+    border: 6px solid rgb(1, 13, 119);
+    width: 100%;
+  }
+
+  .povhad div {
+    font-size: 45px;
+  }
+
+  .povctext {
+    margin-bottom: 3px;
+    font-size: 20px;
+  }
+
+  .phad {
+    font-size: 22px;
+
+  }
+
+  .povchaed {
+    font-size: 25px;
+  }
+
+  .listcon ul li {
+    font-size: 16px;
+  }
+
+  .povfrhead {
+    font-size: 47px;
+  }
+
+  .pvfrcnt {
+    font-size: 24px;
+  }
+
+  .pvfrst {
+    font-size: 27px;
+  }
+
+  .povfotcont {
+    font-size: 20px;
+  }
+}
+
+@media (max-width:490px) {
+  .povhad div {
+    font-size: 40px;
+  }
+
+}
+@media (max-width:400px) {
+  .povmodabody {
+    border: 3px solid rgb(1, 13, 119);
+  }
+
+  .povhad div {
+    font-size:25px;
+  }
+
+  .povctext {
+    margin-bottom: 3px;
+    font-size: 18px;
+  }
+
+  .phad {
+    font-size: 19px;
+
+  }
+
+  .povchaed {
+    font-size: 19px;
+  }
+
+  .listcon ul li {
+    font-size: 15px;
+  }
+
+  .povfrhead {
+    font-size: 25px;
+  }
+
+  .pvfrcnt {
+    font-size: 20px;
+  }
+
+  .pvfrst {
+    font-size: 22px;
+  }
+
+  .povfotcont {
+    font-size: 18px;
+  }
+}
+
+
 
 /* ফুটার */
 footer {
@@ -413,7 +668,6 @@ footer {
   }
 
   .main-layout-wrapper {
-    flex-direction: column;
     padding: 10px;
   }
 

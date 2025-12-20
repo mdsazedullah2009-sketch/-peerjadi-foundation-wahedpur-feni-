@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     const continardescription = {
-        '1': `
+        'abbasi': `
         <div class="deshead">
             <p>২০২২ সালের ২রা ডিসেম্বর রোজ শুক্রবার পীরজাদী ফাউন্ডেশন ও তাহরীকে খতমে নবুওয়্যাত বাংলাদেশ ফেনী জেলা আহ্বায়ক কমিটি এর যৌথ উদ্দ্যোগে আয়োজিত ১৫ তম বার্ষিক ইসালে ছওয়াব ও ওয়াজ মাহফিলের ড. মোঃ এনায়েতুল্লাহ আব্বাসি ওয়া সিদ্দিকী হুজুরের বয়ান।</p>
         </div><br>
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>উক্ত মাহফিলে দুধমুখার পীর <b>আলহাজ্ব হযরত মাওলানা লোকমান হোসাইন সাহেব</b> ও <b>আলহাজ্ব হযরত মাওলানা সোলায়মান হোসাইন সাহেব</b> এবং কুমিল্লা বার্ডের সাবেক পরিচালক <b>আলহাজ্ব হযরত মাওলানা আব্দুল কাদের সাহেব</b> আমন্ত্রিত পীর মাশায়েক হিসেবে বয়ান করেছেন।</p><br>
         <p>বিশেষ আকর্ষন হিসেবে উপস্থিত ছিলেন ইসলামি নাসিদ আটিষ্ট <b>ইকবাল হোসেন জীবন</b>।</p>`,
 
-        '2': `
+        'lokman': `
         <div class="deshead">
             <p>২০২২ সালের ২রা ডিসেম্বর রোজ শুক্রবার পীরজাদী ফাউন্ডেশন ও তাহরীকে খতমে নবুওয়্যাত বাংলাদেশ ফেনী জেলা আহ্বায়ক কমিটি এর যৌথ উদ্দ্যোগে আয়োজিত ১৫ তম বার্ষিক ইসালে ছওয়াব ও ওয়াজ মাহফিলের দুধমুখার পীর আলহাজ্ব হযরত লোকমান হোসাইন হুজুরের বয়ান।</p>
         </div><br>
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>উক্ত মাহফিলে দুধমুখার পীর <b>আলহাজ্ব হযরত মাওলানা লোকমান হোসাইন সাহেব</b> ও <b>আলহাজ্ব হযরত মাওলানা সোলায়মান হোসাইন সাহেব</b> এবং কুমিল্লা বার্ডের সাবেক পরিচালক <b>আলহাজ্ব হযরত মাওলানা আব্দুল কাদের সাহেব</b> আমন্ত্রিত পীর মাশায়েক হিসেবে বয়ান করেছেন।</p><br>
         <p>বিশেষ আকর্ষন হিসেবে উপস্থিত ছিলেন ইসলামি নাসিদ আটিষ্ট <b>ইকবাল হোসেন জীবন</b>।</p>`,
 
-        '3': `
+        'taheri': `
         <div class="deshead">
             <p>২০২৪ সালের ১৪ই জুলাই রোজ রবিবার পীরজাদী ফাউন্ডেশন এর উদ্দ্যোগে আয়োজিত ৫০ তম বার্ষিক পবিত্র আশুরার মাহফিলের আলহাজ্ব হযরত মাওলানা মুফতি গিয়াসউদ্দিন আত তাহেরী হুজুরের বয়ান</p>
         </div><br>
@@ -205,22 +205,22 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>উক্ত মাহফিলে প্রধান মেহমান হিসেবে উপস্থিত ছিলেন ছাগলনাইয়া উপজেলা পরিষদের প্রাক্তন চ্যেয়ারমেন <b>আলহাজ্ব মোহাম্মাদ মিজানুর রহমান মজুমদার সাহেব</b>।</p><br>
         <p>বিশেষ আকর্ষন হিসেবে উপস্থিত ছিলেন চট্টগ্রাম ফ'য়সলেক এর দারুল হুদা দরবারে গাউছিয়া শরিফ এর গদিনশীল পীর <b>আলহাজ্ব হযরত মাওলানা ক্বারী বেলায়েত হোসাইন সাহেব</b>।</p>`,
 
-        '4': `
+        'liakotali': `
         <div class="deshead">
-            <p>২০২৪ সালের ১৪ই জুলাই রোজ রবিবার পীরজাদী ফাউন্ডেশন এর উদ্দ্যোগে আয়োজিত ৫০ তম বার্ষিক পবিত্র আশুরার মাহফিলের আলহাজ্ব হযরত মাওলানা মুফতি গিয়াসউদ্দিন আত তাহেরী হুজুরের বয়ান</p>
+            <p>২০২৫ সালের ৪ই সেপ্টেম্বর রোজ বৃহস্পতিবার পীরজাদী ফাউন্ডেশন এর উদ্দ্যোগে আয়োজিত ৫৩ তম বার্ষিক পবিত্র ঈদে
+            মিলাদুন্নাবী (সাঃ) মাহফিলের সভাপতি হযরত মাওলানা অধ্যাপক লিয়াকত আলী ভূঁইয়া সাহেবের বক্তব্য</p>
         </div><br>
-        <p>২০২৪ সালের ১৪ই জুলাই রোজ রবিবার পীরজাদী ফাউন্ডেশন এর উদ্দ্যোগে ফেনীর ঐতিহাসিক ওয়াপদা মাঠে ৫০ তম বার্ষিক পবিত্র আশুরার মাহফিলের আয়োজন করে।</p><br>
-        <p>উক্ত মাহফিলে প্রধান মেহমান হিসেবে বয়ান রাখেন পীর সাহেব <b>আলহাজ্ব হযরত মাওলানা মুফতি গিয়াসউদ্দিন আত তাহেরী</b> ও দুধমুখা দরবার শরীফের গদিনশীল পীর <b>আলহাজ্ব হযরত মাওলানা লোকমান হোসাইন সাহেব</b>।</p><br>
-        <p>উক্ত মাহফিলে প্রধান মেহমান হিসেবে উপস্থিত ছিলেন ছাগলনাইয়া উপজেলা পরিষদের প্রাক্তন চ্যেয়ারমেন <b>আলহাজ্ব মোহাম্মাদ মিজানুর রহমান মজুমদার সাহেব</b>।</p><br>
-        <p>বিশেষ আকর্ষন হিসেবে উপস্থিত ছিলেন চট্টগ্রাম ফ'য়সলেক এর দারুল হুদা দরবারে গাউছিয়া শরিফ এর গদিনশীল পীর <b>আলহাজ্ব হযরত মাওলানা ক্বারী বেলায়েত হোসাইন সাহেব</b>।</p>`,
-
-        '5': `
+        <p>২০২৫ সালের ৪ই সেপ্টেম্বর রোজ বৃহস্পতিবার পীরজাদী ফাউন্ডেশন এর উদ্দ্যোগে পীরজাদীর বাড়ির আঙ্গিনায় ৫৩ তম বার্ষিক পবিত্র ঈদে মিলাদুন্নাবী (সাঃ) মাহফিলের আয়োজন করে।</p><br>
+        <p>উক্ত মাহফিলে সাভাপতিত্ব করেন <b>হযরত মাওলানা অধ্যাপক লিয়াকত আলী ভূঁইয়া সাহেব</b>।</p><br>
+        <p>উক্ত মাহফিলে বিশেষ মুফাচ্ছির হিসেবে বয়ান করেন বিশিষ্ট ইসলামি আলোচক, চ্যানেল-২৪ ও RTV, তরুণ মুফাচ্ছির <b>হযরত মাওলানা এম সাব্বির বিন লোকমান সাহেব</b>।</p>`,
+        
+        'muttaki1': `
         <div class="deshead">
             <p>পীরজাদী ফাউণ্ডেশান কতৃক ওয়াহেদপুর জামে মসজিদে মুত্তাকী হওয়ার জন্য 'মুত্তাকী' প্রতিযোগীদের মধ্যে অর্থ সহ পবিত্র কুরআনুল কারীম বিতরণ অনুষ্ঠান এর প্রথম পর্ব।</p>
         </div><br>
         <p>পীরজাদী ফাউণ্ডেশান কতৃক ওয়াহেদপুর জামে মসজিদে মুত্তাকী হওয়ার জন্য 'মুত্তাকী' প্রতিযোগীদের মধ্যে অর্থ সহ পবিত্র কুরআনুল কারীম বিতরণ অনুষ্ঠান ২৮শে ফেব্রুয়ারী ২০২৫ খ্রিঃ (হিজরি: ২৯ শাবান ১৪৪৬, বাংলা:১৭ ফাল্গুন ১৪৩১) জুমাবার জুমা পুর্বে ১ম পর্ব অনুষ্ঠিত হয়।</p>`,
 
-        '6': `
+        'muttaki2': `
          <div class="deshead">
             <p>পীরজাদী ফাউণ্ডেশান কতৃক ওয়াহেদপুর জামে মসজিদে মুত্তাকী হওয়ার জন্য 'মুত্তাকী' প্রতিযোগীদের মধ্যে অর্থ সহ পবিত্র কুরআনুল কারীম বিতরণ অনুষ্ঠান এর দ্বিতিয় পর্ব।</p>
         </div><br>
@@ -277,7 +277,6 @@ document.addEventListener('DOMContentLoaded', function () {
             loadVideoGallery(videoId); // Pass the active video ID
 
             const errormasege = document.querySelector('.error-message');
-            iframeloded(headline);
             videoloding(errormasege);
         });
     });
@@ -337,31 +336,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateModalContent(videoId, headline, description, headteglin, catagoriname) {
         const videoPlayer = document.getElementById('modalVideoPlayer');
-        videoPlayer.innerHTML = `<iframe id="ytVideo" src="${videoId}" frameborder="0" allowfullscreen></iframe>`;
+        videoPlayer.innerHTML = `<iframe id="ytVideo" data-src="${videoId}" frameborder="0" allowfullscreen></iframe>`;
 
         document.getElementById('modalhaedtaegname').textContent = headteglin;
         document.getElementById('modalHeadline').textContent = headline;
         document.getElementById('modalDescription').innerHTML = description.innerHTML;
         document.getElementById('catagoriname').textContent = catagoriname;
 
+        iframeloded(headline);
+
     };
 
     async function iframeloded(headline) {
         const iframe = document.getElementById('ytVideo');
+        const srcdata = iframe.getAttribute('data-src')
         const messageDiv = document.querySelector('.error-message');
 
-        // যখন iframe লোড হয় (ভিডিও পাওয়া গেলে)
-        iframe.onload = function () {
-            messageDiv.style.display = 'none';
-            iframe.style.display = 'block';
-        };
+
+        iframe.addEventListener('error', () => {
+            messageDiv.style.display = 'block';
+            iframe.style.display = 'none';
+            return;
+        })
 
         try {
-            const response = await fetch(iframe, { method: 'HEAD' }); // শুধু ভিডিও আছে কিনা দেখা
+            const response = await fetch(srcdata, { method: 'HEAD' }); // শুধু ভিডিও আছে কিনা দেখা
             if (response.ok) {
                 // ভিডিও আছে → ভিডিও দেখানো
-                messageDiv.style.display = 'none';
-                iframe.style.display = 'block';
+                iframe.src = srcdata
+                iframe.addEventListener('load', () => {
+                    messageDiv.style.display = 'none';
+                    messageDiv.innerHTML = ``
+                    iframe.style.display = 'block';
+                })
             } else {
                 // ভিডিও নাই → মেসেজ দেখানো
                 setTimeout(() => {
@@ -373,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="secendifo">ভিডিওটি কিছুদিনের মধ্যে এখানে দেয়া হবে।</div>
                     </div>`;
                     messageDiv.classList.remove('loading');
-                }, 1000); // ১ সেকেন্ড অপেক্ষা করবে
+                }, 150);
                 messageDiv.style.display = 'flex';
             }
         } catch (error) {
@@ -385,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="secendifo">দয়া করে ইন্টারনেট কানেকশন চেক করুন।</div>
                 </div>`;
                 messageDiv.classList.remove('loading');
-            }, 1000); // ১ সেকেন্ড অপেক্ষা করবে
+            }, 1500); // ১ সেকেন্ড অপেক্ষা করবে
             messageDiv.style.display = 'flex';
         };
     };
@@ -450,7 +457,6 @@ document.addEventListener('DOMContentLoaded', function () {
             updateMainGallery(videoId);
 
             const errormasege = document.querySelector('.error-message')
-            iframeloded(headline);
             videoloding(errormasege);
 
             currentlyPlayingVideoId = videoId;

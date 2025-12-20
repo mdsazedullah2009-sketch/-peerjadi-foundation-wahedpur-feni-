@@ -1,8 +1,8 @@
 // আপনার Google Apps Script এর Web app URL টি এখানে দিন (ধাপ ২ দেখুন)
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx_cRv72oJKkm4iB7JvqmTHk94lqzGMReHZ1ceMlXu04xlT_J1MtBImlXXzgBhDISfm/exec";
 
-// ফাইল সাইজের নতুন কনস্ট্যান্ট (৫০ KB)
-const MAX_FILE_SIZE = 50 * 1024;
+// ফাইল সাইজের নতুন কনস্ট্যান্ট (100 KB)
+const MAX_FILE_SIZE = 100 * 1024;
 
 // DOM কন্টেন্ট লোড হওয়ার পর স্ক্রিপ্ট এক্সিকিউট
 document.addEventListener('DOMContentLoaded', function () {
@@ -307,7 +307,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setupImagePreview(nid2silectInput, nid2Div);
 
 
-
     // Form submission handler
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -401,7 +400,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 permanent_thana: permanentFields.thana.value.trim(),
                 permanent_district: permanentFields.district.value.trim(),
                 memberType: memberType,
-                secendarymemberType: selectedKaj.length > 0 ? selectedKaj.join(', ') : 'দেন নাই',  // এই লাইনটা বদলাও
+                secendarymemberType: selectedKaj.length > 0 ? selectedKaj.join(',') : 'দেন নাই',
                 payMethod: payMethod,
                 txid: txid,
                 nid1silect: nid1silectBase64,
@@ -412,7 +411,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const response = await fetch(WEB_APP_URL, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'text/plain;charset=utf-8'
                 },
                 body: JSON.stringify(applicationData)
             });

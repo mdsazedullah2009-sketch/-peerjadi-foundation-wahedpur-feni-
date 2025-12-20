@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পীরজাদী ফাউন্ডেশন — আমল নামা</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta name="description" content="পীরজাদী ফাউন্ডেশন কর্তিক প্রকাশিত আমল নামা">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&family=Noto+Sans+Bengali:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/amol_nama.css">
+</head>
+
+<body>
+
+    <header>
+        <progress id="progress"></progress>
+        <div class="back-btn1">
+            <button onclick="history.back()">⬅ ফিরে যান</button>
+        </div>
+        <div class="justyfy-header">
+            <img src="logo/logo.png" alt="logo" class="logo">
+            <h4>পীরজাদী ফাউন্ডেশন, ওয়াহেদপুর, ফেনী</h4>
+            <p>স্থাপিত: ১৯৯৫</p>
+        </div>
+    </header>
+    <div class="main-body" id="main-body">
+        <div class="downnloadpdf">
+            <button type="button" class="downloadpdfbtn" onclick="downloadpdf()">ডাউনলোড পিডিএফ</button>
+        </div>
+        <div class="imgcas">
+        <img class="amolnamimaimg" src="gallary/karzo/picture11.png" alt="আমল নামা"></div>
+    </div>
+
+    <div class="paragraph-P01">© 2025 পীরজাদী ফাউন্ডেশন - ওয়াহেদপুর, ফেনী</div>
+    <footer id="foter">
+        <div class="credit-right">
+            <div class="sazed">
+                <p>Developed by <span>MD SAZED ULLAH</span></p>
+                <p>ফেসবুক:<a href="#" data-fb-url="https://www.facebook.com/md.sazed.ullah.2024"
+                        data-fb-name="Md Sazed Ullah" data-fb-img="profail.pic/sazed.jpg" class="fb-link-js">Md Sazed
+                        Ullah</a>
+            </div>
+            <div class="topbuttonlin"></div>
+            <div class="sadi">
+                <p>Document Write by <span>ABDULLAH SADI</span></p>
+                <p>ফেসবুক:<a href="#" data-fb-url="https://www.facebook.com/abdullah.sadi.7311"
+                        data-fb-name="Abdullah Sadi" data-fb-img="profail.pic/sadi.jpg" class="fb-link-js">Abdullah
+                        Sadi</a>
+            </div>
+        </div>
+        <div class="socalicon">
+            <a href="https://www.facebook.com/profile.php?id=100078337626798" target="_blank"
+                class="brand-icon fb-brand">
+                <i title="ফাউন্ডেশনের ফেসবুক ফেজ " class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCuS61cRxyztvLuq752Xk37w?si=vt0HbnhygOnkJelU" target="_blank"
+                class="brand-icon yt-brand">
+                <i title="ফাউন্ডেশনের ইউটুব" class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://wa.me/8801916774966?text=আচ্ছালামুআলাইকুম। আমি আপনার সাথে আপনার ফাউন্ডেশন সম্পর্কিত বিষয়ে যোগাযোগ করতে চাই।"
+                target="_blank" class="brand-icon wh-brand">
+                <i class="fab fa-whatsapp" title="হোয়াটসঅ্যাপ"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!--ফেসবুক মডাল-->
+    <div id="fbModal">
+        <div class="fbModal-content">
+            <button onclick="closeFBModal()" class="fbBackBtn">🔙 Back</button>
+            <div class="fbModal-body">
+                <img id="profile-pic" class="profile-pic" alt="profile-picture">
+                <p id="profile-name" class="profile-name"></p>
+                <a id="fb-link" href="#" target="_blank" class="fbBtn">Open Facebook</a>
+                <p class="fb-note">ফেসবুক অ্যাপ বা নতুন ট্যাবে খোলা হচ্ছে…</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/sodostalikacript.js"></script>
+</body>
+
+</html>

@@ -36,13 +36,13 @@ body {
   background-color: #f0f2f5;
 }
 
-/* --- প্রধান লেআউট Wrapper যা মেনু ও কন্টেন্টকে পাশাপাশি রাখবে --- */
+/* --- প্রধান লেআউট Wrapper --- */
 .main-layout-wrapper {
   display: flex;
   justify-content: center;
   gap: 10px;
   padding: 20px;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -899,6 +899,7 @@ span.heading_numbering {
   font-weight: normal;
 }
 
+
 /* ODF styles with no properties representable as CSS:
     .dp1 .T14 .T15 .T16 .T17 .T18 .T2 .T6 .T7  { } */
 
@@ -936,13 +937,20 @@ span.heading_numbering {
 
   .main-layout-wrapper {
     flex-direction: column;
-    padding: 10px;
+    padding: 5px;
   }
 
   .page-wrapper {
+    width: 100%;
     padding: 15px;
     margin-top: 10px;
+    margin: 0px;
   }
+section {
+  padding: 20px;
+  max-width:100%;
+  margin: none;
+}
 
   .credit-right {
     display: flex;

@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+
   // নেভিগেশন লিঙ্কগুলির জন্য স্মুথ স্ক্রোলিং
   const navLinks = document.querySelectorAll('.nav-link');
 
@@ -175,8 +176,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let blockCount = localStorage.getItem("blockCount") || 0;
     blockCount = parseInt(blockCount);
 
-    // যদি ব্লক করা থাকে আর ১০ বারের মধ্যে হয় তাহলে দেখাবে না
-    if (blockCount > 0 && blockCount < 10) {
+    // যদি ব্লক করা থাকে আর ২০ বারের মধ্যে হয় তাহলে দেখাবে না
+    if (blockCount > 0 && blockCount < 20) {
       localStorage.setItem("blockCount", blockCount + 1);
 
       const notifectionDiv = document.querySelector('.sodosonotifeketion');
@@ -185,28 +186,29 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // যদি blockCount >= ১০ হয়ে যায় তাহলে আবার reset করে দেখাবে
-    if (blockCount >= 10) {
+    // যদি blockCount >= ২০ হয়ে যায় তাহলে আবার reset করে দেখাবে
+    if (blockCount >= 20) {
       localStorage.setItem("blockCount", 0);
     }
     notifectionDiv.style.display = "grid";
   }
+
   const notifectionDiv = document.createElement('div');
   notifectionDiv.className = 'sodosonotifeketion';
   notifectionDiv.id = 'notification';
   notifectionDiv.innerHTML = ` 
-                   <div class="noticontet">
-            <button class="close-btnnot" id="close-btnnot" title="শুধু লুকাবে, রিফ্রেশ করলে আবার আসবে">❌️</button>
-            <button class="block-btn" id="block-btn" title="ব্রাউজার ১০ রিফ্রেশ করা পর্যন্ত লুকানো থাকবে">block</button>
-            <div class="notifbody">
-                <p class="salam">আচ্ছালামুআলাইকুম।</p>
-                <p class="sagtom">পীরজাদী ফাউণ্ডেশানের ওয়েবসাইটে আপনাকে স্বাগতম।</p>
-                <span class="witline"></span>
-                <div class="formworf">
-                    <p class="onurod">সদস্য হওয়ার জন্য আবেদন করুন</p>
-                    <a href="sodossofrom.html"><button class="formbtn" id="formbtn">সদস্য ফর্ম</button></a>
-                </div>
-            </div>
+  <div class="noticontet">
+    <button class="close-btnnot" id="close-btnnot" title="শুধু লুকাবে, রিফ্রেশ করলে আবার আসবে">❌️</button>
+    <button class="block-btn" id="block-btn" title="ব্রাউজার ১০ রিফ্রেশ করা পর্যন্ত লুকানো থাকবে">block</button>
+    <div class="notifbody">
+        <p class="salam">আচ্ছালামুআলাইকুম।</p>
+        <p class="sagtom">পীরজাদী ফাউণ্ডেশানের ওয়েবসাইটে আপনাকে স্বাগতম।</p>
+        <span class="witline"></span>
+        <div class="formworf">
+            <p class="onurod">সদস্য হওয়ার জন্য আবেদন করুন</p>
+            <a href="sodossofrom.html"><button class="formbtn" id="formbtn">সদস্য ফর্ম</button></a>
+        </div>
+    </div>
   </div>`;
 
 
@@ -224,10 +226,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 500); // কিছুক্ষন পরে যাবে
     document.querySelector(".formbtn").style.background = 'rgba(165, 18, 13, 1)';
     style.animation = 'none';
-
   });
 
-  // 🚫 Block বাটন → ১০ রিফ্রেশ পর্যন্ত লুকানো থাকবে
+  // 🚫 Block বাটন → ২০ রিফ্রেশ পর্যন্ত লুকানো থাকবে
   document.querySelector(".block-btn").addEventListener("click", () => {
     localStorage.setItem("blockCount", 1); // ব্লক শুরু
     setTimeout(() => {
@@ -273,12 +274,12 @@ document.addEventListener('DOMContentLoaded', function () {
       // ছোট delay দিয়ে redirect করো
       setTimeout(() => {
         window.location.href = this.getAttribute('href');
-      }, 150);
+      }, 1505);
 
       setTimeout(() => {
         loader.style.display = 'none';
         arrow.style.opacity = 1;
-      }, 150);
+      }, 5555);
     });
   });
 
@@ -313,8 +314,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-
-
 
   const cardlink = document.querySelectorAll('.cardlink');
   cardlink.forEach(clink => {
@@ -423,8 +422,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // নোটিশ বোর্ডে তারিখ আপডেট
-  const dateParagraph = document.querySelector('.paragraph-P10');
+  const dateParagraph = document.querySelectorAll('.paragraph-P23');
   if (dateParagraph) {
+    dateParagraph.forEach(dp=>{
     const today = new Date();
     const formattedDate = today.toLocaleDateString('bn-BD', {
       year: 'numeric',
@@ -432,7 +432,9 @@ document.addEventListener('DOMContentLoaded', function () {
       day: 'numeric'
     });
 
-    dateParagraph.textContent = `তারিখ: ${formattedDate}`;
+    dp.textContent = `তারিখ: ${formattedDate}`;
+
+    })
   }
 
 

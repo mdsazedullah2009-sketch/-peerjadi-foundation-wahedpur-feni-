@@ -1,7 +1,7 @@
 // DOM কন্টেন্ট লোড হওয়ার পর স্ক্রিপ্ট এক্সিকিউট
 document.addEventListener('DOMContentLoaded', function () {
     const progress = document.getElementById('progress')
-            progress.style.display = 'none'
+    progress.style.display = 'none'
 
     // ফিক্সড হেডার স্ক্রোল ইভেন্ট
     const fixedHeader = document.getElementById('fixedHeader');
@@ -119,6 +119,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     closeBtn.addEventListener('click', () => {
         lightbox.classList.remove('active');
+        lightboxImg.src = ''
+        lightboxCaption.textContent = ''
     });
 
     prevBtn.addEventListener('click', () => {
@@ -156,6 +158,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && lightbox.classList.contains('active')) {
             lightbox.classList.remove('active');
+            lightboxImg.src = ''
+            lightboxCaption.textContent = ''
         }
     });
 

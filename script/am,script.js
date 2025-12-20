@@ -1,14 +1,6 @@
 // DOM কন্টেন্ট লোড হওয়ার পর স্ক্রিপ্ট এক্সিকিউট
 document.addEventListener('DOMContentLoaded', function () {
-    const progress = document.getElementById('progress')
-    window.addEventListener('DOMContentLoaded', function () {
-        if (window.document) {
-            progress.style.display = 'none'
-        } else {
-            progress.style.display = 'block'
-        }
-    });
-
+    progress.style.display = 'none'
     // অ্যাকর্ডিয়ন ফাংশনালিটি
     document.querySelectorAll(".accordion").forEach(function (btn1) {
         btn1.addEventListener("click", function () {

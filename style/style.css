@@ -3,6 +3,7 @@
 :root {
   --primary-color: #0d8b4e;
   --secondary-color: #2c5f2d;
+  --secondary-color:#003f88;
   --accent-color: #f8f1e5;
   --text-color: #333;
   --light-color: #f9f9f9;
@@ -11,6 +12,7 @@
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   --shadow-midiuam: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
+
 /* বেসিক স্টাইল */
 * {
   margin: 0;
@@ -30,6 +32,13 @@ body {
   background-color: #f5f5f5;
   direction: ltr;
 }
+
+body ::selection{
+  background: #036800;
+  color: #ffffff;
+  padding: 10px;
+}
+
 
 h1,
 h2,
@@ -567,7 +576,7 @@ progress {
 
 /* মেইন কন্টেন্ট */
 .main-layout-wrapper {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 20px auto;
   padding: 0 15px;
 }
@@ -589,6 +598,8 @@ progress {
 /* Loading Animation */
 button .loading {
   display: inline-block;
+  position: absolute;
+  right: 1%;
   width: 20px;
   height: 20px;
   border: 3px solid rgba(255, 255, 255, .3);
@@ -744,7 +755,6 @@ a {
   background-color: rgb(255, 255, 255);
   max-height: 0;
   overflow: hidden;
-  overflow: scroll;
   text-align: justify;
   border-radius: 0 0 12px 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -799,7 +809,6 @@ a {
   overflow: hidden;
   overflow: scroll;
   background: white;
-  border-radius: var(--border-radius);
   box-shadow: var(--shadow);
 }
 
@@ -931,6 +940,12 @@ section h2 {
   gap: 30px;
   margin: 40px 0;
 }
+@media (max-width:593px) {
+  /* 3D কার্ড */
+    .card-container {
+      grid-template-columns:1fr;
+    }
+}
 
 .card {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -984,7 +999,7 @@ section h2 {
   transform: translateZ(5px);
 }
 
-.card a {
+.card span {
   border: none;
   background: none;
   font-size: 16px;
@@ -1363,27 +1378,17 @@ footer {
 }
 
 .fb-link-js {
+  cursor: pointer;
   font-family: 'Arial', sans-serif;
-  /* ফন্ট */
   font-size: 15px;
-  /* লেখা বড়/ছোট */
   color: #1877f2;
   padding: 5px 5px;
-  /* চারপাশে ফাঁকা */
   border-radius: 9px;
-  /* কোণ গোল */
   text-decoration: none;
-  /* আন্ডারলাইন না থাকা */
 }
 
 .fb-link-js:hover {
-  background-color: #1877f2;
-  /* হোভার রঙ পরিবর্তন */
-  color: #ffffff;
-  /* হোভার লেখার রঙ */
-  cursor: pointer;
-  border-radius: 2x;
-  box-shadow: 1px 1px 10px 1px #27629d65;
+  text-shadow: 1px 0px 1px rgb(160, 201, 255);
 }
 
 
@@ -1538,7 +1543,7 @@ footer {
 }
 
 .linkecontent {
-  width: 90%;
+  max-width: 90%;
   max-width: 400px;
   background: rgb(245, 245, 245);
   border: 3px solid rgb(95, 95, 95);
@@ -1570,7 +1575,6 @@ footer {
 .linkselsbody {
   text-align: center;
 }
-
 
 .linicon {
   display: inline-block;
@@ -1715,7 +1719,6 @@ footer {
 
   /* মেইন কন্টেন্ট */
   .main-layout-wrapper {
-    width: 96%;
     margin: 6px;
     padding: 0 6px;
   }
@@ -1739,7 +1742,6 @@ footer {
   .notisbord {
     flex-direction: column;
   }
-
 
   .notis {
     width: 100%;
@@ -1771,7 +1773,10 @@ footer {
   .gallery-caption {
     font-size: 10px;
   }
-
+/* Loading Animation */
+button .loading {
+  right: 3%;
+}
   /* Floating Chat Bubble */
   .launcher-icon {
     bottom: 5px;
@@ -1912,4 +1917,15 @@ footer {
     font-size: 10px;
   }
 
+}
+
+@media (max-width:500px) {
+  .notisborder {
+    padding: 0px;
+  }
+    .notis {
+      padding: 5px;
+      border: 1px solid #dddddd7c;
+      box-shadow: non;
+    }
 }

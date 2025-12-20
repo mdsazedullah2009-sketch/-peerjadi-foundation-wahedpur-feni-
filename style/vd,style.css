@@ -288,29 +288,28 @@ section {
 
 .panel {
   display: none;
-  padding: 5px 10px;
+  padding: 5px 6px;
   background-color: rgb(255, 255, 255);
   overflow: hidden;
   transition: max-height 0.4s ease-out;
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
   margin-top: -10px;
-  box-shadow: var(--shadow);
+  box-shadow: none;
   align-items: center;
   align-content: center;
   align-self: center;
 }
 
-/* --- প্রধান লেআউট Wrapper যা মেনু ও কন্টেন্টকে পাশাপাশি রাখবে --- */
+/* --- প্রধান লেআউট Wrapper  --- */
 .main-layout-wrapper {
   display: block;
   justify-content: center;
   gap: 10px;
   padding: 20px 5px;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
-/* আপনার বডি কন্টেন্টকে একটি "পেজ" এর মতো দেখাতে */
+/* বডি কন্টেন্টকে একটি "পেজ" এর মতো দেখাতে */
 .page-wrapper {
   background-color: white;
   border-radius: 8px;
@@ -324,8 +323,8 @@ section {
   color: black;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-  margin: 40px 0;
+  gap: 10px;
+  margin: 20px 0;
 }
 
 .video-container {
@@ -335,7 +334,7 @@ section {
   position: relative;
   border: 1px groove rgba(2, 41, 95, 0.582);
   border-radius: 10px 10px 0px 0px;
-  box-shadow: 1px 2px 1px rgba(32, 6, 6, 0.519);
+  box-shadow: 1px 2px 1px rgba(6, 10, 32, 0.425);
   cursor: pointer;
   overflow: hidden;
 }
@@ -566,17 +565,26 @@ section {
   border-radius: 25px 25px 0px 0px;
 }
 
+.videframecase{
+  position: relative;
+  background-color: #222;
+  width:100%;
+  height:480px;
+}
+
 .error-message {
+  background-color: #222;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #222;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
   width: 100%;
   height: 480px;
+  padding: 10px;
+  overflow-y: scroll;
 }
 
 .loading {
@@ -591,6 +599,10 @@ section {
   padding: 10px;
   width: 100%;
   animation: fa-beat-fade 1.1ms ease-in-out;
+}
+.error-message img{
+height: 100%;
+max-width: 100%;
 }
 
 
@@ -854,7 +866,7 @@ section {
   width: 100%;
   padding: 2px;
   padding-top: none;
-  padding-left: 5px;
+  justify-content: center;
   height: auto;
   background-color: #ecf3ffe4;
   animation: fadeUp 1.2s ease;
@@ -888,7 +900,7 @@ section {
 }
 
 .modal-gallery .video-container:hover {
-  box-shadow: 1px 1px 1px 1px rgba(32, 6, 6, 0.349);
+  box-shadow: 1px 1px 1px 1px rgba(6, 14, 32, 0.349);
 }
 
 .modal-gallery .album-caption.activ {
@@ -1202,7 +1214,7 @@ footer {
 }
 
 /* Responsive */
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media (max-width: 768px) {
 
   /* হেডার */
   header {
@@ -1262,8 +1274,8 @@ footer {
   }
 
   .main-layout-wrapper {
-    padding: 0px 0px;
-    gap: none;
+    padding: 0px;
+    gap: 5px;
     margin: none;
   }
 
@@ -1277,15 +1289,20 @@ footer {
     margin-top: -5px;
   }
 
-  .page-wrapper {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: none;
-    box-sizing: content-box;
-    flex-grow: 0;
+  .vidionorwp {
+    grid-template-columns: repeat auto-fill, minmax(100%, 1fr);
+    gap: 5px;
+    margin: 10px 0;
   }
 
+.video-container {
+  min-height: 240px;
+}
+  .page-wrapper {
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    padding: none;
+  }
 
   .informetionicon {
     font-size: 25px;
@@ -1343,8 +1360,13 @@ footer {
     box-shadow: 0px 2px 2px rgba(43, 134, 226, 0.557);
   }
 
+.videframecase {
+  height: 350px
+}
+
   .error-message {
     font-size: 16px;
+    height: 350px;
   }
 
   .neticon i {
@@ -1355,7 +1377,7 @@ footer {
     width: 50px;
   }
 
-  .fastifo {
+  .fastifo {margin-top: 7px;
     font-size: 18px;
   }
 
@@ -1365,11 +1387,11 @@ footer {
 
   #modalVideoPlayer iframe {
     width: 100%;
-    height: 250px;
+    height: 350px;
   }
 
   #modalHeadline {
-    font-size: 13px;
+    font-size: 15px;
     padding: 2px;
   }
 
@@ -1406,12 +1428,12 @@ footer {
 
   .overtext {
     margin-left: 5px;
-    font-size: 13px;
+    font-size: 14px;
+    opacity: 0.9;
     text-align: center;
     align-items: center;
     gap: 1px;
     display: flex;
-    width: max-content;
   }
 
   .overicon {
@@ -1487,13 +1509,12 @@ footer {
   }
 
   .modal-gallery {
-    width: 95%;
-    padding-left: -5px;
+    justify-content: center;
   }
 
   .modal-gallery .video-container {
     width: 100%;
-    height: 250px;
+    height: 450px;
     margin: 10px;
     border: 1px solid rgba(34, 94, 178, 0.318);
   }
@@ -1539,19 +1560,252 @@ footer {
   }
 }
 
-/* Responsive */
-@media screen and(max-width: 320px) {
-  .vidionorwp {
-    border-radius: 6px;
-    padding: 4px;
-    margin-top: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+@media (max-width:700px) {
+.video-container {
+   min-height: 400px;
+  }
+.videframecase {
+  height: 330px
+}
+  .error-message {
+      height: 330px;
+    }
+  
+    #modalVideoPlayer iframe {
+      height: 330px;
+    }
+
+.modal-gallery .video-container {
+  height: 400px;
+}
+}
+
+@media (max-width:680px) {
+.video-container {
+    min-height: 380px;
+  }
+
+  .modal-gallery .video-container {
+    height: 380px;
+  }
+}
+
+@media (max-width:650px) {
+  .video-container {
+      min-height: 370px;
+    }
+  .modal-gallery .video-container {
+    height: 370px;
+  }
+}
+
+@media (max-width:630px) {
+.video-container {
+    min-height: 360px;
+  }
+  .modal-gallery .video-container {
+    height: 360px;
+  }
+}
+
+@media (max-width:600px) {
+.video-container {
+    min-height: 350px;
+  }
+  .modal-gallery .video-container {
+    height: 350px;
+  }
+}
+
+@media (max-width:580px) {
+.video-container {
+    min-height: 330px;
+  }
+  .modal-gallery .video-container {
+    height: 330px;
+  }
+}
+
+@media (max-width:520px) {
+.video-container {
+    min-height: 300px;
+  }
+  .modal-gallery .video-container {
+    height: 300px;
+  }
+.videoheadname {
+  font-size: 16px;
+  margin-top: 5px;
+}
+.fastifo {
+margin-top: 5px;
+  font-size: 15px;
+}
+
+.secendifo {
+  font-size: 12px;
+}
+}
+
+@media (max-width: 440px) {
+  * {
+    padding: none;
+    margin: none;
+  }
+
+  .main-layout-wrapper {
+    padding: 4px 1px;
+    gap: 4px;
+  }
+
+  section {
+    padding: 15px 4px;
+  }
+
+  .panel {
+    padding: 1px 4px;
+  }
+
+  .vidionorwp {display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+    gap: 6px;
   }
 
   .video-container {
-    width: 100%;
-    height: 180px;
+    border-radius: 0px;
+    min-width: 100%;
+    min-height:270px;
+  }
+
+  /*---ভিডিও ফ্রেম---*/
+  .vdmodal {
+    padding-top: 5px
+  }
+
+  .modal-content {
+    padding: 0px;
+  }
+
+  .main-video {
+    padding: 0px;
+    box-shadow: 0px 1px 1px rgba(43, 134, 226, 0.322);
+  }
+
+.videframecase {
+  height: 250px
+}
+
+  .error-message {
+    height: 250px;
+  }
+
+#modalVideoPlayer iframe {
+  height: 250px;
+}
+
+  .neticon i {
+    font-size: 45px;
+  }
+
+  .neticon img {
+    width: 45px;
+  }
+
+  .fastifo {
+margin-top: 4px;
+    font-size: 13px;
+  }
+
+  .secendifo {
+    font-size: 14px;
+  }
+
+  .description-content {
+    margin-top: 1px;
+    padding: 0px;
+  }
+
+  .deshead {
+    font-size: 16px;
+  }
+
+  .quickbtnconteinar {
+    overflow-x: scroll;
+  }
+
+  .model-video-itme {
+    padding: 0px;
+  }
+
+.modal-gallery .video-container {
+  height: 270px;
+}
+
+}
+
+@media (max-width:400px) {
+  .video-container {
+      min-height: 240px;
+    }
+  .modal-gallery .video-container {
+      height: 240px;
+    }
+}
+
+@media (max-width:350) {
+  .modal-gallery .video-container {
+      height: 220px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 320px) {
+
+  .main-layout-wrapper {
+    padding: none;
+  }
+
+  .page-wrapper {
+    padding: none;
+    border-radius: none;
+  }
+
+  section {
+    padding: none;
+    margin: none;
+  }
+
+  .panel {
+    padding: none;
+  }
+
+  .vidionorwp {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+    border-radius: none;
+    padding: none;
+  }
+
+
+  .video-container {
+    height: 200px;
+    border-radius: none;
+    box-shadow: 1px 1px 1px rgba(6, 10, 32, 0.26);
+  }
+
+.modal-gallery .video-container {
+  height: 200px;
+}
+
+}
+
+@media (max-width:250) {
+  .video-container {
+      min-height: 100px;
+    }
+  .modal-gallery .video-container {
+    height: 100px;
   }
 }
