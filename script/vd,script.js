@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', function () {
         if (window.pageYOffset > 250) {
-            navmenu.style.marginLeft = '40%';
+            navmenu.style.marginLeft = '70%';
         } else {
             navmenu.style.marginLeft = '0';
         }
@@ -352,12 +352,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const srcdata = iframe.getAttribute('data-src')
         const messageDiv = document.querySelector('.error-message');
 
-
-        iframe.addEventListener('error', () => {
-            messageDiv.style.display = 'block';
-            iframe.style.display = 'none';
-            return;
-        })
 
         try {
             const response = await fetch(srcdata, { method: 'HEAD' }); // শুধু ভিডিও আছে কিনা দেখা

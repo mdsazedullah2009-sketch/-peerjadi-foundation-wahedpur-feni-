@@ -407,6 +407,58 @@ tbody {
     font-weight: bold;
 }
 
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar:hover {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #3a493f00;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #cee2d4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #446b7a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3f79a0;
+}
+
+body ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+body ::-webkit-scrollbar:hover {
+    width: 5px;
+    height: 5px;
+}
+
+body ::-webkit-scrollbar-track {
+    background: #3a424900;
+}
+
+body ::-webkit-scrollbar-track:hover {
+    background: #cedae2;
+}
+
+body ::-webkit-scrollbar-thumb {
+    background: #a8b1b9;
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+    background: #6c7579;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .back-btn1 button {

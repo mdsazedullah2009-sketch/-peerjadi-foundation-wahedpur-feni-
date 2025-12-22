@@ -3,7 +3,7 @@
 :root {
   --primary-color: #0d8b4e;
   --secondary-color: #2c5f2d;
-  --secondary-color:#003f88;
+  --secondary-color: #003f88;
   --accent-color: #f8f1e5;
   --text-color: #333;
   --light-color: #f9f9f9;
@@ -33,7 +33,7 @@ body {
   direction: ltr;
 }
 
-body ::selection{
+body ::selection {
   background: #036800;
   color: #ffffff;
   padding: 10px;
@@ -895,8 +895,8 @@ section h2 {
   border-bottom-right-radius: 10px;
   background-color: #ffffff;
   gap: 5px;
-  width: 50%;
-  height: 50%;
+  width: 20%;
+  height: 20%;
   margin: 15px 0;
 
 }
@@ -940,11 +940,17 @@ section h2 {
   gap: 30px;
   margin: 40px 0;
 }
+
 @media (max-width:593px) {
+
   /* 3D কার্ড */
-    .card-container {
-      grid-template-columns:1fr;
-    }
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-width: 0px;
+  }
 }
 
 .card {
@@ -1631,6 +1637,58 @@ footer {
   background-color: #086b05;
 }
 
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3a493f00;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #cee2d4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #447a50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3fa05c;
+}
+
+body ::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+body ::-webkit-scrollbar:hover {
+  width: 5px;
+  height: 5px;
+}
+
+body ::-webkit-scrollbar-track {
+  background: #3a493f00;
+}
+
+body ::-webkit-scrollbar-track:hover {
+  background: #cee2d4;
+}
+
+body ::-webkit-scrollbar-thumb {
+  background: #a8b9ad;
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+  background: #6c796f;
+}
+
 /* রেসপনসিভ ডিজাইন */
 @media (max-width: 830px) {
 
@@ -1773,10 +1831,12 @@ footer {
   .gallery-caption {
     font-size: 10px;
   }
-/* Loading Animation */
-button .loading {
-  right: 3%;
-}
+
+  /* Loading Animation */
+  button .loading {
+    right: 3%;
+  }
+
   /* Floating Chat Bubble */
   .launcher-icon {
     bottom: 5px;
@@ -1923,9 +1983,10 @@ button .loading {
   .notisborder {
     padding: 0px;
   }
-    .notis {
-      padding: 5px;
-      border: 1px solid #dddddd7c;
-      box-shadow: non;
-    }
+
+  .notis {
+    padding: 5px;
+    border: 1px solid #dddddd7c;
+    box-shadow: non;
+  }
 }

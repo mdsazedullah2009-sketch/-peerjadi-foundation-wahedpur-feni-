@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', function () {
         if (window.pageYOffset > 250) {
-            navmenu.style.marginLeft = '40%';
+            navmenu.style.marginLeft = '70%';
         } else {
             navmenu.style.marginLeft = '0';
         }
