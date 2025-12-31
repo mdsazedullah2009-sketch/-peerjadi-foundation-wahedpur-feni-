@@ -386,8 +386,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 fathername: document.getElementById('fathername').value.trim(),
                 mothername: document.getElementById('mothername').value.trim(),
                 jov: document.getElementById('jov').value.trim(),
-                dob: dobInput.value ? `'${dobInput.value}` : '', // ' যোগ করে টেক্সট হিসেবে সেভ
-                mobile: `'${document.getElementById('mobile').value.trim()}` // ' যোগ করে শুরুর 0 রাখো
+                dob: dobInput.value ? `${dobInput.value}` : '', // ' যোগ করে টেক্সট হিসেবে সেভ
+                mobile: `${document.getElementById('mobile').value.trim()}`, // ' যোগ করে শুরুর 0 রাখো
                 email: document.getElementById('email').value.trim(),
                 present_haus: presentFields.haus.value.trim(),
                 present_village: presentFields.village.value.trim(),
