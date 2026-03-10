@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-
     const optbtn = document.querySelectorAll('.optionbtn.amlpdd')
     optbtn.forEach(btn => {
         btn.addEventListener('click', function (e) {
@@ -108,5 +107,4 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
     }
-
 });
