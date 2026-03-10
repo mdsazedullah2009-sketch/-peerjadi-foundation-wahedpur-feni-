@@ -135,15 +135,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextbuton = document.getElementById('nextbuton');
     const backbuton = document.getElementById('backbuton');
 
+    let sessioncak = sessionStorage.getItem('ntfcllose');
+
+    if (sessioncak) {
+        formnotis.style.display = "none"
+    } else {
+        formnotis.style.display = "grid"
+    }
+
     if (cllosnotis) {
         cllosnotis.addEventListener('click', function () {
             formnotis.style.display = 'none';
+            sessionStorage.setItem('ntfcllose', JSON.stringify('ntfcolose'))
         });
     }
 
     if (closebtn) {
         closebtn.addEventListener('click', function () {
             formnotis.style.display = 'none';
+            sessionStorage.setItem('ntfcllose', JSON.stringify('ntfcolose'))
         });
     }
 
@@ -306,12 +316,16 @@ document.addEventListener('DOMContentLoaded', function () {
     setupImagePreview(nid1silectInput, nid1Div);
     setupImagePreview(nid2silectInput, nid2Div);
 
-
     // Form submission handler
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         // বাধ্যতামূলক ফিল্ড চেক
+        const fullname = document.getElementById('fullname').value;
+        const fathername = document.getElementById('fathername').value;
+        const jov = document.getElementById('jov').value;
+        const mobile = document.getElementById('mobile').value;
+
         const memberType = document.querySelector('input[name="memberType"]:checked')?.value;
         const payMethod = document.querySelector('input[name="payMethod"]:checked')?.value;
         const nid1silectFile = nid1silectInput.files[0];
@@ -333,6 +347,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('দয়া করে আপনার বাড়ির বা স্থায়ী ঠিকানার সকল তথ্য সঠিকভাবে পূরণ করুন অথবা "বর্তমান ঠিকানাই স্থায়ী ঠিকানা" চেকবক্সে টিক দিন।');
                 return;
             }
+        }
+
+        if (!fullname || !fathername || !jov || !mobile) {
+            alert('দয়া করে সকল তথ্য সঠিকভাবে পুরণ করুন।');
+            return;
         }
 
         if (!nid1silectFile || !nid2silectFile) {

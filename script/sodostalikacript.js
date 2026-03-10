@@ -42,23 +42,70 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.target === fbModal) {
             fbModal.style.display = 'none';
         }
+        if (document.querySelector('.optinocntiner.show')) {
+            if (!(e.target === damolbtn || e.target === btnicon)) {
+                damolbtn.classList.remove('active');
+                dmenu.classList.remove('show');
+                iconhandel();
+            }
+        }
     });
 
-    window.downloadpdf = function () {
-        const url = "all_pdf_folder/amolnamapdf.pdf"
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'আমল নামা.pdf';
-        link.click();
+    const damolbtn = document.getElementById('downloadamolnamabtn');
+    const dmenu = document.querySelector('.optinocntiner');
+    const btnicon = document.querySelector('.btnicon');
+    
+    damolbtn.addEventListener('click', function () {
+        damolbtn.classList.toggle('active');
+        dmenu.classList.toggle('show')
+        iconhandel()
+    });
+
+    function iconhandel() {
+        const daolactv = damolbtn.classList.contains('active');
+        if (daolactv) {
+            btnicon.innerHTML = `<i class="fas fa-minus"></i>`
+        } else {
+            btnicon.innerHTML = `<i class="fas fa-plus"></i>`
+        }
     }
 
-    const foter = document.getElementById('foter')
-    foter.addEventListener('click', function () {
-        const a = document.createElement('a');
-        a.href = foter;
-        a.download = 'members.png';
-        a.print()
-
+    const optbtn = document.querySelectorAll('.optionbtn.amlpdd')
+    optbtn.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const selectopt = e.currentTarget.dataset.optc;
+            downloadpdf(selectopt)
+        })
     })
+
+    function downloadpdf(selact) {
+        const url1 = "all_pdf_folder/amolnamapdf.pdf"
+        const link1 = document.createElement('a');
+        link1.href = url1;
+        link1.download = 'আমল নামা (প্রথম পৃষ্ঠা).pdf';
+
+        const url2 = "all_pdf_folder/amolnamabackpdf.pdf"
+        const link2 = document.createElement('a');
+        link2.href = url2;
+        link2.download = 'আমল নামা (দ্বিতীয় পৃষ্ঠা).pdf';
+
+        if (selact === 'all') {
+            link1.click();
+            setTimeout(() => {
+                link2.click();
+            }, 10);
+            return;
+        }
+
+        if (selact === '1stpage') {
+            link1.click();
+            return;
+        }
+        if (selact === '2ndpage') {
+            link2.click();
+            return;
+        }
+    }
 
 });
