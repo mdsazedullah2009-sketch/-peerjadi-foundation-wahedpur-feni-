@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateModalContent(videoId, headline, description, headteglin, catagoriname) {
         const videoPlayer = document.getElementById('modalVideoPlayer');
-        videoPlayer.innerHTML = `<iframe id="ytVideo" data-src="${videoId}" frameborder="0" allowfullscreen></iframe>`;
+        videoPlayer.innerHTML = `<iframe id="ytVideo" data-src="${videoId}" frameborder="0" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"  allowfullscreen></iframe>`;
 
         document.getElementById('modalhaedtaegname').textContent = headteglin;
         document.getElementById('modalHeadline').textContent = headline;
