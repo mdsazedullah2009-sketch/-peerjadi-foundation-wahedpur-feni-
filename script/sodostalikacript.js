@@ -52,13 +52,4 @@ document.addEventListener('DOMContentLoaded', function () {
         link.click();
     }
 
-    const foter = document.getElementById('foter')
-    foter.addEventListener('click', function () {
-        const a = document.createElement('a');
-        a.href = foter;
-        a.download = 'members.png';
-        a.print()
-
-    })
-
 });
