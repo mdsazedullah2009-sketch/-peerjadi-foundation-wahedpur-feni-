@@ -830,8 +830,8 @@ footer {
 
 /* লক্ষনিয় */
 .formnotis {
+    display: none;
     position: fixed;
-    display: grid;
     top: 0px;
     place-content: center;
     place-items: center;
