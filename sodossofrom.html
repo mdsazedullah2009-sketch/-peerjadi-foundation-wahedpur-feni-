@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পীরজাদী ফাউন্ডেশন — সদস্য ফরম</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta name="description" content="পীরজাদী ফাউন্ডেশনের অনলাইন সদস্য ফরম">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&family=Noto+Sans+Bengali:wght@400; 700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style/sodostyle.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="back-btn1">
+            <a title="আগের পৃষ্ঠায় ফিরে যান" href="index.html">⬅ ফিরে যান</a>
+        </div>
+        <div class="justyfy-header">
+            <img src="logo/logo.png" alt="logo" class="logo">
+            <h4>পীরজাদী ফাউন্ডেশন, ওয়াহেদপুর, ফেনী</h4>
+            <p>স্থাপিত: ১৯৯৫</p>
+        </div>
+    </header>
+    <progress id="progress"></progress>
+    <div class="wrap">
+        <div class="top-actions">
+            <h1>পীরজাদী ফাউন্ডেশন — সদস্য ফরম</h1>
+        </div>
+
+        <div id="userView">
+            <div class="card notice">
+                <strong>গুরুত্বপূর্ণ:</strong> যোগাযোগের জন্য আপনার ইমেল আইডি দেয়া উত্তম<br>
+                <small>মোবাইল নাম্বারে আপনার হোয়াটসঅ্যাপ যুক্ত নাম্বর দেয়া উত্তম</small><br>
+                <small>পেমেন্ট: বিকাশ/নগদ/ক্যাশ (ম্যানুয়াল)। বিকাশ/নগদ বেছে নিলে লেনদেনের ট্রানজেকশন আইডি
+                    দিন।</small><br>
+                <small>পেমেন্টের সিস্টেম ক্যাশ বেছে নিলে আপনার আবেদন সম্পু্র্ন করতে পারবেন</small><br>
+                <small>আপনার আবেদনে কোনো ভুল থাকলে আপনার আবেদন বাতিল হয়ে যাবে</small><br>
+                <small style="color:red">NID কার্ডের ছবির আকার **সর্বোচ্চ ১০০ KB** হওয়া আবশ্যক। এর বেশি হলে <b>ছবি আপলোড
+                        হবে
+                        না।</b></small>
+            </div>
+
+            <form id="memberForm" class="card" autocomplete="off">
+                <div class="grid">
+
+                    <div>
+                        <label>পূর্ণ নাম <span class="small" style="color:red">*</span></label>
+                        <input title="আপনার পূর্ণ নাম লিখুন" type="text" id="fullname" required
+                            placeholder="আপনার পূর্ণ নাম লিখুন">
+
+                        <label>পিতার নাম <span class="small" style="color:red">*</span></label>
+                        <input title="আপনার পিতার নাম লিখুন" type="text" id="fathername" required
+                            placeholder="পিতার নাম">
+
+                        <label>মাতার নাম</label>
+                        <input title="আপনার মাতার নাম লিখুন" type="text" id="mothername" placeholder="মাতার নাম">
+                    </div>
+                    <div>
+                        <label>পেশা <span class="small" style="color:red">*</span></label>
+                        <input title="আপনার পেশা সংখ্যেপে বর্নণা করুন" type="text" id="jov" required
+                            placeholder="আপনার পেশা..">
+
+                        <label>জন্ম তারিখ</label>
+                        <div class="date-option">
+                            <input type="radio" id="dateOptionManual" name="dateOption" value="manual" checked>
+                            <label for="dateOptionManual" class="small">ম্যানুয়াল তারিখ</label>
+                        </div>
+                        <input type="date" id="dob" style="margin-top: 8px;">
+
+                        <div class="date-option">
+                            <input type="radio" id="dateOptionDropdown" name="dateOption" value="dropdown">
+                            <label for="dateOptionDropdown" class="small">ড্রপডাউন থেকে নির্বাচন</label>
+                        </div>
+                        <div title="তারিখ নির্বাচন করে (তারিখ সেট করুন) বাটনে ক্লিক করুন" id="dropdownDateSelector"
+                            style="display: none; margin-top: 8px;">
+                            <div class="date-input-group">
+                                <div>
+                                    <label class="small">দিন</label>
+                                    <select id="daySelect" class="small">
+                                        <option value="">দিন</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="small">মাস</label>
+                                    <select id="monthSelect" class="small">
+                                        <option value="">মাস</option>
+                                        <option value="01">জানুয়ারি</option>
+                                        <option value="02">ফেব্রুয়ারি</option>
+                                        <option value="03">মার্চ</option>
+                                        <option value="04">এপ্রিল</option>
+                                        <option value="05">মে</option>
+                                        <option value="06">জুন</option>
+                                        <option value="07">জুলাই</option>
+                                        <option value="08">আগস্ট</option>
+                                        <option value="09">সেপ্টেম্বর</option>
+                                        <option value="10">অক্টোবর</option>
+                                        <option value="11">নভেম্বর</option>
+                                        <option value="12">ডিসেম্বর</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="small">সাল</label>
+                                    <select id="yearSelect" class="small">
+                                        <option value="">সাল</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="button" id="setDateBtn" class="btn secondary small"
+                                style="margin-top: 8px; padding: 6px 10px;">তারিখ সেট করুন</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label>মোবাইল নম্বর <span style="color:red">*</span></label>
+                        <input title="আপনার মোবাইল নাম্বার দিন" type="tel" id="mobile" placeholder="01XXXXXXXXX"
+                            required>
+                    </div>
+                    <div>
+                        <label>ইমেইল ঠিকানা</label>
+                        <input title="আপনারর ইমেইল ঠিকানা দিন" type="email" id="email" placeholder="আপনার ইমেইল ঠিকানা">
+                    </div>
+                    <div>
+                        <div><label>বর্তমান ঠিকানা</label>
+                            <label>বাড়ি বা বাসার নাম<span class="small" style="color:red">*</span></label>
+                            <input title="আপনার বাড়ি বা বাসার নাম লিখুন" type="text" id="present_haus" required
+                                placeholder="আপনার বাড়ি বা বাসার নাম লিখুন">
+                        </div>
+                        <div>
+                            <label>গ্রাম / পাড়া<span class="small" style="color:red">*</span></label>
+                            <input title="আপনার গ্রামের / পাড়ার নাম লিখুন" type="text" id="present_village" required
+                                placeholder="আপনার গ্রামের / পাড়ার নাম লিখুন">
+                        </div>
+                        <div>
+                            <label>ডাকঘর<span class="small" style="color:red">*</span></label>
+                            <input title="আপনার ডাকঘরের নাম লিখুন" type="text" id="present_post" required
+                                placeholder="ডাকঘর">
+                        </div>
+                        <div>
+                            <label>থানা<span class="small" style="color:red">*</span></label>
+                            <input title="আপনার থানার নাম দিন" type="text" id="present_thana" required
+                                placeholder="থানা">
+                        </div>
+                        <div>
+                            <label>জেলা <span class="small" style="color:red">*</span></label>
+                            <input title="আপনার জেলার নাম দিন" type="text" id="present_district" required
+                                placeholder="জেলা">
+                        </div>
+                    </div>
+                    <div id="prgentaddressilect">
+                        <div id="prezentadres" style="font-size: 12px; opacity: 0.8;">স্থাই ঠিকানা
+                            <label style="display:flex;align-items:center;gap:8px">
+                                <label
+                                    title="আপনার বর্তমান এবং স্থায়ী ঠিকানা এক হলে আলাদা করে স্থায়ি ঠিকানা দেয়া লাগবেনা">
+                                    <input type="checkbox" id="sameAddress">
+                                    বর্তমান ঠিকানাই স্থায়ী ঠিকানা
+                                </label>
+                            </label>
+                        </div>
+                        <div>
+                            <label>বাড়ি বা বাসার নাম<span class="small" style="color:red">*</span>
+                            </label>
+                            <input title="আপনার বাড়ি বা বাসার নাম লিখুন" type="text" id="permanent_haus" required
+                                placeholder="আপনার বাড়ি বা বাসার নাম লিখুন">
+                        </div>
+                        <div>
+                            <label>গ্রাম<span class="small" style="color:red">*</span></label>
+                            <input title="আপনার গ্রামের / পাড়ার নাম লিখুন" type="text" id="permanent_village" required
+                                placeholder="আপনার গ্রামের নাম লিখুন">
+                        </div>
+                        <div>
+                            <label>ডাকঘর<span class="small" style="color:red">*</span></label>
+                            <input title="আপনার ডাকঘরের নাম লিখুন" type="text" id="permanent_post" required
+                                placeholder="ডাকঘর">
+                        </div>
+                        <div>
+                            <label>থানা<span class="small" style="color:red">*</span></label>
+                            <input title="আপনার থানার নাম দিন" type="text" id="permanent_thana" required
+                                placeholder="থানা">
+                        </div>
+                        <div>
+                            <label>জেলা <span class="small" style="color:red">*</span></label>
+                            <input title="আপনার জেলার নাম দিন" type="text" id="permanent_district" required
+                                placeholder="জেলা">
+                        </div>
+                    </div>
+                    <div>
+                        <label>আপনার NID কাার্ডের ছবি (প্রথম পৃষ্ঠা) (সর্বোচ্চ ১০০ KB) <span
+                                style="color:red">*</span></label>
+                        <input title="আপনার এন আইডি কার্ডের প্রথম পৃষ্ঠার ছবি দিন" type="file" id="nid1silect"
+                            accept="image/*" required>
+                        <div id="nid1" class="file-preview"></div>
+                    </div>
+                    <div>
+                        <label>আপনার NID কাার্ডের ছবি (দ্বিতীয় পৃষ্ঠা) (সর্বোচ্চ ১০০ KB) <span
+                                style="color:red">*</span></label>
+                        <input title="আপনার এন আইডি কার্ডের দ্বতীয় পৃষ্ঠার ছবি দিন" type="file" id="nid2silect"
+                            accept="image/*" required>
+                        <div id="nid2" class="file-preview"></div>
+                    </div>
+                    <div>
+                        <label>সদস্য প্রকার <span style="color:red">*</span></label>
+                        <div title="যে কনো একটি সদস্যপদ বেছে নিন" class="radio-row">
+                            <label><input type="radio" name="memberType" value="আজীবন" checked> আজীবন সদস্য
+                                (১০,০০০)</label>
+                            <label><input type="radio" name="memberType" value="সাধারণ"> সাধারণ সদস্য (১,০০০)</label>
+                        </div>
+
+                        <label>আপনি যে কার্যক্রমের জন্য বিশেষভাবে ইচ্ছুক</label>
+                        <div title="এক বা একা দিক কার্যক্রম বেছে নিন" class="member-kaj">
+                            <label><input type="checkbox" name="secendarymemberType"
+                                    value="অর্থসহ পবিত্র কুরআন বিতরন সদস্য"> অর্থসহ পবিত্র কুরআন বিতরন সদস্য</label>
+                            <label><input type="checkbox" name="secendarymemberType"
+                                    value="বার্সিক তাফসিরুল কুরআন ও ইসালে ছোয়াব মাহফিল সদস্য"> বার্সিক তাফসিরুল কুরআন ও
+                                ইসালে ছোয়াব মাহফিল সদস্য</label>
+                            <label><input type="checkbox" name="secendarymemberType"
+                                    value="পবিত্র ইদে মীলাদুন্নবি মাহফিল সদস্য">পবিত্র ইদে মীলাদুন্নবি মাহফিল
+                                সদস্য</label>
+                            <label><input type="checkbox" name="secendarymemberType" value="পবিত্র আশুরার মাহফিল সদস্য">
+                                পবিত্র আশুরার মাহফিল সদস্য</label>
+                            <label><input type="checkbox" name="secendarymemberType"
+                                    value="পবিত্র মিরাজুন্নবি মাহফিল সদস্য">
+                                পবিত্র মিরাজুন্নবি মাহফিল সদস্য</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>টাকা প্রদান মাধ্যম <span style="color:red">*</span></label>
+                        <div title="টাকা প্রদান মাধ্যম বেছে নিন" class="radio-row">
+                            <label><input type="radio" name="payMethod" value="বিকাশ" id="bikas" checked>
+                                বিকাশ</label>
+                            <label><input type="radio" name="payMethod" value="নগদ" id="ngod"> নগদ</label>
+                            <label><input type="radio" name="payMethod" value="ক্যাশ" id="cas"> ক্যাশ</label>
+                        </div>
+                        <a title="নাম্বারটিতে বিকাশ এবং নগদ দোনটিই আছে" href="tel:+8801916774966" id="number">
+                            <p id="bikasnong">বিকাশ নম্বর</p>
+                            <p id="ngodnong">নগদ নম্বর</p>+880 1916774966
+                        </a>
+                    </div>
+                    <div id="trajection">
+                        <label>ট্রানজেকশন আইডি</label>
+                        <input title="টাকা প্রদান মাধ্যম বিকাশ বা নগদ নাম্বার বেছে নিলে ট্রানজেকশন নাম্বার দিন"
+                            type="text" id="txid" placeholder="যদি অনলাইনে পাঠান, TXID দিন">
+                    </div>
+                </div>
+
+                <div style="margin-top:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+                    <label style="display:flex;align-items:center;gap:8px">
+                        <input type="checkbox" id="agree" required>
+                        <div class="list1" style="list-style: none;">
+                            <li>মহান আল্লাহর সন্তুস্টি অর্জনের লক্ষে ইহকালিন শান্তি পরকালিন মুক্তি (জান্নাত)
+                                লাভের আশায় এই ফাউন্ডেশন-এর পরিচালিত
+                                শরিয়ত সম্মত সকল কাজের প্রতি সমর্থন করে <span
+                                    class="selectedMember highlight">আজীবন</span> সদস্যপদ গ্রহনের জন্য আবেদন করিলাম।
+                            </li>
+                            <li>আমি <span class="selectedMember highlight">আজীবন</span> সদস্য পদ গ্রহন করার পর থেকে
+                                পবিত্র কুরআন অর্থ-ব্যখ্যা সহ নিজ উদ্যগে অধ্যায়ন করে
+                                কুরআনের প্রতিটি আয়াত বুঝে শুনে আদেশ পালন নিষেধ ত্যায়াগ আমার উপর যতটুক পালন করা প্রয়জন
+                                এতটুকু ব্যক্তি
+                                জিবনে পালন করবো ।
+                                আল্লাহ কবুল করুন </li>
+                            <li>এই ফাউন্ডেশনের <span class="selectedMember highlight">আজীবন</span> সদস্যপদ হিসেবে
+                                গ্রহন
+                                করে নিলে আমি ফাউন্ডেশনের ঘোষিত শরিয়ত সম্মত সকল
+                                কাজে সার্বিক সহযোগিতা করব।
+                            </li>
+                        </div>
+                    </label>
+                    <div style="margin-left:auto" class="inline">
+                        <button type="submit" id="saveBtn" class="btn">সাবমিট করুন</button>
+                        <button type="reset" id="resetBtn" class="btn secondary">রিসেট</button>
+                    </div>
+                </div>
+            </form>
+
+
+            <div id="result" class="card" style="display: none;">
+                <h3>আবেদন সফলভাবে সংরক্ষিত হয়েছে!</h3>
+                <div id="summary" class="summary"></div>
+            </div>
+
+            <div id="fromproview" class="card" style="display:none;">
+                <div class="fromprint">
+                    <button class="printforom"><span>print</span></button>
+                </div>
+                <h3>আবেদন সফলভাবে সংরক্ষিত হয়েছে!</h3>
+                <section id="stutesfr" class="stutesfr" aria-live="polite">
+                </section>
+            </div>
+        </div>
+
+        <div>
+            <a href="sodosso.html"><button class="accordion" id="accordion" style="margin-bottom: 10px;">সদস্যদের তালিকা</button></a>
+            <a href="amolnama.html"><button class="accordion" id="accordion">পীরজাদী ফাউণ্ডেশান কর্তিক প্রকাশিত আমল নামা</button></a>
+        </div>
+
+    </div>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" class="modal-img" src="">
+        </div>
+    </div>
+
+    <div class="paragraph-P01">© 2025 পীরজাদী ফাউন্ডেশন - ওয়াহেদপুর, ফেনী</div>
+    <footer>
+        <div class="credit-right">
+            <div class="sazed">
+                <p>Developed by <span>MD SAZED ULLAH</span></p>
+                <p>ফেসবুক:<a href="#" data-fb-url="https://www.facebook.com/md.sazed.ullah.2024"
+                        data-fb-name="Md Sazed Ullah" data-fb-img="profail.pic/sazed.jpg" class="fb-link-js">Md Sazed
+                        Ullah</a>
+            </div>
+            <div class="topbuttonlin"></div>
+            <div class="sadi">
+                <p>Document Write by <span>ABDULLAH SADI</span></p>
+                <p>ফেসবুক:<a href="#" data-fb-url="https://www.facebook.com/abdullah.sadi.7311"
+                        data-fb-name="Abdullah Sadi" data-fb-img="profail.pic/sadi.jpg" class="fb-link-js">Abdullah
+                        Sadi</a>
+            </div>
+        </div>
+        <div class="socalicon">
+            <a href="https://www.facebook.com/profile.php?id=100078337626798" target="_blank"
+                class="brand-icon fb-brand">
+                <i title="ফাউন্ডেশনের ফেসবুক ফেজ " class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCuS61cRxyztvLuq752Xk37w?si=vt0HbnhygOnkJelU" target="_blank"
+                class="brand-icon yt-brand">
+                <i title="ফাউন্ডেশনের ইউটুব" class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://wa.me/8801916774966?text=আচ্ছালামুআলাইকুম। আমি আপনার সাথে আপনার ফাউন্ডেশন সম্পর্কিত বিষয়ে যোগাযোগ করতে চাই।"
+                target="_blank" class="brand-icon wh-brand">
+                <i class="fab fa-whatsapp" title="হোয়াটসঅ্যাপ"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!--ফেসবুক মডাল-->
+    <div id="fbModal">
+        <div class="fbModal-content">
+            <button onclick="closeFBModal()" class="fbBackBtn">🔙 Back</button>
+            <div class="fbModal-body">
+                <img id="profile-pic" class="profile-pic" alt="profile-picture">
+                <p id="profile-name" class="profile-name"></p>
+                <a id="fb-link" href="#" target="_blank" class="fbBtn">Open Facebook</a>
+                <p class="fb-note">ফেসবুক অ্যাপ বা নতুন ট্যাবে খোলা হচ্ছে…</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="formnotis" id="formnotis">
+        <div class="formnotiscontent" id="formnotiscontent">
+            <button class="cllosnotis" id="cllosnotis">❌️</button>
+            <div class="notishead" id="lkkhonio">লক্ষনীয়</div>
+            <div class="notishead" id="niomaboli" style="display: none;">নীয়মাবলি</div>
+            <div class="linbak"></div>
+            <div class="notisbody1" id="notisbody1">
+                <div class="listnotis">
+                    <li>পীরজাদী ফাউন্ডেশন ওয়েবসাইট ব্যাতিত অন্য কোনো পদ্ধতিতে সদস্য নিচ্ছে না।</li>
+                    <li>এই ওয়েবসাইটে আপনি সহজেই সদস্য পদের জন্য আবেদন করতে পারবেন।</li>
+                    <li>আপনার দেয়া তথ্য যাাচাই করে আপনার আবেদন গ্রহন করা হবে।</li>
+                    <li>আপনার আবেদন যাচাইয়ের ক্ষেত্রে কোন তথ্য ভুল প্রমানিত হলে আবেদন বাতিল হয়ে যাবে।</li>
+                    <li>সদস্য ফি না দেয়া পর্যন্ত আপনার আবেদন অপেক্ষিত হিসিবে সাময়িক সংগ্রহ থাকবে।</li>
+                    <li>আপনার আবেদন যাচাাই করে সদস্যতা নিশ্চিত করে সদস্যদের তালিকায় আপনার নাম যোগ করা হবে।</li>
+                </div>
+            </div>
+            <div class="notisbody2" id="notisbody2">
+                <div class="listnotis">
+                    <li>ফরমে আপনার নাম, পিতার নাম, আপনার পেশা, মোবাইল নাম্বার এবং আপনার পুর্ন ঠাকানা দেয়া বাধ্যতামুলক
+                        করা হয়েছে।</li>
+                    <li>জন্ম তারিখ নির্বাচন করার ক্ষেত্রে <a href="icon/bardey1.png" target="_blank"
+                            rel="noopener noreferrer"><img title="নতুন ট্যাবে খুলে ছবি বড় করে দেখুন"
+                                style="width: 100px; height: 35px;" src="icon/bardey1.png"
+                                alt="(ড্রপডাউন থেকে নির্বাচন করুন)"></a>বেছে নিলে আপনার জন্ম্য তারিখ নির্বাচন করে
+                        <a href="icon/barday2.png" target="_blank" rel="noopener noreferrer"><img
+                                title="নতুন ট্যাবে খুলে ছবি বড় করে দেখুন" style="width: 100px; height: 35px;"
+                                src="icon/barday2.png" alt="(তারিখ সেট করুন)"></a> এ ক্লিক
+                        করুন।
+                    </li>
+                    <li>আপনার বর্তমান ঠিকানা এবং স্থায়ি ঠিকানা এক হলে <a href="icon/adres.png" target="_blank"
+                            rel="noopener noreferrer"><img title="নতুন ট্যাবে খুলে ছবি বড় করে দেখুন"
+                                style="width: 100px; height: 35px;" src="icon/adres.png"
+                                alt="(স্থা্য়ি ঠিকানা এবং বর্তমান ঠিকানা এক)"></a> বাটন সিলেকক্ট করুন।</li>
+                    <li>আপনার NID কার্ডের এক পৃষ্ঠার মান **সর্বচ্ছ ১০০ KB** এর মধ্যে হতে হবে।</li>
+                    <li><a href="icon/nid1.png" target="_blank" rel="noopener noreferrer"><img
+                                title="নতুন ট্যাবে খুলে ছবি বড় করে দেখুন" style="width: 100px; height: 35px;"
+                                src="icon/nid1.png"
+                                alt="(আপনার NID কাার্ডের ছবি (প্রথম পৃষ্ঠা) (jpeg/png) ছবির মান সর্বউচ্ছ ১০০kb *)"></a>
+                        এখানে
+                        আপপনার NID কার্ডের প্রথম পৃষ্ঠা দিন।</li>
+                    <li><a href="icon/nid2.png" target="_blank" rel="noopener noreferrer"><img
+                                title="নতুন ট্যাবে খুলে ছবি বড় করে দেখুন" style="width: 100px; height: 35px;"
+                                src="icon/nid2.png"
+                                alt="(আপনার NID কাার্ডের ছবি (প্রথম পৃষ্ঠা) (jpeg/png) ছবির মান সর্বউচ্ছ ১০০kb *)"></a>
+                        এখানে
+                        আপনার NID কার্ডের দ্বিতীয় পৃস্ঠা দিন।</li>
+                    <li><a href="icon/sdossoprokar.png" target="_blank" rel="noopener noreferrer"><img
+                                title="নতুন ট্যাবে খুলে ছবি বড় করে দেখুন" style="width: 100px; height: 35px;"
+                                src="icon/sdossoprokar.png"
+                                alt="(সদস্য প্রকার *আজীবন সদস্য (১০,০০০) ভোটার সদস্য (৩,০০০) সাধারণ সদস্য (১০০))"></a>
+                        এখান থেকে
+                        যে কোন একটি সদস্য পদ সিলেকট করুন।</li>
+                    <li><a href="icon/bisesprokar.png" target="_blank" rel="noopener noreferrer"><img
+                                title="নতুন ট্যাবে খুলে ছবি বড় করে দেখুন" style="width: 100px; height: 40px;"
+                                src="icon/bisesprokar.png"
+                                alt="(আপনি যে কার্যক্রমের জন্য বিশেষভাবে ইচ্ছুক *অর্থসহ পবিত্র কুরআন বিতরন সদস্য, বার্সিক তাফসিরুল কুরআন ও ইসালে ছোয়াব মাহফিল সদস্য, ইদে মীলাদুন্নবি মাহফিল সদস্য)"></a>
+                        এখানে
+                        বক্সগুলো সিলেক্ট করে আপনি চাাইলে আমাদের নির্দিষ্ট বা একাদিক কার্যক্রমের বিষেশ সদস্য হতে পারেন।
+                    </li>
+                    <li>টাকা প্রদানের জন্য বিকাশ বা নগদ বেঁছৈ নিলে <a href="tel:+8801916774699"
+                            title="এই নাম্বারে বিকাশ, নগদ, এম ক্যাশ খোলা আছে" class="notistsfone">০১৯১৬৭৭৪৯৬৬</a> এই
+                        নাম্বারে টাকা দিয়ে ট্রানজেকশন
+                        নাম্বার
+                        দিন।
+                    </li>
+                    <li>পেমেন্টের মাধ্যম ক্যাশ বেছে নিলে প্যামেন্ট না করে আবেদন নিশ্চিত করলে ২০ দিন এর মধ্যে অন্য কোন
+                        মাধ্যমে সদস্য ফি দেয়ার
+                        প্রমান দিতে হবে। অন্যথায় ২০ দিন পর আপনার আবেদন নিজ থেকে মুছে যাবে।
+                    </li>
+                    <li>সবশেষে নিচের শর্তগুলো টিক দিয়ে <a href="icon/savmitbtn.png" target="_blank"
+                            rel="noopener noreferrer"><img title="নতুন ট্যাবে খুলে ছবি বড় করে দেখুন"
+                                style="width: 100px;" src="icon/savmitbtn.png" alt="(সাাবমিট করুন)"></a> বাটনে ক্লিক
+                        করুন</li>
+                    <li>আপনার আবেদন সফল হলে (আপনার আবেদন সফলভাবে জমা হয়েছে!) মেসেজ আসবে</li>
+                </div>
+            </div>
+            <div class="rightbtn">
+                <div class="nextbuton" id="nextbuton">পরবর্তি</div>
+                <div class="backbuton" id="backbuton">পুনরায়</div>
+                <div class="closebtn" id="closebtn">বন্ধ করুন</div>
+            </div>
+        </div>
+    </div>
+    <script src="script/sodoscript.js"></script>
+</body>
+
+</html>

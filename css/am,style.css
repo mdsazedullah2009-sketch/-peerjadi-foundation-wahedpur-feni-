@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&family=Noto+Serif+Bengali:wght@400;700&family=Tiro+Bangla&family=Amiri&display=swap');
+
+:root {
+  --primary-color: #0d8b4e;
+  --secondary-color: #2c5f2d;
+  --accent-color: #f8f1e5;
+  --text-color: #333;
+  --light-color: #f9f9f9;
+  --dark-color: #1a472a;
+  --gold-color: #c9a145;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* বেসিক স্টাইল */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (max-width:130px) {
+  *{
+    word-break: break-all;
+    font-size: small;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  /* আগে হয়তো ডিফল্টে 700 ছিল */
+  line-height: 1.4;
+}
+
+progress {
+  width: 100%;
+  height: 0px;
+  position: fixed;
+  top: 2px;
+  display: block;
+  align-items: center;
+  z-index: 1200;
+}
+
+/* --- প্রধান কাঠামো এবং বডি --- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+/* --- প্রধান লেআউট Wrapper যা মেনু ও কন্টেন্টকে পাশাপাশি রাখবে --- */
+.main-layout-wrapper {
+  display: block;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* আপনার বডি কন্টেন্টকে একটি "পেজ" এর মতো দেখাতে */
+.page-wrapper {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 55px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+/* --- হেডার --- */
+header {
+  background: rgb(59, 62, 10);
+  color: rgba(255, 255, 255, 1);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.header-topLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+header h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+
+/* ফেসবুক মোডাল */
+#fbModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1200;
+  justify-content: center;
+  align-items: center;
+}
+
+.fbModal-content {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fbBackBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #c4c4c438;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.fbBackBtn:hover {
+  background-color: #ff0000;
+  color: rgb(255, 255, 255);
+}
+
+.fbModal-body {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #1877f2;
+}
+
+.fbBtn {
+  display: inline-block;
+  background-color: #1877f2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.fbBtn i {
+  padding-right: 10px;
+}
+
+.fbBtn .fbloading {
+  display: none;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  border: 3px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.fbBtn:hover {
+  background-color: #145dbf;
+}
+
+.fb-note {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.fb-link-js {
+  font-family: 'Arial', sans-serif;
+  /* ফন্ট */
+  font-size: 15px;
+  /* লেখা বড়/ছোট */
+  color: #1877f2;
+  padding: 5px 5px;
+  /* চারপাশে ফাঁকা */
+  border-radius: 9px;
+  /* কোণ গোল */
+  text-decoration: none;
+  /* আন্ডারলাইন না থাকা */
+}
+
+.fb-link-js:hover {
+  background-color: #1877f2;
+  /* হোভার রঙ পরিবর্তন */
+  color: #ffffff;
+  /* হোভার লেখার রঙ */
+  cursor: pointer;
+  border-radius: 2x;
+  box-shadow: 1px 1px 10px 1px #27629d65;
+}
+
+/* Back Button Style */
+.back-btn1 {
+  border-radius: 50px;
+  background: rgb(84, 81, 9);
+  padding: 0px;
+  text-align: center;
+  margin-right: auto;
+}
+
+.back-btn1 button {
+  background: rgba(90, 89, 84, 0.073);
+  color: #ffffff;
+  border: none;
+  padding: 6px 6px;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-btn1 button:hover {
+  background: #805100;
+  color: #fff;
+}
+
+div {
+  font-family: FreeSerif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+section {
+  margin-top: 20px;
+  padding: 10px;
+  width: 90%;
+  margin: auto;
+  text-align: justify;
+}
+
+section p {
+  font-size: 25px;
+  padding-bottom: 25px;
+}
+
+h2 {
+  color: #0e3c87;
+}
+
+h3 {
+  color: #000000;
+}
+
+/*new style withe sotovag mosjid */
+.povimosdan {
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.povmodabody {
+  display: block;
+  border: 10px solid rgb(1, 13, 119);
+  max-width: 900px;
+  background-color: #f1f3f7;
+}
+
+
+.povhad {
+  display: block;
+  background: rgb(1, 81, 155);
+  padding: 5px;
+}
+
+.povhad div {
+  display: block;
+  font-family: monospace;
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+}
+
+.povhad div span {
+  display: block;
+}
+
+.povcont {
+  display: block;
+  padding: 8px;
+}
+
+.povctext {
+  display: block;
+  color: #000;
+  margin-bottom: 6px;
+  font-size: 23px;
+  font-weight: 600;
+  opacity: 1;
+  text-align: justify;
+}
+
+.phad {
+  font-weight: 700;
+  font-size: 25px;
+
+}
+
+.povchaed {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.povlist {
+  display: block;
+}
+
+.povliscont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  text-align: left;
+  justify-content: space-around;
+}
+
+@media (max-width:1129px) {
+.povhad div {
+    font-size: 47px;
+  }
+  .povliscont {
+    display: block;
+  }
+
+  .bcgrin {
+    display: none;
+  }
+}
+
+.listcon {
+  display: inline;
+  text-align: left;
+}
+
+.listcon ul {
+  margin: 0 10px;
+}
+
+.listcon ul li {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cpinc {
+  color: rgb(187, 53, 98);
+}
+
+.cgrin {
+  color: rgb(3, 104, 3);
+}
+
+.coreng {
+  color: rgb(197, 62, 0);
+}
+
+.cdrblu {
+  color: rgb(10, 10, 102);
+}
+
+.bcoreng {
+  color: white;
+  background-color: rgb(197, 62, 0);
+  border-radius: 10px;
+  padding: 2px;
+  margin-top: 10px;
+  margin: 5px;
+}
+
+.bcgrin {
+  width: 4px;
+  height: inherit;
+  background-color: rgb(2, 59, 2);
+}
+
+.povfoter {
+  display: block;
+}
+
+.povfrhead {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.pvfrcnt {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pvfrst {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.povfotcont {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@media (max-width:500px) {
+  .povmodabody {
+    border: 6px solid rgb(1, 13, 119);
+    width: 100%;
+  }
+
+  .povhad div {
+    font-size: 45px;
+  }
+
+  .povctext {
+    margin-bottom: 3px;
+    font-size: 20px;
+  }
+
+  .phad {
+    font-size: 22px;
+
+  }
+
+  .povchaed {
+    font-size: 25px;
+  }
+
+  .listcon ul li {
+    font-size: 16px;
+  }
+
+  .povfrhead {
+    font-size: 47px;
+  }
+
+  .pvfrcnt {
+    font-size: 24px;
+  }
+
+  .pvfrst {
+    font-size: 27px;
+  }
+
+  .povfotcont {
+    font-size: 20px;
+  }
+}
+
+@media (max-width:490px) {
+  .povhad div {
+    font-size: 40px;
+  }
+
+}
+@media (max-width:400px) {
+  .povmodabody {
+    border: 3px solid rgb(1, 13, 119);
+  }
+
+  .povhad div {
+    font-size:25px;
+  }
+
+  .povctext {
+    margin-bottom: 3px;
+    font-size: 18px;
+  }
+
+  .phad {
+    font-size: 19px;
+
+  }
+
+  .povchaed {
+    font-size: 19px;
+  }
+
+  .listcon ul li {
+    font-size: 15px;
+  }
+
+  .povfrhead {
+    font-size: 25px;
+  }
+
+  .pvfrcnt {
+    font-size: 20px;
+  }
+
+  .pvfrst {
+    font-size: 22px;
+  }
+
+  .povfotcont {
+    font-size: 18px;
+  }
+}
+
+
+
+/* ফুটার */
+footer {
+  background-color: rgba(4, 5, 5, 0.908);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.paragraph-P01 {
+  background-color: var(--dark-color);
+  color: #ececec;
+  border-bottom: 1px solid rgb(156, 149, 149);
+  padding: 5px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.credit-right {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.topbuttonlin {
+  background-color: rgb(52, 47, 47);
+  padding: 1px;
+  height: 100px;
+  width: 0px;
+}
+
+.sazed {
+  text-align: right;
+}
+
+.sadi {
+  text-align: left;
+}
+
+.credit-right span {
+  color: rgb(165, 172, 175);
+  font-weight: bold;
+}
+
+.socalicon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.brand-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 02);
+}
+
+.fb-brand {
+  background: #1877f2;
+}
+
+.yt-brand {
+  background: #ff0000;
+}
+
+.wh-brand {
+  background: #25D366;
+}
+
+
+.card {
+  background: rgb(239, 239, 239);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.accordion {
+  background-color: #1967baff;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  font-size: 19px;
+  border-radius: 6px;
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+
+.accordion:hover {
+  background-color: #0152a8ff;
+}
+
+.panel {
+  display: none;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 0 0 6px 6px;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3a493f00;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #cee2d4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #447a50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3fa05c;
+}
+
+body ::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+body ::-webkit-scrollbar:hover {
+  width: 5px;
+  height: 5px;
+}
+
+body ::-webkit-scrollbar-track {
+  background: #3a493f00;
+}
+
+body ::-webkit-scrollbar-track:hover {
+  background: #cee2d4;
+}
+
+body ::-webkit-scrollbar-thumb {
+  background: #a8b9ad;
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+  background: #6c796f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  header h1 {
+    font-size: 1.2em;
+  }
+
+  .main-layout-wrapper {
+    padding: 10px;
+  }
+
+  .page-wrapper {
+    padding: 2px;
+    margin-top: 20px;
+  }
+
+  section p {
+    font-size: 17px;
+  }
+
+  .credit-right {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    margin-top: 15px;
+    font-size: 0.6rem;
+  }
+
+
+  .credit-right span {
+    margin: 0%;
+    font-size: 10px;
+    color: rgb(165, 172, 175);
+    font-weight: bold;
+  }
+
+}

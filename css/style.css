@@ -1,0 +1,3658 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&family=Noto+Serif+Bengali:wght@400;700&family=Tiro+Bangla&family=Amiri&display=swap');
+
+:root {
+  --primary-color: #004334;
+  --secondary-color: #0a716b;
+  --thard-color: #d1a73d;
+  --section-head: #0c553f;
+  --accent-color: #f6fafc;
+  --text-color: #1F2937;
+  --light-color: #f9f9f9;
+  --dark-color: #1a2647;
+  --sky-color: #49b6d1;
+  --hover-glass-light: rgba(255, 255, 255, 0.068);
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-midiuam: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* eliment style */
+.btn {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+body {
+  font-family: 'Noto Serif Bengali', 'Hind Siliguri', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-color);
+  direction: ltr;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/theme/head-backg.jpg");
+  background-size: cover;
+  background-position: center left;
+  background-repeat: no-repeat;
+  height: 600px;
+  padding: 0px;
+  position: relative;
+}
+
+.header-fast {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.header-last {
+  /* width: 100dvw; */
+  position: relative;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.shedowcraft {
+  display: block;
+  position: absolute;
+  border-top-left-radius: 60%;
+  left: 40%;
+  top: 11%;
+  width: 70dvw;
+  height: 600px;
+  background: transparent;
+  box-shadow: -500px -50px 50px 500px var(--primary-color), inset 10px -20px 100px 100px var(--primary-color);
+  opacity: 0.9;
+  border: 1px px solid var(--primary-color);
+}
+
+.shedowcraft::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/theme/back-over2-.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.header-contet {
+  display: flex;
+  height: 500px;
+  margin: 30px 60px;
+  flex-direction: column;
+  justify-items: left;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+.main-name {
+  display: flex;
+  flex-direction: column;
+  justify-items: left;
+  justify-content: center;
+  font-family: 'cinzel', serif;
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.fasrt-name {
+  color: var(--accent-color);
+}
+
+.last-name {
+  margin-top: -20px;
+  color: var(--thard-color);
+  font-size: 44px;
+}
+
+.found-articel {
+  font-size: 18px;
+  color: white;
+  font-family: 'hind siliguri', 'noto sons bengali';
+  width: 500px;
+}
+
+.founder-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.head-btn {
+  border: 2px solid var(--thard-color);
+  background: transparent;
+  color: var(--light-color);
+  font-size: 0.9rem;
+  padding: 10px 25px;
+  backdrop-filter: blur(10px);
+}
+
+.dontet-btn,
+.menu-btn.dontet-btn {
+  border-color: #d0d0d0 !important;
+  background: #01694c !important;
+}
+
+.head-btn:hover {
+  background: var(--hover-glass-light);
+  backdrop-filter: blur(20);
+  border-color: #b89629;
+  box-shadow: 0px 0px 6px 0px var(--thard-color);
+}
+
+.dontet-btn:hover,
+.menu-btn.dontet-btn:hover {
+  border-color: #d0d0d0e8 !important;
+  background: #038b65 !important;
+  box-shadow: 0px 0px 6px 0px var(--primary-color) !important;
+}
+
+.founder-info-vew {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-evenly;
+  background: #063c34;
+  border-radius: 8px;
+  border: 1px solid #585858;
+  padding: 20px 0px;
+  position: absolute;
+  bottom: -63px;
+  backdrop-filter: blur(30px);
+  margin: 30px 60px;
+  width: 90dvw;
+  box-shadow: 0px -3px 20px 0px #372c0554;
+}
+
+.vew-item {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  border-right: 2px solid #2b594b;
+  padding: 0px 40px;
+}
+
+.vew-item:last-child {
+  border-right: 0px;
+}
+
+.vew-icon {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin: 20px;
+}
+
+.vew-icon i {
+  font-size: 40px;
+  color: var(--thard-color);
+}
+
+.vew-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0;
+  color: #f8fbfb;
+}
+
+.bold-text {
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+.mini-tet {
+  font-size: 15px;
+}
+
+.mobail-vab-sho{
+  display: none;
+  z-index: 1001;
+  /* আইকন ক্লিকের রেসপন্স স্মুথ করার জন্য ট্রানজিশন */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: fixed;
+  background: transparent;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+/* ১. সাধারণ ডেস্কটপ মনিটরে হ্যামবার্গার বাটনটি লুকানো থাকবে */
+.menubardiv {
+  display: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  background: #5d5d5d14;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.menubari {
+  font-size: 24px;
+  color: var(--section-head);
+  /* টপ হেডারের ব্যাকগ্রাউন্ডে স্পষ্ট দেখার জন্য সাদা কালার */
+}
+
+.menubardiv:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* হোভার করলে হালকা গ্লাস ইফেক্ট */
+}
+
+.menubardiv:active {
+  transform: scale(0.92);
+  /* ক্লিকের মুহূর্তে হালকা পুশ ডাউন রেসপন্স */
+}
+
+.min-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1500;
+}
+
+.min-menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  background: #fefdfd;
+  border: 1px solid rgb(255 247 216);
+  padding: 5px 10px;
+  box-shadow: 0px -2px 23px -4px #002a276b;
+}
+
+.menu-crose {
+  position: relative;
+  display: none;
+  font-size: 18px;
+  color: var(--dark-color);
+}
+
+.menu-name-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+  gap: 5px;
+}
+
+.main-logo {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  justify-items: center;
+  width: 50px;
+}
+
+.nav-name {
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-color);
+  font-family: 'Hind Siliguri';
+}
+
+.nav-bold {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-hide {
+  margin-top: -2px;
+  font-size: 15px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+}
+
+.menu-riht-itme{
+  display: flex;
+  flex-direction: row;
+  right: 0;
+  position: relative;
+}
+
+.menu-btn-cont{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right: 0;
+}
+.menu-btn {
+  background: transparent;
+  font-size: 1rem;
+  color: var(--dark-color);
+  border-radius: 0;
+  padding: 5px 10px;
+  border-bottom: 3px solid transparent;
+  border-width: 0%;
+}
+
+.menu-btn:active,
+.menu-btn.active {
+  background: #002b2811;
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  border-width: 100%;
+}
+
+.min-menu .menu-btn-cont .dontet-btn {
+  margin-left: 10px;
+  color: var(--light-color);
+}
+
+.min-section {
+  display: flex;
+  justify-items: center;
+  margin: 80px 60px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  /* অ্যানিমেশনটি কত স্মুথ হবে */
+}
+.min-section.ntfdiv{
+  margin: 80px 60px;
+}
+
+.reveal.min-section.active,
+.reveal.header-last.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ntf-contet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  gap: 15px;
+  width: 100dvw;
+  background: #fbf5ea;
+  border-radius: 8px;
+  border: 2px solid #f3ebd9;
+  padding: 30px 20px;
+}
+
+.ntf-head {
+  display: block;
+  font-size: 30px;
+  color: var(--section-head);
+  font-family: 'hind siliguri', 'noto sans bengali';
+  font-weight: bold;
+}
+
+.ntf-head i {
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.min-ntf {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ntf-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 10px 15px;
+  gap: 10px;
+  background: var(--accent-color);
+  color: var(--text-color);
+  border: 1px solid #c2c2c287;
+  border-top: none;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.ntf-item:nth-child(even) {
+  border-top: 1px solid #c2c2c287;
+  border-bottom: 1px solid #c2c2c287;
+}
+
+.ntf-item:first-child {
+  border-radius: 8px 8px 0px 0px;
+  border-top: 1px solid #c2c2c287;
+}
+
+.ntf-item:last-child {
+  border-radius: 0px 0px 8px 8px;
+  border-bottom: 1px solid #c2c2c287;
+}
+
+.ntf-item:hover:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  position: absolute;
+  background: #b0b0b00d;
+}
+
+.ntf-min-item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-start;
+  justify-items: center;
+  z-index: 1;
+}
+
+.ntf-day {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+  background: #fbf5ea;
+  color: var(--secondary-color);
+  font-family: 'Hind Siliguri';
+}
+
+.ntf-day-bold {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.ntf-day-mini {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.ntf-titele {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.ntf-titele {
+  align-items: center;
+  font-family: 'Noto Serif Bengali';
+  font-weight: 500;
+}
+
+.ntf-pluse-i {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.ntf-pluse-i span {
+  align-items: center;
+}
+
+.ntf-all-show-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.ntf-show-btn {
+  border: none;
+  background: var(--section-head);
+  color: #fffcf5;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  padding: 13px 25px;
+}
+
+.ntf-show-btn:hover {
+  box-shadow: 0px 0px 6px 0px #d1cb94;
+}
+
+.min-section.aboute {
+  display: block;
+  margin: 80px 0;
+  background: #01412f;
+  transform: translate(0);
+  opacity: 1;
+}
+
+.about-contet {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 25px 20px;
+  position: relative;
+  cursor: default;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-contet::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/theme/bac-icon-mosqu-dor.png');
+  background-size: 200px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-contet::after::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/theme/back-over2-.png');
+  background-size: 400px;
+  background-position: bottom right;
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-shb-img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transform: translateX(-100px)
+}
+
+.reveal.about-shb-img.active {
+  transform: translateX(0px)
+}
+
+.mosqo-img {
+  width: 300px;
+}
+
+.ab-sh-img-titel {
+  display: grid;
+  font-size: 16px;
+  position: absolute;
+  bottom: -29px;
+  height: 33px;
+  left: 0;
+  right: 0;
+  transition: all 0.4s ease;
+  background: linear-gradient(360deg, #02272380, transparent);
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-radius: 49% 50% 0% 0%;
+}
+
+.about-shb-img:hover .ab-sh-img-titel {
+  bottom: 0px;
+}
+
+.shovapoti-dtls .ab-sh-img-titel {
+  background: linear-gradient(360deg, #d6d6d645, transparent);
+  color: var(--section-head);
+}
+
+.about-tex {
+  display: block;
+  width: 500px;
+  text-align: left;
+  font-family: 'Hind Siliguri';
+  transform: translateX(100px)
+}
+
+.reveal.about-tex.active {
+  transform: translateX(0px)
+}
+
+.about-tex h2 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.about-tex p {
+  color: #ececec;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.show-about {
+  border: 1px solid #9e9e9e;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background: transparent;
+  color: #ececec;
+  margin-top: 20px;
+}
+
+.show-about:hover {
+  transform: scale(1.1);
+}
+
+.shovapoti-dtls {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 25px 50px;
+  background: var(--accent-color);
+}
+
+.shovapoti-dtls::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/theme/bac-gold-parten.jpeg');
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.soba-item {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+  z-index: 3;
+}
+
+.shb-img {
+  width: 300px;
+  border-radius: 50%;
+}
+
+.shoba-info.text {
+  font-family: 'Hind Siliguri';
+  color: var(--section-head);
+  margin-bottom: 10px;
+  width: 500px;
+  transform: translateX(100px)
+}
+
+.reveal.shoba-info.text.active {
+  transform: translateX(0px)
+}
+
+.shoba-info.text h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.shoba-info.text p {
+  font-size: 20px;
+  text-align: justify;
+}
+
+.min-section.activitis,
+.min-section.mahfil {
+  margin: 80px 0px;
+  padding: 20px 10px;
+  position: relative;
+}
+
+.section-conte {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+
+.section-head {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.section-head h2 {
+  font-size: 30px;
+  color: var(--primary-color);
+  text-align: center;
+  font-family: 'Hind Siliguri';
+}
+
+.section-head p {
+  font-size: 17px;
+  color: var(--text-color);
+  text-align: center;
+  opacity: 0.9;
+  font-family: 'Noto Serif Bengali';
+}
+
+.act-card-contet {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+  justify-items:center;
+  margin-top: 20px
+}
+
+.act-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+  min-width: 250px;
+  padding: 30px 20px;
+  border: 1px solid #7063361c;
+  border-radius: 5px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+}
+
+@media (max-width: 1130px) {
+.act-card-contet {
+  gap: 25px;
+}
+.act-card {
+  min-width: 220px;
+  padding: 25px 15px;
+}
+}
+
+@media (max-width: 950px) {
+.act-card {
+  min-width: 208px !important;
+}
+}
+
+@media (max-width: 887px) {
+  .act-card-contet {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+    flex-wrap: wrap;
+  }
+.act-card {
+  min-width: 250px !important;
+  max-width: 250px !important;
+  /* padding: 25px 15px; */
+}
+}
+@media (max-width: 547px) {
+  .act-card-contet {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    flex-wrap: wrap;
+  }
+
+  .act-card {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    /* padding: 25px 15px; */
+  }
+}
+
+@media (max-width: 460px) {
+  .act-card-contet {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .act-card {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    /* padding: 25px 15px; */
+  }
+}
+
+.act-card:hover {
+  transform: translateY(-10px) rotateY(5deg);
+  border-color: #00623c12;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-i {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 10px;
+}
+
+.card-i i,
+.card-i img {
+  font-size: 40px;
+  width: 40px;
+  color: var(--section-head);
+}
+
+.card-head {
+  font-size: 20px;
+  font-family: 'hind siliguri';
+  color: var(--dark-color);
+  font-weight: 800;
+}
+
+.card-titel {
+  font-size: 15px;
+  color: rgb(31, 31, 31);
+}
+
+.mahfil-item-conten {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  gap: 10px;
+  width: 100%;
+}
+
+.mahfil-item {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: white;
+  border: 1px solid #3d3d3d14;
+  width: 100%;
+  position: relative;
+}
+
+.mahfil-item:hover:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  position: absolute;
+  background: #b0b0b00d;
+}
+
+.mhl-fast {
+  display: flex;
+  gap: 20px;
+  z-index: 1;
+}
+
+.mhl-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: var(--section-head);
+  color: var(--light-color);
+}
+
+.mhl-time .day {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.mhl-time .moanth,
+.mhl-time .yer {
+  font-size: 16;
+  font-weight: 400;
+}
+
+.mhl-titel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.mhl-titel-head {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.mhl-titel-location,
+.mhl-titel-time {
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  gap: 10px;
+}
+
+.mhl-titel-location i,
+.mhl-titel-time i {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.mhl-showbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.show-mhl-btn,
+.show-all-mhl {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.show-mhl-btn:hover,
+.show-all-mhl:hover {
+  transform: scale(1.1);
+}
+
+.mhl-all-show {
+  display: block;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.show-all-mhl {
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+
+.min-section.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  align-items: center;
+  margin: 80px 20px;
+  transform: translate(1);
+  opacity: 1;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin: 10px;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+  width: 30dvw;
+}
+
+.contact-item:first-child {
+  transform: translateX(-100px)
+}
+
+.contact-item:nth-child(2) {
+  transform: translateX(100px)
+}
+
+
+.contact-item:last-child {
+  transform: translateY(100px)
+}
+
+.reveal.contact-item.active {
+  transform: translate(0px)
+}
+
+.contact-item.full-width {
+  grid-column: span 2;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.location-ifrm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.location-ifrm iframe {
+  width: 70dvw;
+  min-height: 400px;
+}
+
+.section-head.contact {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 100%;
+  font-family: 'Hind Siliguri';
+  margin-bottom: 12px;
+}
+
+.section-head.contact .fast {
+  font-size: 25px;
+  color: var(--text-color);
+}
+
+.section-head.contact .last {
+  font-size: 18px;
+  color: #545454;
+}
+
+.contect-info {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contect-info p,
+.contect-info a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+.contect-item-p {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  font-size: 20px;
+  color: #434343;
+}
+
+.contect-item-p i {
+  font-size: 25px;
+  color: var(--text-color);
+}
+
+.conteact-input-item {
+  display: block;
+  width: 100%;
+}
+
+.conteact-input-item input,
+.conteact-input-item textarea {
+  display: block;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  color: #363636;
+  margin: 10px 0px;
+  width: 100%;
+  resize: none;
+  border: 1px solid rgb(175 175 175 / 50%);
+  background: #fefefec4;
+}
+
+.conteact-input-item input:focus,
+.conteact-input-item textarea:focus {
+  background: white;
+  border-color: rgb(117 117 117 / 52%);
+  outline: none;
+}
+
+.conteact-input-item textarea {
+  height: 150px
+}
+
+.sendmasegetn {
+  /* display: block; */
+  width: 100%;
+  font-size: 22px;
+  background: var(--section-head);
+  color: var(--light-color);
+  border: 0;
+  border-radius: 5px;
+  padding: 11px;
+}
+
+footer {
+  display: block;
+  background: var(--primary-color);
+  color: var(--accent-color);
+  padding: 20px 50px;
+  margin: 0;
+  font-family:
+    'hind siliguri';
+  overflow: hidden;
+  position: relative;
+}
+
+/* গোল্ডেন প্যাটার্ন বা টেম্পলেটের জন্য লেয়ার */
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/theme/golden-overly.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.footer-items {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.footer-items.fast {
+  justify-content: space-between;
+}
+
+.footer-items.last {
+  border-top: 1px solid #f9edc312;
+  padding: 41px 20px 0px;
+  margin-bottom: 0;
+}
+
+.footer-contet {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-right: 1px solid #f0e4bc1a;
+  gap: 8px;
+  padding: 0 40px 0 0;
+}
+
+.footer-contet:first-child {
+  border-right: 0;
+}
+
+.footer-contet:last-child {
+  margin-right: 20px;
+  border-right: 0;
+}
+
+.fot-it.footet-name-logo {
+  display: flex;
+  gap: 10px;
+}
+
+
+.fot-logo .fot-logo-img {
+  width: 50px;
+}
+
+.fot-name {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.fot-name .fast {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.fot-name .last {
+  font-size: 13px;
+  margin-top: -6px;
+}
+
+.fot-discription {
+  text-align: left;
+  font-size: 15px;
+  width: 79%;
+  margin-bottom: 10px;
+}
+
+.fot-link-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+}
+
+.sosale-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+}
+
+.sosale-logo.fb {
+  background: #318aff;
+}
+
+.sosale-logo.ytb {
+  background: #ff0000;
+}
+
+.sosale-logo.wht {
+  background: #0ad62c;
+
+}
+
+.sosale-logo.mel {
+  background: rgb(7 73 171);
+}
+
+.sosale-logo.phn {
+  background: #e7e7e71a;
+  color: rgb(192 202 225);
+}
+
+.fot-head {
+  display: block;
+  margin: 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.list-fot {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.fot-list-it {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--accent-color);
+  list-style: none;
+}
+
+.fot-nav-it {
+  cursor: pointer;
+}
+
+.fot-dont-btn {
+  background: var(--thard-color) !important;
+  color: var(--accent-color) !important;
+  font-size: 1rem;
+}
+
+.flating-div-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 10%;
+  right: 3%;
+  pointer-events: none;
+}
+
+.up-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #4e4e4e70;
+  color: black;
+  background: #8b8b8b1c;
+  backdrop-filter: blur(20px);
+  font-size: 17px;
+  padding: 15px;
+  pointer-events: painted;
+  cursor: pointer;
+}
+
+.up-btn:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 15px 0px rgba(48, 48, 48, 0.514);
+}
+
+.floting-modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-family: 'Hind Siliguri';
+  background: #00000031;
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+}
+
+.floting-modal.show {
+  display: flex;
+}
+
+.modal-contaner {
+  background: #f9fffe;
+  min-height: 80dvh;
+  min-width: 40dvw;
+  max-width: 60dvw;
+  max-height: 85dvh;
+  border: 1px solid #fafff8e3;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#donet-md .modal-contaner,
+#dnt-sher-md .modal-contaner{
+  min-height: 40dvh;
+  
+}
+
+.modal-heade {
+  border-radius: 15px 15px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid #03515f38;
+  box-shadow: -1px -3px 18px #6c5b1154;
+  background: var(--secondary-color);
+  padding: 20px 30px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.modal-head-item {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  gap: 0;
+}
+
+.modal-head-item:first-child {
+  text-align: left;
+}
+
+.modal-head-item:last-child {
+  justify-content: center;
+  text-align: center;
+}
+
+.mdal-head-tytle {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.mdal-head-subritel {
+  font-size: 15px;
+  margin-top: -3px;
+  color: whitesmoke;
+}
+
+.mdal-head-tytle-img {
+  display: flex;
+  justify-items: center;
+  width: 50px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+}
+
+.modal-close {
+  font-size: 25px;
+  color: rgb(249 209 213 / 42%);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background: #8c8b8b26;
+}
+
+.modal-close:hover {
+  background: #a2a2a226;
+  color: rgb(255 85 101);
+
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
+  margin: 20px 50px;
+  max-height: 90%;
+  height: 50%;
+}
+/* মডাল বডির কাস্টম স্ক্রলবার */
+
+/* ১. স্ক্রলবারের চওড়া বা উইডথ (ডেস্কটপে চিকন দেখানোর জন্য ৬ পিক্সেল) */
+.modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* ২. স্ক্রলবারের পেছনের রাস্তা বা ট্র্যাক (Track) */
+.modal-body::-webkit-scrollbar-track {
+  background: #f1f5f9; /* হালকা ধূসর কালার, যা ব্যাকগ্রাউন্ডের সাথে মিশে থাকবে */
+  border-radius: 10px;
+}
+
+/* ৩. স্ক্রলবারের নড়াচড়া করার বার বা থাম্ব (Thumb) */
+.modal-body::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* স্ট্যান্ডার্ড মিডিয়াম ধূসর কালার */
+  border-radius: 10px; /* চারকোনা না রেখে গোল করার জন্য */
+  transition: background 0.3s ease;
+}
+
+/* ৪. মাউস হোভার করলে স্ক্রলবারের রঙ সামান্য গাঢ় হবে */
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; 
+}
+.modal-body-head {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: center;
+  border-bottom: 1px solid #7cbeba70;
+  padding: 10px;
+}
+
+.ntd-bismillah {
+  font-size: 15px;
+  text-align: center;
+}
+
+.ntd-date {
+  font-size: 16px;
+  text-align: end;
+  margin-top: 15px;
+}
+
+.nt-md-item {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.nt-md-item.nttxt-item {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 10px;
+}
+
+.nt-md-item.ntcradit-item {
+  text-align: end;
+}
+
+.modal-foote {
+  border-radius: 0px 0px 15px 15px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--secondary-color);
+  color: var(--accent-color);
+  padding: 14px 15px;
+}
+
+.modal-foote-item {
+  position: relative;
+}
+
+.nt-md-foote-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nt-md-fot-hint {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: #d4d4d4;
+}
+
+.next-prov-btn-cont {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nt-md-fot-sch-btn {
+  padding: 8px 14px;
+  font-size: 0.7rem;
+  background: #99979763;
+  backdrop-filter: blur(15px);
+  color: #f9f9f996;
+}
+
+.nt-md-fot-sch-btn:hover {
+  background: #acacac4f;
+  color: #d6d6d6bf;
+}
+
+.nt-md-fot-sch-btn:disabled {
+  cursor: default;
+  background: #9e9e9e21;
+  color: #a3a0a0a1;
+}
+
+.modal-body-discription {
+  font-size: 20px;
+  color: #333333;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.modal-body-contet {
+  padding: 20px;
+  font-size: 17px;
+  color: var(--text-color);
+  background: #fafeff;
+  border-radius: 8px;
+  border: 1px solid #002f1c0d;
+  box-shadow: inset 3px 4px 8px 0px #4376670a;
+}
+
+.modal-body-contet li {
+  margin: 0px 10px;
+  font-size: 17px;
+  list-style: circle;
+}
+
+.aldtteghed {
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.modal-p {
+  text-align: justify;
+  margin: 15px 0;
+}
+
+.modal-btn-contet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.show-all-info {
+  padding: 20px 25px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--accent-color);
+  background: rgb(21 96 180);
+}
+
+.pymanet-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pymant-tem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #eefff5b3;
+  border: 1px solid #01200c0f;
+  border-radius: 10px;
+  gap: 25px;
+  position: relative;
+}
+
+.pym-it {
+  display: flex;
+  flex-direction: row;
+  /* position: relative; */
+}
+
+.pym-it.fast {
+  gap: 15px;
+  /* width: 70%; */
+}
+
+.pym-it.last {
+  gap: 10px;
+}
+
+.pym-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.pym-logo img {
+  width: 50px;
+}
+
+.pym-name-num {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.pym-title {
+  font-size: 21px;
+  font-weight: bold;
+  color: #232426;
+}
+
+.pym-num {
+  font-size: 18px;
+  color: #363a39;
+}
+
+.pym-action-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  /* position: relative; */
+}
+
+.pym-acbt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #1b1c1bbd;
+  background: #36383e0d;
+  padding: 9px 9px;
+}
+
+.pym-acbt:hover {
+  color: #151816;
+  background: #36383e1a;
+}
+
+.shear-item-contet {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-radius: 10px;
+}
+
+.shr-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 20px;
+  background: rgb(180 180 180 / 13%);
+  border: 1px solid rgb(0 46 32 / 8%);
+  position: relative;
+}
+
+.shr-item:hover {
+  background: rgb(180 180 180 / 21%);
+  border: 1px solid rgb(1 29 21 / 13%);
+  border-radius: 3px;
+  box-shadow: 4px 7px 15px 0px #8f8f8f54, inset 4px 7px 25px 0px #f6fffeb8;
+}
+
+.shr-shr-btn-cont {
+  display: flex;
+  gap: 0;
+  /* position: relative; */
+}
+
+.shar-min {
+  padding: 10px 15px;
+  border-radius: 0;
+  background: #35373a0f;
+  color: #21212185;
+}
+
+.btn.shar-min:hover {
+  background: #35373a1f;
+  color: #333333;
+}
+
+.btn.shar-min:first-child {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.btn.shar-min:last-child {
+  border-radius: 0 10px 10px 0px;
+}
+
+.phm-btn-text {
+  position: absolute;
+  /* top: 0; */
+  bottom: 0;
+  /* left: 0; */
+  /* right: 0; */
+  display: none;
+  align-items: center;
+  background-color: #00000099;
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 15px;
+  pointer-events: none;
+}
+
+.phm-btn-text.sher {
+  right: 0;
+  text-align: right;
+}
+
+.btn.shar-min:hover .phm-btn-text,
+.pym-acbt:hover .phm-btn-text {
+  display: flex;
+}
+
+.shr-it-seion i {
+  font-size: 40px;
+}
+
+.shr-it-seion .fab.fa-facebook {
+  color: #0084ff;
+}
+
+.shr-it-seion .fab.fa-facebook-messenger {
+  color: #0084ff;
+}
+
+.shr-it-seion .fab.fa-whatsapp {
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.shr-it-seion .fas.fa-envelope {
+  color: #1c846b;
+}
+
+.lodingpag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: whitesmoke;
+  border-radius:15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 250px;
+  min-width: 300px;
+}
+
+.loding.spin {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid #d6d6d6;
+  border-top-color: var(--secondary-color);
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.shar-min i {
+  font-size: 16px;
+}
+
+/* মসজিদ গ্রিড লেআউট ডিজাইন */
+.mosque-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* কম্পিউটারে ২ কলামে দেখাবে */
+  gap: 20px;
+  margin-top: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* প্রতিটি কার্ড বা বক্সের ডিজাইন */
+.mosque-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mosque-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* কেন (Why) কার্ডটি একটু বড় দেখানোর জন্য গ্রিড লজিক */
+.mdlcard-why {
+  grid-column: span 2;
+  /* এটি পুরো স্ক্রিন জুড়ে থাকবে */
+  border-left: 5px solid #064E3B;
+  /* ইসলামিক ডিপ গ্রিন কালার টোন */
+}
+
+.mdlcard-what {
+  border-left: 5px solid #D2AF37;
+  /* গোল্ডেন কালার টোন */
+}
+
+.mdlcard-where {
+  border-left: 5px solid #2563EB;
+  /* ব্লু কালার টোন */
+}
+
+/* আইকন ও টাইটেল স্টাইল */
+.mdlcard-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #4a5568;
+}
+
+.mdlcard-what .mdlcard-icon {
+  color: #D2AF37;
+}
+
+.mdlcard-why .mdlcard-icon {
+  color: #064E3B;
+}
+
+.mdlcard-where .mdlcard-icon {
+  color: #2563EB;
+}
+
+.mdlcard-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 10px 0;
+}
+
+.card-text {
+  font-size: 14.5px;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+  text-align: justify;
+}
+
+/* লিস্ট স্টাইল */
+.mdlcard-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mdlcard-list li {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+.mdlcard-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #064E3B;
+  font-weight: bold;
+}
+
+/* লোকেশন ডিটেলস ডিজাইন */
+.location-details p {
+  font-size: 14px;
+  color: #4a5568;
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.location-details i {
+  width: 16px;
+  color: #718096;
+}
+
+/* নিচের উক্তি/বক্তব্য বক্স ডিজাইন */
+.mosque-quote-box {
+  background-color: #f7fafc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 25px;
+  border-left: 4px solid #718096;
+  text-align: center;
+  font-style: italic;
+}
+
+.mosque-quote-box p {
+  margin: 0;
+  font-size: 14px;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* 📱 রেসপন্সিভ ব্রেকপয়েন্ট (মোবাইলের জন্য স্ক্রিন এডজাস্টমেন্ট) */
+@media (max-width: 768px) {
+  .mosque-grid-container {
+    grid-template-columns: 1fr;
+    /* মোবাইলে সব একটার নিচে আরেকটা চলে আসবে */
+  }
+
+  .mdlcard-why {
+    grid-column: span 1;
+  }
+}
+
+/* মাদ্রাসা সেকশন ডিজাইন */
+.madrasha-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.madrasha-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* ইতিহাস ও টাইমলাইন */
+.history-card {
+  border-top: 4px solid #064E3B;
+  /* ইসলামিক ডিপ গ্রিন */
+}
+
+.madrasha-badge {
+  display: inline-block;
+  background: #064E3B;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.madrasha-p {
+  font-size: 15px;
+  margin: 0 0 15px 0;
+  text-align: justify;
+}
+
+/* টাইমলাইন ডিজাইন */
+.madrasha-timeline {
+  border-left: 2px dashed #cbd5e1;
+  margin: 20px 10px;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: #064E3B;
+  border-radius: 50%;
+}
+
+.timeline-year {
+  font-weight: bold;
+  color: #064E3B;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.timeline-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+/* গ্রিড লেআউট (বর্তমান অবস্থা ও আবেদন পাশাপাশি) */
+.madrasha-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  border-top: 4px solid #d97706;
+  /* আম্বার বা গোল্ডেন টোন */
+}
+
+.appeal-card {
+  border-top: 4px solid #dc2626;
+  /* লালচে টোন আবেদনের গাম্ভীর্য বুঝাতে */
+  background: #fffbef;
+}
+
+.madrasha-subheading {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* লিস্ট */
+.madrasha-list {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.madrasha-list li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #475569;
+}
+
+/* হাইলাইট বক্স */
+.madrasha-highlight {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #334155;
+  border-left: 3px solid #d97706;
+}
+
+/* পরিচালিকার আবেদন বক্স */
+.appeal-box {
+  background: #7f1d1d;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(127, 29, 29, 0.2);
+}
+
+/* 📱 রেসপন্সিভ ডিজাইন */
+@media (max-width: 768px) {
+  .madrasha-grid {
+    grid-template-columns: 1fr;
+    /* মোবাইলে এক কলামে আসবে */
+  }
+}
+
+/* মকতব সেকশন ডিজাইন */
+.maktab-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.maktab-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* একাত্মতা ও মেলবন্ধন কার্ড */
+.unity-card {
+  border-left: 5px solid #0d9488;
+  /* টিল বা নীলাভ সবুজ রঙ */
+  background: #f0fdfa;
+}
+
+.maktab-badge {
+  display: inline-block;
+  background: #0d9488;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.maktab-p {
+  font-size: 15px;
+  margin: 0 0 15px 0;
+  text-align: justify;
+}
+
+/* গ্রিড লেআউট (কী ও সিলেবাস পাশাপাশি) */
+.maktab-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.core-card {
+  border-top: 4px solid #0284c7;
+  /* স্কাই ব্লু টোন */
+}
+
+.syllabus-card {
+  border-top: 4px solid #16a34a;
+  /* গ্রিন টোন */
+}
+
+.maktab-subheading {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* হাইলাইট বক্স */
+.maktab-highlight {
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #475569;
+  border-left: 3px solid #0284c7;
+}
+
+/* লিস্ট */
+.maktab-list {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.maktab-list li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #475569;
+  list-style-type: square;
+}
+
+/* গৌরব ও বৈশিষ্ট্য কার্ড */
+.feature-card {
+  border-top: 4px solid #4f46e5;
+  /* ইন্ডিগো বা বেগুনি টোন */
+}
+
+/* নিচের উক্তি বক্স */
+.maktab-quote {
+  background: #f5f3ff;
+  color: #4c1d95;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 15px;
+  border: 1px dashed #c084fc;
+}
+
+/* 📱 রেসপন্সিভ ডিজাইন */
+@media (max-width: 768px) {
+  .maktab-grid {
+    grid-template-columns: 1fr;
+    /* মোবাইলে এক কলামে আসবে */
+  }
+}
+
+/* মাহফিল সেকশন মূল লেআউট */
+.mahfil-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #334155;
+}
+
+.mahfil-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* কম্পিউটারে ২টি করে কলাম */
+  gap: 20px;
+  margin-top: 15px;
+}
+
+/* প্রতিটি মাহফিল কার্ডের ডিজাইন */
+.mahfil-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+  border-top: 4px solid #cbd5e1;
+  /* ডিফল্ট বর্ডার */
+}
+
+.mahfil-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+/* ভিন্ন ভিন্ন কার্ডের জন্য ওপরের রঙিন বর্ডার */
+.mahfil-grid .mahfil-card:nth-child(1) {
+  border-top-color: #059669;
+}
+
+/* ইসালে সওয়াব - গ্রিন */
+.mahfil-grid .mahfil-card:nth-child(2) {
+  border-top-color: #d97706;
+}
+
+/* মিলাদুন্নবী - গোল্ড */
+.mahfil-grid .mahfil-card:nth-child(3) {
+  border-top-color: #4f46e5;
+}
+
+/* মেরাজুন্নবী - ইন্ডিগো */
+.mahfil-grid .mahfil-card:nth-child(4) {
+  border-top-color: #dc2626;
+}
+
+/* আশুরা - রেড */
+.mahfil-grid .mahfil-card:nth-child(5) {
+  border-top-color: #f59e0b;
+}
+
+/* রমজান - আম্বার */
+.qirat-card {
+  border-top-color: #0d9488 !important;
+  background: #f0fdfa;
+}
+
+/* কেরাত সম্মেলন */
+
+/* আইকন ও টেক্সট স্টাইল */
+.mahfil-icon {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.text-emerald {
+  color: #059669;
+}
+
+.text-gold {
+  color: #d97706;
+}
+
+.text-indigo {
+  color: #4f46e5;
+}
+
+.text-red {
+  color: #dc2626;
+}
+
+.text-amber {
+  color: #f59e0b;
+}
+
+.text-teal {
+  color: #0d9488;
+}
+
+.mahfil-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.mahfil-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.mahfil-text {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+}
+
+/* কেরাত সম্মেলন লিংক বোতামের ডিজাইন */
+.qirat-links {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.qirat-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #99f6e4;
+  color: #0f766e;
+  padding: 10px 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.qirat-btn:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border-color: #0f766e;
+  padding-left: 18px;
+  /* হোভারে সামান্য ডানে সরবে */
+}
+
+/* 📱 রেসপন্সিভ ডিজাইন (মোবাইলের জন্য) */
+@media (max-width: 768px) {
+  .mahfil-grid {
+    grid-template-columns: 1fr;
+    /* মোবাইলে এক কলামে আসবে */
+  }
+}
+
+/* আমাদের সম্পর্কে (About) সেকশন ডিজাইন */
+.about-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.about-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+/* ভূমিকা কার্ড স্টাইল */
+.intro-card {
+  border-top: 4px solid #0f766e;
+  /* ডার্ক টিল গ্রিন */
+  background: #fafafa;
+}
+
+.about-badge {
+  display: inline-block;
+  background: #0f766e;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.about-p {
+  font-size: 15px;
+  margin: 0 0 15px 0;
+  text-align: justify;
+}
+
+/* গ্রিড লেআউট (লক্ষ্য ও কার্যক্রম পাশাপাশি) */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.vision-card {
+  border-top: 4px solid #d97706;
+  /* গোল্ডেন/আম্বার বর্ডার */
+}
+
+.activities-card {
+  border-top: 4px solid #0284c7;
+  /* স্কাই ব্লু বর্ডার */
+}
+
+.about-subheading {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* লিস্ট স্টাইল - ১ (সাধারণ বুলেট) */
+.about-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.about-list li {
+  font-size: 14.5px;
+  margin-bottom: 10px;
+  color: #475569;
+  list-style-type: disc;
+}
+
+/* লিস্ট স্টাইল - ২ (কার্যক্রমের জন্য আইকন ভিত্তিক কাস্টম লিস্ট) */
+.about-list-styled {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-list-styled li {
+  font-size: 14.5px;
+  margin-bottom: 12px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.about-list-styled i {
+  color: #0284c7;
+  /* আইকন কালার */
+  margin-right: 4px;
+}
+
+/* বোতাম বাটন ডিজাইন */
+.about-btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0f766e;
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(15, 118, 110, 0.15);
+}
+.mospu .about-btn-wrapper {
+  margin: 15px 0px!important;
+}
+.about-action-btn:hover {
+  background: #115e59;
+  transform: translateY(-1px);
+}
+
+/* দ্বিতীয় বোতামটির কালার থিম আলাদা রাখার জন্য */
+.btn-secondary {
+  background: #0284c7;
+  box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15);
+}
+
+.btn-secondary:hover {
+  background: #0369a1;
+}
+
+/* সমাপ্তি উক্তি বক্স */
+.about-quote-box {
+  background-color: #f8fafc;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 10px;
+  border-left: 4px solid #64748b;
+  text-align: center;
+  font-style: italic;
+  border-right: 1px solid #e2e8f0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.about-quote-box p {
+  margin: 0;
+  font-size: 14.5px;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* 📱 রেসপন্সিভ ব্রেকপয়েন্ট (মোবাইলের জন্য) */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    /* মোবাইলে সব এক কলামে সোজা নিচে চলে আসবে */
+  }
+}
+
+
+/* মাহফিল বিস্তারিত মডাল বডি ইউনিভার্সাল ডিজাইন */
+.mahfil-detail-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.mahfil-detail-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+/* কাস্টম গ্রিড লেআউট */
+.mahfil-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.mahfil-detail-subheading {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mahfil-detail-p {
+  font-size: 14.5px;
+  margin: 0 0 10px 0;
+  text-align: justify;
+  color: #475569;
+}
+
+.mahfil-detail-p:last-child {
+  margin-bottom: 0;
+}
+
+/* কাস্টম ব্যাজ ও থিম বর্ডার স্টাইলসমূহ */
+.mahfil-detail-badge {
+  display: inline-block;
+  color: #ffffff;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* ১. ইসালে সওয়াব থিম (গ্রিন) */
+.badge-emerald {
+  background: #059669;
+}
+
+.border-emerald {
+  border-top: 4px solid #059669;
+}
+
+.quote-emerald {
+  border-left: 4px solid #059669;
+  background: #f0fdf4;
+  color: #065f46;
+}
+
+/* ২. মিলাদুন্নবী থিম (গোল্ড) */
+.badge-gold {
+  background: #d97706;
+}
+
+.border-gold {
+  border-top: 4px solid #d97706;
+}
+
+.quote-gold {
+  border-left: 4px solid #d97706;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* ৩. মেরাজুন্নবী থিম (ইন্ডিগো) */
+.badge-indigo {
+  background: #4f46e5;
+}
+
+.border-indigo {
+  border-top: 4px solid #4f46e5;
+}
+
+.quote-indigo {
+  border-left: 4px solid #4f46e5;
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+/* ৪. আশুরা থিম (রেড) */
+.badge-red {
+  background: #dc2626;
+}
+
+.border-red {
+  border-top: 4px solid #dc2626;
+}
+
+.quote-red {
+  border-left: 4px solid #dc2626;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ৫. রমজান থিম (আম্বার) */
+.badge-amber {
+  background: #f59e0b;
+}
+
+.border-amber {
+  border-top: 4px solid #f59e0b;
+}
+
+.quote-amber {
+  border-left: 4px solid #f59e0b;
+  background: #fef3c7;
+  color: #78350f;
+}
+
+/* নিচের বাণী/উক্তি বক্স ইউনিভার্সাল স্টাইল */
+.mahfil-detail-quote {
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  font-style: italic;
+  font-size: 14.5px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* ঐতিহ্যের স্মারক বক্স ডিজাইন */
+.mahfil-heritage-box {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.08);
+}
+
+.heritage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #d97706;
+  /* গোল্ডেন আম্বার */
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.heritage-counter {
+  font-size: 22px;
+  font-weight: 800;
+  color: #78350f;
+  margin-bottom: 6px;
+}
+
+.heritage-number {
+  color: #b45309;
+  font-size: 26px;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+  background: #ffffff;
+  padding: 2px 10px;
+  border-radius: 6px;
+  border: 1px solid #fcd34d;
+  display: inline-block;
+}
+
+.heritage-desc {
+  font-size: 13.5px;
+  color: #92400e;
+  margin: 0;
+  font-style: italic;
+}
+
+/* 📱 রেসপন্সিভ ডিজাইন (মোবাইল স্ক্রিন এডজাস্টমেন্ট) */
+@media (max-width: 768px) {
+  .mahfil-detail-grid {
+    grid-template-columns: 1fr;
+    /* মোবাইলে ২ কলাম ভেঙে ১ কলামে আসবে */
+  }
+}
+
+/* সম্পূর্ণ ওয়েবসাইট এবং সমস্ত ডিভ (Div)-এর জন্য গ্লোবাল স্ক্রলবার */
+
+/* ১. রুট এবং সমস্ত এলিমেন্টের স্ক্রলবার উইডথ নির্ধারণ */
+::-webkit-scrollbar {
+  width: 8px; /* মূল পেজের জন্য ৮ পিক্সেল আদর্শ, খুব বেশি মোটাও না আবার চিকনও না */
+  height: 8px; /* অনুভূমিক বা হরিজন্টাল স্ক্রলবারের জন্য */
+}
+
+/* ২. গ্লোবাল স্ক্রলবার ট্র্যাক স্টাইল */
+::-webkit-scrollbar-track {
+  background: #f8fafc; /* পুরো ওয়েবসাইটের ব্যাকগ্রাউন্ডের সাথে সামঞ্জস্যপূর্ণ */
+}
+
+/* ৩. গ্লোবাল স্ক্রলবার থাম্ব স্টাইল */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 67, 52, 0.25); /* আপনার প্রাইমারি কালারের (#004334) একটি হালকা ২৫% ট্রান্সপারেন্ট রূপ */
+  border-radius: 20px;
+  border: 2px solid #f8fafc; /* ট্র্যাকের সাথে একটু ফাঁকা বা প্যাডিং ফিল দেওয়ার জন্য বর্ডার ট্রিক */
+}
+
+/* ৪. হোভার করলে থাম্ব আরও স্পষ্ট হবে */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 67, 52, 0.45); /* হোভার করলে ৪৫% ওপাসিটি হবে, যা দেখতে চমৎকার লাগে */
+}
+
+/* ============================================= */
+/* RESPONSIVE MEDIA QUERIES - Pirjadi Foundation */
+/* Desktop-First Approach                        */
+/* ============================================= */
+
+/* ============================================= */
+/* 1. LAPTOP & LARGE TABLET (≤ 1024px)           */
+/* ============================================= */
+@media (max-width: 1024px) {
+
+  /* ================== HEADER ================== */
+  .main-header {
+    height: 520px;
+  }
+
+  .header-fast,
+  .header-contet {
+    height: 520px;
+  }
+
+  .main-name {
+    font-size: 48px;
+  }
+
+  .last-name {
+    font-size: 36px;
+  }
+
+  .found-articel {
+    width: 100%;
+    max-width: 420px;
+    font-size: 16px;
+  }
+
+  .founder-info-vew {
+    margin: 20px 30px;
+    width: calc(100% - 60px);
+    bottom: -106px;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .vew-item {
+    padding: 0 20px;
+    border-right: 2px solid #2b594b;
+    flex: 1 1 45%;
+    justify-content: center;
+  }
+  
+  .vew-item:nth-child(2){
+    border-right: none;
+  }
+  
+.vew-icon {
+  margin: 8px;
+}
+
+.vew-icon i {
+  font-size: 35px;
+}
+
+.bold-text {
+  font-size: 20px;
+}
+
+.mini-tet {
+  font-size: 13px;
+}
+
+
+  /* ================== NAVIGATION DRAWER ================== */
+    /* ডেস্কটপের মেইন মেনু লিংকগুলো হাইড হবে */
+    .nav-bar {
+      display: none !important;
+    }
+  
+    /* মোবাইলের হ্যামবার্গার বাটনটি সচল হবে */
+    .menubardiv {
+      display: flex !important;
+    }
+  
+    /* ৩. মোবাইল মেনুর ফুল-স্ক্রিন ব্যাকড্রপ ওভারলে */
+    .min-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.45);
+      /* ডার্ক ট্রান্সপারেন্ট ব্যাকগ্রাউন্ড */
+      backdrop-filter: blur(8px);
+      /* মডার্ন প্রিমিয়াম গ্লাস ব্লার */
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 2000;
+  
+      /* শুরুতে এটি সম্পূর্ণ অদৃশ্য ও ক্লিক-অযোগ্য থাকবে */
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  
+    /* জাভাস্ক্রিপ্ট দিয়ে যখন এই ক্লাসটি যুক্ত হবে তখন মেনু শো করবে */
+    .min-nav.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  
+    /* 📦 ৪. ডান পাশ থেকে ভেসে ওঠা সাইড ড্রয়ার প্যানেল */
+    .min-menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 290px;
+      height: 100%;
+      background-color: var(--primary-color);
+      /* আপনার অফিশিয়াল ডার্ক গ্রিন থিম */
+      padding: 24px 20px;
+      box-shadow: -6px 0 25px rgba(0, 0, 0, 0.3);
+  
+      /* শুরুতে এটি স্ক্রিনের বাইরে ডানপাশে লুকিয়ে থাকবে */
+      transform: translateX(100%);
+      /* মাখনের মতো সিল্কি অ্যানিমেশনের জন্য কাস্টম কিউবিক-বেজিয়ার */
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  
+    /* ব্যাকড্রপ শো হলে মেনু প্যানেলটি স্ক্রিনের ভেতরে চলে আসবে */
+    .min-nav.show .min-menu {
+      transform: translateX(0);
+    }
+  .nav-link-item {
+    display: none !important;
+  }
+.mobail-vab-sho{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  background: #fefdfd;
+  border: 1px solid rgb(255 247 216);
+  padding: 5px 10px;
+  box-shadow: 0px -2px 23px -4px #002a276b;
+}
+
+  .mobail-vab-sho .menu-name-logo {
+    padding-bottom: 0px;
+    border-bottom: 0px;
+  }
+  .menubardiv {
+    display: flex !important;
+  }
+
+  .min-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .min-nav.show {
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+  }
+
+  .min-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 290px;
+    height: 100%;
+    background-color: var(--light-color);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: -6px 0 25px rgba(0, 0, 0, 0.25);
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    justify-content: flex-start;
+  }
+
+  .min-nav.show .min-menu {
+    transform: translateX(0);
+  }
+
+  .menu-crose {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .cllose-menu {
+    width: 38px;
+    height: 38px;
+    background: rgb(128 127 127 / 7%) !important;
+    border-radius: 50% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #57575780 !important;
+    font-size: 18px;
+    cursor: pointer;
+    border: 0;
+  }
+
+  .cllose-menu:hover {
+    color: #013c2ded !important;
+    background: #a7a7a736 !important;
+    transform: rotate(90deg);
+  }
+  .menu-logo-cros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(10 67 43 / 12%);
+    position: relative;
+  }
+
+
+  .main-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-name {
+    font-size: 19px;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+.menu-riht-itme{
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+  /* justify-content: left; */
+  flex-grow: 1;
+  overflow-y: auto;
+  right: 0;
+  position: relative;
+}
+
+  .menu-btn-cont{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(10 67 43 / 12%);
+    position: relative;
+    /* flex-grow: 1; */
+  }
+
+  .menu-btn {
+    width: 100%;
+    text-align: left !important;
+    background: #94949405 !important;
+    color: #414141 !important;
+    font-size: 15.5px !important;
+    font-weight: 600 !important;
+    padding: 13px 18px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  }
+
+  .menu-btn:hover,
+  .menu-btn.active {
+    background-color: var(--secondary-color) !important;
+    color: var(--light-color) !important;
+    padding-left: 24px !important;
+  }
+
+  .dontet-btn.menu-btn {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+    margin-top: 15px;
+    text-align: center !important;
+    font-weight: 700 !important;
+    overflow: hidden;
+  }
+
+  /* ================== SECTIONS ================== */
+  .min-section {
+    margin: 100px 30px;
+  }
+
+  .min-section.ntfdiv {
+    margin: 100px 30px;
+  }
+
+  .about-contet {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-tex {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shovapoti-dtls {
+    padding: 30px 20px;
+  }
+
+  .soba-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .shoba-info.text {
+    width: 100%;
+    transform: none !important;
+  }
+
+  .act-card-contet {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  
+  .mahfil-item {
+    flex-direction: column;
+    gap: 15px;
+    padding: 18px;
+  }
+
+  .mhl-fast {
+    gap: 15px;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-item {
+    width: 100%;
+    transform: none !important;
+  }
+
+  .location-ifrm iframe {
+    width: 100%;
+    min-height: 320px;
+  }
+
+  /* Footer */
+  .footer-items.fast {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .footer-contet {
+    border-right: 0;
+    padding-right: 0;
+  }
+
+.modal-body {
+  margin: 15px 35px;
+}
+}
+
+/* ============================================= */
+/* 2. MOBILE LANDSCAPE / TABLET (≤ 768px)        */
+/* ============================================= */
+@media (max-width: 768px) {
+
+  .main-header {
+    height: 480px;
+  }
+
+  .header-fast,
+  .header-contet {
+    height: 480px;
+  }
+
+  .header-contet {
+    height: 480px;
+    margin: 20px 20px;
+  }
+  .main-name {
+    font-size: 42px;
+  }
+
+  .last-name {
+    font-size: 32px;
+  }
+
+  .founder-info-vew {
+    margin: 15px 20px;
+    width: calc(100% - 40px);
+    bottom: -107px;
+    padding: 12px 0;
+    gap: 12px;
+  }
+
+  .vew-item {
+    flex: 1 1 48%;
+    padding: 0 15px;
+  }
+
+  .vew-icon i {
+    font-size: 32px;
+  }
+
+  .bold-text {
+    font-size: 22px;
+  }
+
+  .min-section {
+    margin: 110px 20px;
+  }
+
+  .min-section.ntfdiv {
+    margin: 110px 20px;
+  }
+
+  .section-head h2 {
+    font-size: 26px;
+  }
+
+  .act-card-contet {
+    gap: 20px;
+  }
+
+  .act-card {
+    min-width: 100%;
+    padding: 25px 18px;
+  }
+
+  .mahfil-item-conten {
+    padding: 0 10px;
+  }
+
+  .mahfil-item {
+    padding: 16px;
+  }
+
+  .mhl-titel-head {
+    font-size: 21px;
+  }
+
+  /* Contact Form */
+  .conteact-input-item input,
+  .conteact-input-item textarea {
+    font-size: 18px;
+    padding: 12px 16px;
+  }
+
+  .sendmasegetn {
+    font-size: 20px;
+    padding: 14px;
+  }
+
+  /* Modal */
+  .modal-contaner {
+    min-width: 92%;
+    max-width: 92%;
+    margin: 20px;
+    max-height: 92dvh;
+  }
+
+  #donet-md .modal-contaner,
+  #dnt-sher-md .modal-contaner {
+    min-height: 55dvh;
+  }
+}
+@media (max-width: 600px) {
+
+  /* Contact Section */
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-item {
+    width: 100%;
+    transform: none !important;
+  }
+
+  .location-ifrm iframe {
+    width: 100%;
+    min-height: 320px;
+  }
+  
+  .contact-item.full-width {
+    grid-column: span 1;
+    width: 100%;
+    margin: 20px 0;
+  }
+/* Footer */
+.footer-items.fast {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.footer-contet:first-child {
+    grid-column: span 2;
+}
+
+.footer-contet:last-child {
+    grid-column: span 2;
+}
+
+}
+
+@media (max-width: 510px) {
+.founder-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.head-btn {
+  width:100%;
+} 
+
+  .founder-info-vew {
+    margin: 15px 20px;
+    width: calc(100% - 40px);
+    bottom: -107px;
+    padding: 12px 0;
+    gap: 12px;
+  }
+
+  .vew-icon i {
+    font-size: 35px;
+  }
+
+  .bold-text {
+    font-size: 20px;
+  }
+  
+  .vew-icon i {
+     font-size: 20px;
+  }
+
+.modal-body {
+  margin: 15px 30px;
+}
+  
+}
+/* ============================================= */
+/* 3. MOBILE PORTRAIT (≤ 480px)                  */
+/* ============================================= */
+@media (max-width: 480px) {
+
+  .main-header {
+    height: 420px;
+  }
+
+  .header-fast,
+  .header-contet {
+    height: 420px;
+  }
+
+  .header-contet {
+    margin: 25px 15px
+  }
+  .main-name {
+    font-size: 34px;
+    line-height: 1.7;
+  }
+
+  .last-name {
+    font-size: 26px;
+  }
+
+  .found-articel {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .founder-btn {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .head-btn {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+
+  .founder-info-vew {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    bottom: -160px;
+  }
+
+  .vew-item {
+    flex: 1 1 100%;
+    border-right: none;
+    padding: 8px 0;
+    justify-content: flex-start;
+  }
+
+  .vew-icon i {
+    font-size: 30px !important;
+  }
+
+  .bold-text {
+    font-size: 20px !important;
+  }
+
+  .min-section {
+    margin: 2px 15px;
+  }
+  
+  .min-section.ntfdiv {
+    margin: 183px 0px 0px 0px;
+  }
+
+  .about-contet {
+    padding: 25px 15px;
+  }
+
+  .mosqo-img {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .about-tex h2 {
+    font-size: 26px;
+  }
+
+  .about-tex p {
+    font-size: 17px;
+  }
+
+  .shovapoti-dtls {
+    padding: 25px 15px;
+  }
+
+  .shb-img {
+    width: 220px;
+  }
+
+  .section-head h2 {
+    font-size: 28px;
+  }
+
+  .section-head p {
+    font-size: 15.5px;
+  }
+
+  .act-card {
+    padding: 22px 16px;
+  }
+
+  .card-i i,
+  .card-i img {
+    font-size: 34px;
+  }
+
+  .card-head {
+    font-size: 18px;
+  }
+
+  .mahfil-item {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .mhl-time {
+    padding: 12px 10px;
+  }
+
+  .mhl-titel-head {
+    font-size: 19px;
+  }
+
+  .mhl-titel-location,
+  .mhl-titel-time {
+    font-size: 16px;
+  }
+
+  /* Contact */
+  .contect-item-p {
+    font-size: 17px;
+  }
+
+  .conteact-input-item input,
+  .conteact-input-item textarea {
+    font-size: 17px;
+    padding: 11px 14px;
+  }
+
+
+/* Footer */
+.footer-items.fast {
+  grid-template-columns: 1fr;
+}
+
+.footer-contet:first-child {
+  grid-column: span 1;
+}
+
+.footer-contet:last-child {
+  grid-column: span 1;
+}
+  .fot-discription {
+    width: 100%;
+  }
+
+  /* Typography Scaling */
+  .ntf-head {
+    font-size: 26px;
+  }
+
+  .ntf-titele {
+    font-size: 16px;
+  }
+
+  /* Modal Adjustments */
+  .modal-contaner {
+    min-width: 96%;
+    max-width: 96%;
+    border-radius: 12px;
+  }
+
+  .modal-heade {
+    padding: 16px 20px;
+  }
+
+  .mdal-head-tytle {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .main-header {
+    height: 490px;
+  }
+
+  .header-fast,
+  .header-contet {
+    height: 490px;
+  }
+  
+  .header-contet {
+    margin: 15px 10px
+  }
+  .founder-info-vew {
+    bottom: -126px;
+  }
+
+  
+.modal-body {
+  margin: 10px 25px;
+}
+}
+
+/* ============================================= */
+/* Additional Fine Tuning for Very Small Screens */
+/* ============================================= */
+@media (max-width: 360px) {
+
+  .main-name {
+    font-size: 31px;
+  }
+
+  .last-name {
+    font-size: 24px;
+  }
+
+  .vew-icon i {
+    font-size: 28px;
+  }
+
+  .bold-text {
+    font-size: 20px;
+  }
+
+  .min-section {
+    margin: 40px 12px;
+  }
+  .min-section.ntfdiv {
+    margin: 151px 0px 0px;
+  }
+}

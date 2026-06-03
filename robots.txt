@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/sitemap.xml
