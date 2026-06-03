@@ -1,37 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/</loc>
+    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/pages/gallery.html</loc>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/pages/vidio.html</loc>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/pages/sodosso.html</loc>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/pages/sodossofrom.html</loc>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/pages/kerat-sommelon.html</loc>
+    <priority>0.7</priority>
   </url>
-
 
   <url>
     <loc>https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/pages/fell_sommelon.html</loc>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/pages/amolnama.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/pages/protistha.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/pages/protisthalokko.html</loc>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
