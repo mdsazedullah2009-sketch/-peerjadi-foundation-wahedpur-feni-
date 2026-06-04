@@ -88,7 +88,7 @@
     // ব্রাউজার সার্ভিস ওয়ার্কার সাপোর্ট করে কি না তা চেক করা
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js')
+            navigator.serviceWorker.register('https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/service-worker.js')
                 .then((reg) => console.log('সার্ভিস ওয়ার্কার সফলভাবে রেজিস্টার হয়েছে!', reg))
                 .catch((err) => console.log('রেজিস্ট্রেশন ব্যর্থ হয়েছে:', err));
         });
