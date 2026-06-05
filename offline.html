@@ -1,29 +1,248 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>আপনি অফলাইনে আছেন | Pirjadi Foundation</title>
-        <style>
-            body{
-                min-width: 100dvw;
-                height: 100dvh;
-                background:#e4e4e4 ;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                justify-items: center;
-                color: #222222;
-                overflow: hidden;
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Offline | Pirjadi Foundation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: system-ui, sans-serif;
+            background:
+                radial-gradient(circle at top, #1e40af, #0f172a);
+            overflow: hidden;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: .3;
+        }
+
+        .c1 {
+            width: 300px;
+            height: 300px;
+            background: #3b82f6;
+            top: -80px;
+            left: -80px;
+        }
+
+        .c2 {
+            width: 250px;
+            height: 250px;
+            background: #22c55e;
+            bottom: -60px;
+            right: -60px;
+        }
+
+        .card {
+            width: min(92%, 650px);
+            padding: 40px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, .15);
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .icon {
+            font-size: 90px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
             }
-            img{
-                width: min(150px,40vw);
-                height:auto;
+
+            50% {
+                transform: translateY(-10px)
             }
-        </style>
-    </head>
+        }
+
+        h1 {
+            margin-top: 15px;
+            font-size: 2rem;
+        }
+
+        p {
+            margin-top: 15px;
+            line-height: 1.8;
+            color: #dbeafe;
+        }
+
+        .status {
+            margin: 25px auto;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, .12);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            background: white;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: .9rem;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+
 <body>
-    <img src="https://mdsazedullah2009-sketch.github.io/-peerjadi-foundation-wahedpur-feni-/assets/icons/offline_bckg.png" alt="offline icon">
-    <h1>আপনি অফলাইনে আছেন</h1>
-    <p>দয়া করে ইন্টারনেট সংযোগ চেক করুন।</p>
+
+    <div class="bg-circle c1"></div>
+    <div class="bg-circle c2"></div>
+
+    <div class="card">
+
+<div class="wifi-loader">
+
+    <svg viewBox="0 0 120 120" width="140" height="140">
+
+        <!-- Offline Slash -->
+        <line class="slash" x1="20" y1="20" x2="100" y2="100" stroke="#ff4d4d" stroke-width="8"
+            stroke-linecap="round" />
+        <!-- Level 3 -->
+        <path class="wifi level3" d="M15 45 Q60 10 105 45" stroke="white" stroke-width="6" fill="none"
+            stroke-linecap="round" />
+
+        <!-- Level 2 -->
+        <path class="wifi level2" d="M30 60 Q60 35 90 60" stroke="white" stroke-width="6" fill="none"
+            stroke-linecap="round" />
+
+        <!-- Level 1 -->
+        <path class="wifi level1" d="M45 75 Q60 65 75 75" stroke="white" stroke-width="6" fill="none"
+            stroke-linecap="round" />
+
+        <!-- Dot -->
+        <circle class="wifi dot" cx="60" cy="92" r="5" fill="white" />
+
+    </svg>
+
+</div>
+
+<style>.wifi{
+    stroke:white;
+    opacity:1;
+}
+
+.level3{
+    animation:l3 4s infinite;
+}
+
+.level2{
+    animation:l2 4s infinite;
+}
+
+.level1{
+    animation:l1 4s infinite;
+}
+
+.dot{
+    animation:dot 4s infinite;
+}
+
+.slash{
+    opacity:0;
+    animation:slash 4s infinite;
+}
+
+@keyframes l3{
+    0%,20%{opacity:1;}
+    30%,100%{opacity:.15;}
+}
+
+@keyframes l2{
+    0%,40%{opacity:1;}
+    50%,100%{opacity:.15;}
+}
+
+@keyframes l1{
+    0%,60%{opacity:1;}
+    70%,100%{opacity:.15;}
+}
+
+@keyframes dot{
+    0%,75%{opacity:1;}
+    85%,100%{opacity:.15;}
+}
+
+@keyframes slash{
+    0%,80%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+</style>
+        <h1>আপনি বর্তমানে অফলাইনে আছেন</h1>
+
+        <p>
+            ইন্টারনেট সংযোগ পাওয়া যাচ্ছে না।
+            সংযোগ ফিরে এলে পৃষ্ঠাটি স্বয়ংক্রিয়ভাবে পুনরায় লোড হবে।
+        </p>
+
+        <div class="status" id="status">
+            ⚠️ No Internet Connection
+        </div>
+
+        <br>
+
+        <a class="btn" href="/" onclick="location.reload()">
+            পুনরায় চেষ্টা করুন
+        </a>
+
+        <div class="footer">
+            © Pirjadi Foundation
+        </div>
+
+    </div>
 </body>
+<script>
+    function updateStatus() {
+        const status = document.getElementById("status");
+
+        if (navigator.onLine) {
+            status.innerHTML = "✅ Connection Restored";
+            setTimeout(() => {
+                location.reload();
+            }, 1500);
+        } else {
+            status.innerHTML = "⚠️ No Internet Connection";
+        }
+    }
+
+    window.addEventListener("online", updateStatus);
+    window.addEventListener("offline", updateStatus);
+    updateStatus();
+</script>
 </html>

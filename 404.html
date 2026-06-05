@@ -1,45 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
+
 <head>
-  <title>404| Pirjadi Foundation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | Pirjadi Foundation</title>
+
   <style>
-    body {
-      min-width: 100dvw;
-      height: 100dvh;
-      background: #e4e4e4;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      justify-items: center;
-      color: #222222;
-      overflow: hidden;
-    }
-  
-    img {
-      width: 10dvw;
-      height: auto;
+    :root {
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --card: #ffffff;
     }
 
-    a{
-      display:flex;
-      padding: 10px 15px;
-      background: #1b87eb;
-      border: 1px solid #2c364200;
-      text-decoration: none;
-      color: white;
-      font-size: 1rem;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    a:hover{
-      display:flex;
-      padding: 10px 15px;
-      background: #0f8cf3;
-      border: 1px solid #2c364246;
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(135deg, #e8f2ff, #ffffff, #eef7ff);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, .08),
+        0 4px 15px rgba(0, 0, 0, .04);
+    }
+
+    .error-code {
+      font-size: clamp(5rem, 18vw, 10rem);
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg,
+          #0d6efd,
+          #3b82f6,
+          #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      color: var(--text);
+    }
+
+    .subtitle {
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    .actions {
+      margin-top: 30px;
+    }
+
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .home-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .quick-links {
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .quick-links h2 {
+      margin-bottom: 15px;
+      text-align: center;
+      color: var(--text);
+    }
+
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .link-grid a {
+      text-decoration: none;
+      color: var(--text);
+      background: #f5f8fc;
+      padding: 14px;
+      border-radius: 12px;
+      transition: .3s;
+      border: 1px solid #e5e7eb;
+    }
+
+    .link-grid a:hover {
+      background: #eaf3ff;
+      border-color: #bfd8ff;
+    }
+
+    .footer {
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @media(max-width:600px) {
+      .card {
+        padding: 25px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>404 - Page Not Found 😢</h1>
-  <a href="/-peerjadi-foundation-wahedpur-feni-/">Go Home</a>
+
+  <div class="container">
+
+    <div class="card">
+
+      <div class="error-code">404</div>
+
+      <h1>পৃষ্ঠা খুঁজে পাওয়া যায়নি</h1>
+
+      <p class="subtitle">
+        আপনি যে পৃষ্ঠাটি খুঁজছেন সেটি হয় সরিয়ে ফেলা হয়েছে,
+        নয়তো লিংকটি ভুল হয়েছে।
+      </p>
+
+      <div class="actions">
+        <a href="/" class="home-btn">
+          🏠 হোম পেজে ফিরে যান
+        </a>
+      </div>
+
+      <div class="quick-links">
+
+        <h2>জনপ্রিয় পেজসমূহ</h2>
+
+        <div class="link-grid">
+          <a href="/index.html">🏠 হোম</a>
+          <a href="/pages/mosjid.html">🕌 মসজিদ</a>
+          <a href="/pages/gallery.html">📷 ছবি গ্যালারি</a>
+          <a href="/pages/vidio.html">🎥 ভিডিও গ্যালারি</a>
+          <a href="/pages/sodossofrom.html">📝 সদস্য ফরম</a>
+          <a href="/pages/amolnama.html">📖 আমলনামা</a>
+          <a href="/pages/kerat-sommelon.html">🎙️ কেরাত সম্মেলন</a>
+          <a href="/index.html#contact">📞 যোগাযোগ</a>
+        </div>
+
+      </div>
+
+      <div class="footer">
+        © Pirjadi Foundation
+      </div>
+
+    </div>
+
+  </div>
+
 </body>
+
 </html>
