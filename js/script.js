@@ -33,8 +33,8 @@ function handleScreenChange(e) {
                 </div>
             </div>
             
-            <div class="menu-btn-cont" hidden>
-                    <button class="dontet-btn btn menu-btn" data-id="dontetbtn" disabled>Donate Now</button>
+            <div class="menu-btn-cont" style="visibility: hidden;">
+                    <button class="dontet-btn btn menu-btn" data-id="dontetbtn"hidden  disabled>Donate Now</button>
             </div>`;
             mobailnavhendel();
             navlinkhandel();
@@ -67,8 +67,8 @@ function handleScreenChange(e) {
                     <button class="btn menu-btn galbtn" data-id="pages/gallery.html">গ্যালারী</button>
                 </div>
             
-                <div class="menu-btn-cont" hidden>
-                    <button class="dontet-btn btn menu-btn" data-id="dontetbtn" disabled>Donate Now</button>
+                <div class="menu-btn-cont" style="visibility: hidden;">
+                    <button class="dontet-btn btn menu-btn" data-id="dontetbtn" hidden disabled>Donate Now</button>
                 </div>
             </div>`;
             navlinkhandel();
