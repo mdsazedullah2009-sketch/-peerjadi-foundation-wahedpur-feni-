@@ -3370,15 +3370,14 @@ footer::before {
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
-
 .footer-contet:first-child {
     grid-column: span 2;
 }
+/* 
 
 .footer-contet:last-child {
     grid-column: span 2;
-}
-
+}*/
 }
 
 @media (max-width: 510px) {
@@ -3569,14 +3568,14 @@ footer::before {
 .footer-items.fast {
   grid-template-columns: 1fr;
 }
-
 .footer-contet:first-child {
   grid-column: span 1;
 }
 
+/*
 .footer-contet:last-child {
   grid-column: span 1;
-}
+}*/
   .fot-discription {
     width: 100%;
   }
